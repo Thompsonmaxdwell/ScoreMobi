@@ -119,6 +119,9 @@
   background-color: #7FA302;
 }
 
+.showcase_wrapper {
+  position: relative;
+}
 .showcase_wrapper img {
   width: 100%;
   background-repeat: no-repeat;
@@ -127,6 +130,10 @@
   object-fit: cover;
   background-attachment: fixed;
   background-position: center;
+}
+.showcase_wrapper .showcase_test {
+  position: absolute;
+  top: 0;
 }
 
 .scoreMobi_footer {
