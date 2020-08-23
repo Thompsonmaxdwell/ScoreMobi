@@ -1,5 +1,140 @@
+//***********************  top header logo styling ***********************
+//***********************  top header logo styling ***********************
+.scoreMobi_header {
+	background-color: $header_light;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	padding: 15px 20px;
 
+	h2 {
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 30px;
 
+		color: #ffffff;
+	}
 
+	// @include desktop {
+	// 	padding: 0 15px;
+	// }
 
+	.scoreMobi_logo {
+		color: white;
+	}
+	.header_social_icon {
+		display: none;
 
+		@include desktop {
+			display: flex;
+			padding-right: 20px;
+		}
+	}
+	.header_sign {
+		display: flex;
+	}
+	.login {
+		color: white;
+		font-size: 18px;
+	}
+}
+//***********************  top header logo styling  Ended here***********************
+//***********************  top header logo styling  Ended here**********************
+
+//*********************** Nav header  styling Starte here ***********************
+//*********************** Nav header  styling Starte here ***********************
+.scoreMobi_header_color {
+	background-color: $header_dark;
+
+	.scoreMobi_header_content {
+		width: 100%;
+		padding: 0px;
+
+		@include desktop {
+			padding: 0 20px;
+		}
+	}
+	.scoreMobi_logo_menu_section {
+		padding: 10px;
+		align-items: center;
+		align-content: center;
+
+		@include desktop {
+			padding: 0px;
+		}
+	}
+	#nav {
+		@include desktop {
+			padding: 0;
+		}
+
+		.nav_ul a .fa-home {
+			font-size: 1.1em !important;
+			color: white !important;
+		}
+		.nav_ul a,
+		.dropdown_indicator {
+			color: white;
+			font-size: 1.1em;
+			cursor: pointer;
+		}
+		.nav_ul .nav_ul_li {
+			@include desktop {
+				padding-right: 10px;
+				padding-left: 0px;
+			}
+		}
+	}
+
+	// header input  styling here with header search icon
+	#header_right_wrapper {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		position: relative;
+		z-index: 1;
+	}
+	.input_wrap {
+		border: none;
+		background-color: $header_light;
+
+		.form_input:focus {
+			box-shadow: 0px 0px 1px 1.5px #fff;
+		}
+
+		@include desktop {
+			margin: 10px;
+		}
+
+		i.fa-search {
+			color: white;
+		}
+		span i:hover {
+			color: white;
+		}
+
+		.header_input {
+			background-color: $header_light;
+			color: white;
+
+			&::placeholder {
+				color: white;
+			}
+
+			&:focus {
+				box-shadow: 0px 0px 1px 1.5pxwhite;
+			}
+		}
+	}
+	.header_select {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5px;
+		background-color: $header_light;
+	}
+}
+//*********************** Nav header  styling Ended here.. ***********************
+//*********************** Nav header  styling Ended here.. ***********************

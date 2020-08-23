@@ -1,0 +1,79 @@
+header {
+  background-color: #6F8B0A !important;
+}
+header .header_content {
+  width: 100%;
+  padding: 0px;
+}
+@media (min-width: 900px) {
+  header .header_content {
+    padding: 0 5px;
+  }
+}
+header .logo_menu_section {
+  padding: 10px;
+  align-items: center;
+  align-content: center;
+}
+@media (min-width: 900px) {
+  header #nav {
+    padding: 0;
+  }
+}
+header .nav_open {
+  height: 25vh;
+}
+header #nav .nav_ul a .fa-home {
+  font-size: 1.1em !important;
+  color: white !important;
+}
+header #nav .nav_ul a,
+header .dropdown_indicator {
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+@media (min-width: 900px) {
+  header #nav .nav_ul .nav_ul_li {
+    padding: 0;
+  }
+}
+header #header_right_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+header .input_wrap {
+  border: none;
+  background-color: #7FA302;
+}
+@media (min-width: 900px) {
+  header .input_wrap {
+    margin: 10px;
+  }
+}
+header .input_wrap i.fa-search {
+  color: white;
+}
+header .input_wrap span i:hover {
+  color: white;
+}
+header .input_wrap .header_input {
+  background-color: #7FA302;
+  color: white;
+}
+header .input_wrap .header_input::placeholder {
+  color: white;
+}
+header .input_wrap .header_input:focus {
+  box-shadow: 0px 0px 1px 1.5pxwhite;
+}
+header .header_select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #7FA302;
+}

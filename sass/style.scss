@@ -4,15 +4,25 @@
 // @import "../node_modules/pelvris-ui/sass/style.scss";
 
 
-//header
-
-@import "./header/navber.scss";
-
 // color
 @import "./color/all_color.scss";
 
+//media query 
+@import './mediaQuery/tablet';
+
+@import './mediaQuery/deskatop';
+
+// Navbar 
+@import "./header/navber.scss";
+
 // reset
 @import "./reset/reset.scss";
+
+// Showase
+@import './showacase/showcase';
+
+// footer
+@import './footer/footer';
 
 
 

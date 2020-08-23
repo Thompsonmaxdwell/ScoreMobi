@@ -1,0 +1,192 @@
+.scoreMobi_footer {
+	background-color: $header_dark;
+	margin: 10px 0;
+// ScoreMbi Footer Content
+	.scoreMobi_footer_content {
+		width: 100%;
+		padding: 20px;
+
+		@include desktop {
+			padding: 30px 70px;
+		}
+	}
+	// ScoreMobi footer_flex_wrapper
+	.scoreMobi_footer_flex_wrapper {
+		color: #fff;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		grid-column-gap: 20px;
+
+		@include desktop {
+			grid-column-gap: 0px;
+		}
+	}
+	// ScoreMobi  footer Description
+		.scoreMobi_footer_text {
+			grid-column: 1 /span 2;
+			text-align: start;
+
+			h1 {
+				font-weight: 500;
+				font-size: 40px;
+				line-height: 47px;
+				padding: 10px 0;
+			}
+
+			P {
+				font-size: 16px;
+				line-height: 1.6;
+				color: #cbc8c8;
+			}
+			// ScoreMobi footer Links text
+			.scoreMobi_links_wrapper {
+				margin: 30px 0;
+
+				h4 {
+					font-family: Montserrat;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 18px;
+					line-height: 22px;
+					color: #dfdfdf;
+				}
+				// ScoreMobi footer Links text
+				.scoreMobi_links {
+					display: flex;
+					justify-content: space-between;
+					flex-direction: column;
+					width: 300px;
+					margin: 20px 0;
+
+					@include tabletSize {
+						flex-direction: row;
+					}
+
+					@include desktop {
+						flex-direction: row;
+					}
+
+					a {
+						font-family: Montserrat;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 16px;
+						line-height: 2.5;
+
+						@include desktop {
+							line-height: unset;
+						}
+						color: #dfdfdf;
+					}
+				}
+			}
+		}
+		// Scorebi Google play store
+		.scoreMobi_googlePlayStore {
+			width: 100%;
+
+			@include desktop {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			h2 {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 22px;
+				color: #dfdfdf;
+			}
+			.footer_img {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+				img {
+					display: block;
+					height: 50px;
+					width: 50%;
+					border-radius: 5px;
+					margin-top: 30px;
+					object-fit: contain;
+				}
+			}
+			.scoreMobi_follow_us_wrapper {
+				margin-top: 10px;
+
+				h2 {
+					font-size: 18px;
+					padding: 15px 0;
+					color: #dfdfdf;
+				}
+			}
+			.scoreMobi_follow_us {
+				display: flex;
+				flex-direction: row;
+
+				i {
+					padding: 5px;
+					font-size: 20px;
+					border-radius: 3px;
+					margin-right: 30px;
+					display: block;
+
+					@include tabletSize {
+						margin: 20px 25px 0 0;
+					}
+				}
+				.fa-facebook {
+					background-color: #1877f2;
+				}
+				.fa-instagram {
+					background: #d6249f;
+					background: radial-gradient(
+						circle at 30% 107%,
+						#fdf497 0%,
+						#fdf497 5%,
+						#fd5949 45%,
+						#d6249f 60%,
+						#285aeb 90%
+					);
+					box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+				}
+
+				.fa-twitter {
+					background-color: #00a3ed;
+				}
+			}
+		}
+		// ScoreMobi Copyright
+	.copyright {
+		background-color: $header_light;
+		color: #ffffff;
+		.copyRightText {
+			display: none;
+			@include desktop {
+				display: block;
+			}
+		}
+		.scoreMobi_copyRight_ul {
+			@include desktop {
+				display: none;
+			}
+		}
+		.scoreMobi_copyRight {
+			display: flex;
+			flex-direction: column;
+
+			a {
+				font-family: Montserrat;
+				font-style: normal;
+				font-size: 14px;
+				text-align: center;
+			}
+			i {
+				font-size: 25px;
+				padding-top: 10px;
+			}
+		}
+	}
+}
