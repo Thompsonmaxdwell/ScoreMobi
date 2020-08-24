@@ -3,16 +3,25 @@
 
 // @import "../node_modules/pelvris-ui/sass/style.scss";
 
+@import "./color/all_color.scss";  //All ScoreMobi colors
+@import './mediaQuery/tablet';     // Media for Tablet Size
 
-//header
+@import './mediaQuery/deskatop';   // Media for Dektop Size
 
-@import "./header/navber.scss";
+@import "./header/navber.scss";    // Navbar 
 
-// color
-@import "./color/all_color.scss";
+@import './showacase/showcase';   // Homepage Showase image
 
-// reset
-@import "./reset/reset.scss";
+@import './mainSection/mainSection'; // Homepage mainSection
+
+@import './mainSection/asideleft'; // Homepage asideleft
+
+@import './mainSection/mainprediction';// mainprediction
+
+@import './mainSection/asideright';// Homepage asideRight
+
+
+@import './footer/footer';// footer
 
 
 

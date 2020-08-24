@@ -1,0 +1,34 @@
+.ScoreMobi_main_prediction {
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+     "asideLeft asideLeft asideLeft asideLeft"
+     "main main main main"
+     "asideRight asideRight asideRight asideRight";
+
+	@include tabletSize(850px) {
+        grid-template-areas: 
+        "main main main main"
+        "asideLeft asideLeft asideRight asideRight";
+	}
+	@include desktopSize(1000px) {
+		grid-template-areas: "asideLeft main main asideRight";
+	}
+
+	#aside_left {
+		height: 200px;
+		background-color: red;
+		grid-area: asideLeft;
+	}
+	#main {
+		background-color: yellow;
+		height: 200px;
+		grid-area: main;
+	}
+	#aside_right {
+		height: 200px;
+		width: 100%;
+		background-color: blue;
+		grid-area: asideRight;
+	}
+}
