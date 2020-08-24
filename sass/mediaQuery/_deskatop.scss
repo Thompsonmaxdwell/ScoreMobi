@@ -1,0 +1,7 @@
+
+@mixin  desktopSize($size) {
+    @media (min-width:$size) {
+        @content;
+    }
+    
+}

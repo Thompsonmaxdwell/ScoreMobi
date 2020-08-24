@@ -86,6 +86,30 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/header/navToggle.js":
+/*!*********************************!*\
+  !*** ./src/header/navToggle.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nlet navToggle = (nav, header_right) => {\n\tif (nav.className == 'nav_close') {\n\t\tnav.classList.add('nav_open');\n\t\theader_right.classList.add('header_right_open');\n\t} else {\n\t\tnav.classList.remove('nav_open');\n\t\theader_right.classList.remove('header_right_open');\n\t}\n};\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (navToggle);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaGVhZGVyL25hdlRvZ2dsZS5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9oZWFkZXIvbmF2VG9nZ2xlLmpzP2RhOWEiXSwic291cmNlc0NvbnRlbnQiOlsibGV0IG5hdlRvZ2dsZSA9IChuYXYsIGhlYWRlcl9yaWdodCkgPT4ge1xuXHRpZiAobmF2LmNsYXNzTmFtZSA9PSAnbmF2X2Nsb3NlJykge1xuXHRcdG5hdi5jbGFzc0xpc3QuYWRkKCduYXZfb3BlbicpO1xuXHRcdGhlYWRlcl9yaWdodC5jbGFzc0xpc3QuYWRkKCdoZWFkZXJfcmlnaHRfb3BlbicpO1xuXHR9IGVsc2Uge1xuXHRcdG5hdi5jbGFzc0xpc3QucmVtb3ZlKCduYXZfb3BlbicpO1xuXHRcdGhlYWRlcl9yaWdodC5jbGFzc0xpc3QucmVtb3ZlKCdoZWFkZXJfcmlnaHRfb3BlbicpO1xuXHR9XG59O1xuXG5cbmV4cG9ydCBkZWZhdWx0IG5hdlRvZ2dsZTtcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/header/navToggle.js\n");
+
+/***/ }),
+
+/***/ "./src/header/navbar.js":
+/*!******************************!*\
+  !*** ./src/header/navbar.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navToggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navToggle */ \"./src/header/navToggle.js\");\n\nlet bars = document.querySelectorAll('#bars');\n\nconst navbar = () => {\n\tif (bars.length >= 1) {\n\t\tbars.forEach((bar) => {\n\t\t\tbar.addEventListener('click', (e) => {\n\t\t\t\tlet header_right = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector(\n\t\t\t\t\t'#header_right'\n\t\t\t\t);\n\t\t\t\tlet nav = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector(\n\t\t\t\t\t'#nav'\n\t\t\t\t);\n\t\t\t\tbar.classList.toggle('change');\n\t\t\t\tObject(_navToggle__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(nav, header_right);\n\t\t\t});\n\t\t});\n\t} else {\n\t\tlet bar = document.querySelector('#bars');\n\t\tlet header_right = document.querySelector('#header_right');\n\n\t\tbar.addEventListener('click', (e) => {\n\t\t\tObject(_navToggle__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(nav, header_right);\n\t\t});\n\t}\n};\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (navbar);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaGVhZGVyL25hdmJhci5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9oZWFkZXIvbmF2YmFyLmpzP2Y0YzIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IG5hdlRvZ2dsZSBmcm9tICAnLi9uYXZUb2dnbGUnO1xubGV0IGJhcnMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcjYmFycycpO1xuXG5jb25zdCBuYXZiYXIgPSAoKSA9PiB7XG5cdGlmIChiYXJzLmxlbmd0aCA+PSAxKSB7XG5cdFx0YmFycy5mb3JFYWNoKChiYXIpID0+IHtcblx0XHRcdGJhci5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIChlKSA9PiB7XG5cdFx0XHRcdGxldCBoZWFkZXJfcmlnaHQgPSBlLnRhcmdldC5wYXJlbnRFbGVtZW50LnBhcmVudEVsZW1lbnQucGFyZW50RWxlbWVudC5wYXJlbnRFbGVtZW50LnBhcmVudEVsZW1lbnQucXVlcnlTZWxlY3Rvcihcblx0XHRcdFx0XHQnI2hlYWRlcl9yaWdodCdcblx0XHRcdFx0KTtcblx0XHRcdFx0bGV0IG5hdiA9IGUudGFyZ2V0LnBhcmVudEVsZW1lbnQucGFyZW50RWxlbWVudC5wYXJlbnRFbGVtZW50LnBhcmVudEVsZW1lbnQucGFyZW50RWxlbWVudC5xdWVyeVNlbGVjdG9yKFxuXHRcdFx0XHRcdCcjbmF2J1xuXHRcdFx0XHQpO1xuXHRcdFx0XHRiYXIuY2xhc3NMaXN0LnRvZ2dsZSgnY2hhbmdlJyk7XG5cdFx0XHRcdG5hdlRvZ2dsZShuYXYsIGhlYWRlcl9yaWdodCk7XG5cdFx0XHR9KTtcblx0XHR9KTtcblx0fSBlbHNlIHtcblx0XHRsZXQgYmFyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI2JhcnMnKTtcblx0XHRsZXQgaGVhZGVyX3JpZ2h0ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI2hlYWRlcl9yaWdodCcpO1xuXG5cdFx0YmFyLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKGUpID0+IHtcblx0XHRcdG5hdlRvZ2dsZShuYXYsIGhlYWRlcl9yaWdodCk7XG5cdFx0fSk7XG5cdH1cbn07XG5cblxuXG5leHBvcnQgZGVmYXVsdCBuYXZiYXI7XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/header/navbar.js\n");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -94,19 +118,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/nav */ \"./src/modules/nav.js\");\n\n\nconsole.log(Object(_modules_nav__WEBPACK_IMPORTED_MODULE_0__[\"nav\"])('john', 22,'football'));\n\nconsole.log(\n'YEAH working... is it not really'\n);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge25hdn0gZnJvbSBcIi4vbW9kdWxlcy9uYXZcIjtcblxuY29uc29sZS5sb2cobmF2KCdqb2huJywgMjIsJ2Zvb3RiYWxsJykpO1xuXG5jb25zb2xlLmxvZyhcbidZRUFIIHdvcmtpbmcuLi4gaXMgaXQgbm90IHJlYWxseSdcbik7XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js\n");
-
-/***/ }),
-
-/***/ "./src/modules/nav.js":
-/*!****************************!*\
-  !*** ./src/modules/nav.js ***!
-  \****************************/
-/*! exports provided: nav */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"nav\", function() { return nav; });\nfunction nav(name, age, hobby) {\n    return `${name} is at the age of ${age}  and likes ${hobby}`;\n}\n\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvbW9kdWxlcy9uYXYuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvbW9kdWxlcy9uYXYuanM/M2NkNSJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gbmF2KG5hbWUsIGFnZSwgaG9iYnkpIHtcbiAgICByZXR1cm4gYCR7bmFtZX0gaXMgYXQgdGhlIGFnZSBvZiAke2FnZX0gIGFuZCBsaWtlcyAke2hvYmJ5fWA7XG59XG5cblxuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/modules/nav.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header_navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header/navbar */ \"./src/header/navbar.js\");\n\nObject(_header_navbar__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgbmF2RnVuICBmcm9tICcuL2hlYWRlci9uYXZiYXInO1xubmF2RnVuKCkiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ }),
 

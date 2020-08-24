@@ -1,3 +1,388 @@
+
+.scoreMobi_header {
+  background-color: #7FA302;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 15px 20px;
+}
+.scoreMobi_header h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+}
+.scoreMobi_header .scoreMobi_logo {
+  color: white;
+}
+.scoreMobi_header .header_social_icon {
+  display: none;
+}
+@media (min-width: 900px) {
+  .scoreMobi_header .header_social_icon {
+    display: flex;
+    padding-right: 20px;
+  }
+}
+.scoreMobi_header .header_sign {
+  display: flex;
+}
+.scoreMobi_header .login {
+  color: white;
+  font-size: 18px;
+}
+
+.scoreMobi_header_color {
+  background-color: #6F8B0A;
+}
+.scoreMobi_header_color .scoreMobi_header_content {
+  width: 100%;
+  padding: 0px;
+}
+@media (min-width: 900px) {
+  .scoreMobi_header_color .scoreMobi_header_content {
+    padding: 0 20px;
+  }
+}
+.scoreMobi_header_color .scoreMobi_logo_menu_section {
+  padding: 10px;
+  align-items: center;
+  align-content: center;
+}
+@media (min-width: 900px) {
+  .scoreMobi_header_color .scoreMobi_logo_menu_section {
+    padding: 0px;
+  }
+}
+@media (min-width: 900px) {
+  .scoreMobi_header_color #nav {
+    padding: 0;
+  }
+}
+.scoreMobi_header_color #nav .nav_ul a .fa-home {
+  font-size: 1.1em !important;
+  color: white !important;
+}
+.scoreMobi_header_color #nav .nav_ul a,
+.scoreMobi_header_color #nav .dropdown_indicator {
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+@media (min-width: 900px) {
+  .scoreMobi_header_color #nav .nav_ul .nav_ul_li {
+    padding-right: 10px;
+    padding-left: 0px;
+  }
+}
+.scoreMobi_header_color #header_right_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+.scoreMobi_header_color .input_wrap {
+  border: none;
+  background-color: #7FA302;
+}
+.scoreMobi_header_color .input_wrap .form_input:focus {
+  box-shadow: 0px 0px 1px 1.5px #fff;
+}
+@media (min-width: 900px) {
+  .scoreMobi_header_color .input_wrap {
+    margin: 10px;
+  }
+}
+.scoreMobi_header_color .input_wrap i.fa-search {
+  color: white;
+}
+.scoreMobi_header_color .input_wrap span i:hover {
+  color: white;
+}
+.scoreMobi_header_color .input_wrap .header_input {
+  background-color: #7FA302;
+  color: white;
+}
+.scoreMobi_header_color .input_wrap .header_input::placeholder {
+  color: white;
+}
+.scoreMobi_header_color .input_wrap .header_input:focus {
+  box-shadow: 0px 0px 1px 1.5pxwhite;
+}
+.scoreMobi_header_color .header_select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #7FA302;
+}
+
+.showcase_wrapper {
+  position: relative;
+  height: 350px;
+}
+.showcase_wrapper img {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  object-fit: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.showcase_wrapper .showcase_test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 10px;
+  color: #fff;
+}
+@media (min-width: 900px) {
+  .showcase_wrapper .showcase_test {
+    padding: 40px;
+  }
+}
+.showcase_wrapper .showcase_test h1 {
+  line-height: 1.4;
+  font-weight: 600;
+  font-size: 20px;
+}
+@media (min-width: 900px) {
+  .showcase_wrapper .showcase_test h1 {
+    font-size: 35px;
+  }
+}
+.showcase_wrapper .showcase_test .showacase_btn_flex {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.showcase_wrapper .showcase_test .showacase_btn_flex button {
+  background-color: #fff;
+  margin-right: 20px;
+  color: #000;
+}
+.showcase_wrapper .showcase_test .showacase_btn_flex p {
+  padding: 10px;
+}
+@media (min-width: 900px) {
+  .showcase_wrapper .showcase_test .showacase_btn_flex p {
+    padding: 0px;
+  }
+}
+
+.ScoreMobi_main_prediction {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "asideLeft asideLeft asideLeft asideLeft" "main main main main" "asideRight asideRight asideRight asideRight";
+}
+@media (min-width: 850px) {
+  .ScoreMobi_main_prediction {
+    grid-template-areas: "main main main main" "asideLeft asideLeft asideRight asideRight";
+  }
+}
+@media (min-width: 1000px) {
+  .ScoreMobi_main_prediction {
+    grid-template-areas: "asideLeft main main asideRight";
+  }
+}
+.ScoreMobi_main_prediction #aside_left {
+  height: 200px;
+  background-color: red;
+  grid-area: asideLeft;
+}
+.ScoreMobi_main_prediction #main {
+  background-color: yellow;
+  height: 200px;
+  grid-area: main;
+}
+.ScoreMobi_main_prediction #aside_right {
+  height: 200px;
+  width: 100%;
+  background-color: blue;
+  grid-area: asideRight;
+}
+
+.scoreMobi_footer {
+  background-color: #6F8B0A;
+  margin: 0;
+}
+.scoreMobi_footer .scoreMobi_footer_content {
+  width: 100%;
+  padding: 20px;
+}
+@media (min-width: 900px) {
+  .scoreMobi_footer .scoreMobi_footer_content {
+    padding: 30px 70px;
+  }
+}
+.scoreMobi_footer .scoreMobi_footer_flex_wrapper {
+  color: #fff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-column-gap: 20px;
+}
+@media (min-width: 900px) {
+  .scoreMobi_footer .scoreMobi_footer_flex_wrapper {
+    grid-column-gap: 0px;
+  }
+}
+.scoreMobi_footer .scoreMobi_footer_text {
+  grid-column: span 2;
+  text-align: start;
+}
+.scoreMobi_footer .scoreMobi_footer_text h1 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  padding: 10px 0;
+}
+.scoreMobi_footer .scoreMobi_footer_text P {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cbc8c8;
+}
+.scoreMobi_footer .scoreMobi_footer_text .scoreMobi_links_wrapper {
+  margin: 30px 0;
+}
+.scoreMobi_footer .scoreMobi_footer_text .scoreMobi_links_wrapper h4 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #dfdfdf;
+}
+.scoreMobi_footer .scoreMobi_footer_text .scoreMobi_links_wrapper .scoreMobi_links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 300px;
+  margin: 20px 0;
+}
+@media (min-width: 900px) {
+  .scoreMobi_footer .scoreMobi_footer_text .scoreMobi_links_wrapper .scoreMobi_links {
+    flex-direction: row;
+  }
+}
+@media (min-width: 900px) {
+  .scoreMobi_footer .scoreMobi_footer_text .scoreMobi_links_wrapper .scoreMobi_links {
+    flex-direction: row;
+  }
+}
+.scoreMobi_footer .scoreMobi_footer_text .scoreMobi_links_wrapper .scoreMobi_links a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 2.5;
+  color: #dfdfdf;
+}
+@media (min-width: 900px) {
+  .scoreMobi_footer .scoreMobi_footer_text .scoreMobi_links_wrapper .scoreMobi_links a {
+    line-height: unset;
+  }
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore {
+  width: 100%;
+}
+@media (min-width: 1100px) {
+  .scoreMobi_footer .scoreMobi_googlePlayStore {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore h2 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #dfdfdf;
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore .footer_img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore .footer_img img {
+  display: block;
+  height: 50px;
+  width: 50%;
+  border-radius: 5px;
+  margin-top: 30px;
+  object-fit: contain;
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us_wrapper {
+  margin-top: 10px;
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us_wrapper h2 {
+  font-size: 18px;
+  padding: 15px 0;
+  color: #dfdfdf;
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us {
+  display: flex;
+  flex-direction: row;
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us i {
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 3px;
+  margin-right: 30px;
+  display: block;
+}
+@media (min-width: 900px) {
+  .scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us i {
+    margin: 20px 25px 0 0;
+  }
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us .fa-facebook {
+  background-color: #1877f2;
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us .fa-instagram {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+.scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us .fa-twitter {
+  background-color: #00a3ed;
+}
+.scoreMobi_footer .copyright {
+  background-color: #7FA302;
+  color: #ffffff;
+}
+.scoreMobi_footer .copyright .copyRightText {
+  display: none;
+}
+@media (min-width: 900px) {
+  .scoreMobi_footer .copyright .copyRightText {
+    display: block;
+  }
+}
+@media (min-width: 900px) {
+  .scoreMobi_footer .copyright .scoreMobi_copyRight_ul {
+    display: none;
+  }
+}
+.scoreMobi_footer .copyright .scoreMobi_copyRight {
+  display: flex;
+  flex-direction: column;
+}
+.scoreMobi_footer .copyright .scoreMobi_copyRight a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+}
+.scoreMobi_footer .copyright .scoreMobi_copyRight i {
+  font-size: 25px;
+  padding-top: 10px;
 body {
   background-color: red;
 }

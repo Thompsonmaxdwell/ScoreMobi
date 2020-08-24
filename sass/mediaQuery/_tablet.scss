@@ -1,0 +1,7 @@
+
+@mixin  tabletSize($size) {
+    @media (min-width:$size) {
+        @content;
+    }
+    
+}
