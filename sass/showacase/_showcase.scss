@@ -1,8 +1,8 @@
 // <!-- Showcase image section -->
 .showcase_wrapper {
-    position: relative;
-		height: 350px;
-    
+	position: relative;
+	height:260px;
+
 	img {
 		width: 100%;
 		background-repeat: no-repeat;
@@ -10,48 +10,51 @@
 		height: 100%;
 		object-fit: cover;
 		background-attachment: fixed;
-        background-position: center;
-        
+		background-position: center;
 	}
 	.showcase_test {
 		position: absolute;
 		top: 0;
-        left: 0;
-        padding:40px 10px;
-        color: #fff;
-        
-        @include tabletSize(900px) {
-            padding: 40px;
-        }
+		left: 0;
+		padding: 40px 10px;
+		color: #fff;
+		font-family: Montserrat;
+
+		@include tabletSize(900px) {
+			padding: 40px 45px;
+		}
 
 		h1 {
-			line-height: 1.4;
-            font-weight: 600;
-            font-size: 20px;
-            
-            @include tabletSize(900px) {
-                font-size: 35px;
-            }
-            
+			font-style: normal;
+			font-weight: 500;
+			font-size: 22px;
+			color: #ffffff;
+			
+			@include tabletSize(900px) {
+				font-size: 35px;
+				line-height: 43px;
+			}
 		}
 		.showacase_btn_flex {
 			display: flex;
-			margin-top: 10px;
-            align-items: center;
-            flex-wrap: wrap;
+			margin-top: 20px;
+			align-items: center;
+			flex-wrap: wrap;
 
 			button {
 				background-color: #fff;
-				margin-right: 20px;
-                color: #000;
-            }
-            p{
-                padding: 10px;
+				margin-right: 10px;
+				font-weight: 500;
+				font-size: 18px;
+				color: $black_color;
+			}
+			p {
+				padding: 10px;
 
-                @include tabletSize(900px) {
-                    padding: 0px;
-                }
-            }
+				@include tabletSize(900px) {
+					padding: 0px;
+				}
+			}
 		}
 	}
 }

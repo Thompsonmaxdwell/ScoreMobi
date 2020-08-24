@@ -100,17 +100,30 @@
 				color: #dfdfdf;
 			}
 			.footer_img {
-				width: 100%;
+				width: 50%;
 				display: flex;
 				flex-direction: column;
+				@include desktopSize(1000px){
+					width: 60%;
+				}
 
 				img {
 					display: block;
-					height: 50px;
-					width: 50%;
+					height: 40px;
+					width: 100%;
 					border-radius: 5px;
 					margin-top: 30px;
-					object-fit: contain;
+					object-fit: cover;
+
+					@include tabletSize(450px){
+						height: 50px;
+						width: 80%;
+					}
+
+					@include desktopSize(600px){
+						width: 100%;
+						object-fit: unet;
+					}
 				}
 			}
 			.scoreMobi_follow_us_wrapper {

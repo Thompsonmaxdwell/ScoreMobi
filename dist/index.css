@@ -121,7 +121,7 @@
 
 .showcase_wrapper {
   position: relative;
-  height: 350px;
+  height: 260px;
 }
 .showcase_wrapper img {
   width: 100%;
@@ -138,32 +138,37 @@
   left: 0;
   padding: 40px 10px;
   color: #fff;
+  font-family: Montserrat;
 }
 @media (min-width: 900px) {
   .showcase_wrapper .showcase_test {
-    padding: 40px;
+    padding: 40px 45px;
   }
 }
 .showcase_wrapper .showcase_test h1 {
-  line-height: 1.4;
-  font-weight: 600;
-  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  color: #ffffff;
 }
 @media (min-width: 900px) {
   .showcase_wrapper .showcase_test h1 {
     font-size: 35px;
+    line-height: 43px;
   }
 }
 .showcase_wrapper .showcase_test .showacase_btn_flex {
   display: flex;
-  margin-top: 10px;
+  margin-top: 20px;
   align-items: center;
   flex-wrap: wrap;
 }
 .showcase_wrapper .showcase_test .showacase_btn_flex button {
   background-color: #fff;
-  margin-right: 20px;
-  color: #000;
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
 }
 .showcase_wrapper .showcase_test .showacase_btn_flex p {
   padding: 10px;
@@ -177,6 +182,8 @@
 .ScoreMobi_main_prediction {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding: 20px 45px;
   grid-template-areas: "asideLeft asideLeft asideLeft asideLeft" "main main main main" "asideRight asideRight asideRight asideRight";
 }
 @media (min-width: 850px) {
@@ -184,14 +191,13 @@
     grid-template-areas: "main main main main" "asideLeft asideLeft asideRight asideRight";
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
   .ScoreMobi_main_prediction {
-    grid-template-areas: "asideLeft main main asideRight";
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: "asideLeft asideLeft main main main main  main asideRight asideRight";
   }
 }
 .ScoreMobi_main_prediction #aside_left {
-  height: 200px;
-  background-color: red;
   grid-area: asideLeft;
 }
 .ScoreMobi_main_prediction #main {
@@ -204,6 +210,123 @@
   width: 100%;
   background-color: blue;
   grid-area: asideRight;
+}
+
+#aside_left .ScoreMobi_mobile_Template {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #898686;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+#aside_left .ScoreMobi_mobile_Template h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #7fa302;
+}
+#aside_left .ScoreMobi_mobile_Template img {
+  max-width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+.ScoreMobi_popular_competitions {
+  font-family: "Montserrat";
+}
+.ScoreMobi_popular_competitions h1 {
+  font-size: 18px;
+  line-height: 21px;
+  padding: 15px 0;
+  font-style: normal;
+  font-weight: normal;
+  /* navbar color-1 */
+  color: #6f8b0a;
+}
+.ScoreMobi_popular_competitions .popular_competitions_li {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 0.6px solid #9d9f9d;
+  padding: 7px 8px;
+  box-sizing: border-box;
+  margin-top: 7px;
+}
+.ScoreMobi_popular_competitions .top_layers {
+  margin: 20px 0;
+}
+.ScoreMobi_popular_competitions .top_layers p {
+  font-size: 14px;
+  padding: 4px 0;
+}
+.ScoreMobi_popular_competitions .top_players_justified {
+  justify-content: space-between;
+}
+.ScoreMobi_popular_competitions .top_players_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.ScoreMobi_popular_competitions .top_players_flex p {
+  color: #000;
+}
+.ScoreMobi_popular_competitions .top_player_score {
+  background-color: #c1e3fa;
+  border: 0.5px solid #9d9f9d;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 13px;
+}
+.ScoreMobi_popular_competitions img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.6px solid #9d9f9d;
+  margin: 0 7px;
+}
+.ScoreMobi_popular_competitions h4 {
+  font-size: 14px;
+  color: #000000;
+}
+.ScoreMobi_popular_competitions h6 {
+  color: #9ea09d;
+  text-shadow: 0px 0px 2px #9ea09d;
+}
+
+.show_more {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  background: #ffffff;
+  border: 0.6px solid #898686;
+  box-sizing: border-box;
+  color: #7FA302;
+  padding: 5px;
+  text-align: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.ScoreMobi_card img {
+  width: 100%;
+  object-fit: cover;
+}
+.ScoreMobi_card .ScoreMobi_card_padding {
+  padding: 10px;
+}
+.ScoreMobi_card .ScoreMobi_card_padding p {
+  font-size: 14px;
+  color: #6f8b0a;
+  padding: 5px 0;
+}
+.ScoreMobi_card .ScoreMobi_card_padding .ScoreMobi_card_post_time {
+  padding: 0;
+  color: unset;
 }
 
 .scoreMobi_footer {
@@ -305,17 +428,34 @@
   color: #dfdfdf;
 }
 .scoreMobi_footer .scoreMobi_googlePlayStore .footer_img {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 1000px) {
+  .scoreMobi_footer .scoreMobi_googlePlayStore .footer_img {
+    width: 60%;
+  }
+}
 .scoreMobi_footer .scoreMobi_googlePlayStore .footer_img img {
   display: block;
-  height: 50px;
-  width: 50%;
+  height: 40px;
+  width: 100%;
   border-radius: 5px;
   margin-top: 30px;
-  object-fit: contain;
+  object-fit: cover;
+}
+@media (min-width: 450px) {
+  .scoreMobi_footer .scoreMobi_googlePlayStore .footer_img img {
+    height: 50px;
+    width: 80%;
+  }
+}
+@media (min-width: 600px) {
+  .scoreMobi_footer .scoreMobi_googlePlayStore .footer_img img {
+    width: 100%;
+    object-fit: unet;
+  }
 }
 .scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us_wrapper {
   margin-top: 10px;

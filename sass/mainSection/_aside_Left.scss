@@ -1,0 +1,126 @@
+#aside_left {
+	.ScoreMobi_mobile_Template {
+		width: 100%;
+		background: #ffffff;
+		border: 1px solid #898686;
+		box-sizing: border-box;
+		padding: 10px 15px;
+
+		h2 {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 15px;
+			color: $text_color_2;
+		}
+		img {
+			max-width: 100%;
+			height: 50px;
+			border-radius: 10px;
+			margin-top: 10px;
+			object-fit: cover;
+		}
+	}
+}
+// Competitions  -************** -->     <!--**************  Competitions  -**************
+.ScoreMobi_popular_competitions {
+	font-family: 'Montserrat';
+
+	h1 {
+		font-size: 18px;
+		line-height: 21px;
+		padding: 15px 0;
+		font-style: normal;
+		font-weight: normal;
+		/* navbar color-1 */
+
+		color: $text_color_1;
+	}
+	.popular_competitions_li {
+		display: flex;
+		align-items: center;
+		background: #ffffff;
+		border: 0.6px solid $border_color_1;
+		padding: 7px 8px;
+		box-sizing: border-box;
+		margin-top: 7px;
+	}
+	// ************** TOP PLAYERS  -************** --> <!--************** TOP PLAYERS  -**************
+	.top_layers {
+		margin: 20px 0;
+		p {
+			font-size: 14px;
+			padding: 4px 0;
+		}
+	}
+	.top_players_justified {
+		justify-content: space-between;
+	}
+	.top_players_flex {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-self: center;
+
+		p {
+			color: #000;
+		}
+	}
+	.top_player_score {
+		background-color: #c1e3fa;
+		border: 0.5px solid $border_color_1;
+		border-radius: 50%;
+		padding: 3px;
+		font-size: 13px;
+	}
+
+	img {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 0.6px solid $border_color_1;
+		margin: 0 7px;
+	}
+	h4 {
+		font-size: 14px;
+		color: $black_color;
+	}
+	h6 {
+		color: #9ea09d;
+		text-shadow: 0px 0px 2px #9ea09d;
+	}
+}
+.show_more {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	background: #ffffff;
+	border: 0.6px solid $border_color_2;
+	box-sizing: border-box;
+	color: $header_light;
+	padding: 5px;
+	text-align: center;
+	margin: 10px 0;
+	cursor: pointer;
+}
+// ScoreMobi_card
+.ScoreMobi_card {
+	img {
+		width: 100%;
+		object-fit: cover;
+	}
+	.ScoreMobi_card_padding {
+		padding: 10px;
+
+		p {
+			font-size: 14px;
+			color: $text_color_1;
+			padding:5px 0;
+		}
+		.ScoreMobi_card_post_time{
+			padding: 0;
+			color:unset;
+		}
+	}
+}
