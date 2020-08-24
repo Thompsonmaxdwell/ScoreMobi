@@ -1,12 +1,12 @@
 .scoreMobi_footer {
 	background-color: $header_dark;
-	margin: 10px 0;
+	margin: 0;
 // ScoreMbi Footer Content
 	.scoreMobi_footer_content {
 		width: 100%;
 		padding: 20px;
 
-		@include desktop {
+		@include desktopSize(900px) {
 			padding: 30px 70px;
 		}
 	}
@@ -20,13 +20,13 @@
 		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 		grid-column-gap: 20px;
 
-		@include desktop {
+		@include desktopSize(900px) {
 			grid-column-gap: 0px;
 		}
 	}
 	// ScoreMobi  footer Description
 		.scoreMobi_footer_text {
-			grid-column: 1 /span 2;
+			grid-column: span 2;
 			text-align: start;
 
 			h1 {
@@ -61,11 +61,11 @@
 					width: 300px;
 					margin: 20px 0;
 
-					@include tabletSize {
+					@include tabletSize(900px) {
 						flex-direction: row;
 					}
 
-					@include desktop {
+					@include desktopSize(900px) {
 						flex-direction: row;
 					}
 
@@ -76,7 +76,7 @@
 						font-size: 16px;
 						line-height: 2.5;
 
-						@include desktop {
+						@include desktopSize(900px) {
 							line-height: unset;
 						}
 						color: #dfdfdf;
@@ -88,7 +88,7 @@
 		.scoreMobi_googlePlayStore {
 			width: 100%;
 
-			@include desktop {
+			@include desktopSize(1100px) {
 				width: 80%;
 				margin: 0 auto;
 			}
@@ -133,7 +133,7 @@
 					margin-right: 30px;
 					display: block;
 
-					@include tabletSize {
+					@include tabletSize(900px) {
 						margin: 20px 25px 0 0;
 					}
 				}
@@ -164,12 +164,12 @@
 		color: #ffffff;
 		.copyRightText {
 			display: none;
-			@include desktop {
+			@include desktopSize(900px) {
 				display: block;
 			}
 		}
 		.scoreMobi_copyRight_ul {
-			@include desktop {
+			@include desktopSize(900px) {
 				display: none;
 			}
 		}

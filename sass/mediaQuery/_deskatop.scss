@@ -1,6 +1,6 @@
 
-@mixin  desktop {
-    @media (min-width:900px) {
+@mixin  desktopSize($size) {
+    @media (min-width:$size) {
         @content;
     }
     

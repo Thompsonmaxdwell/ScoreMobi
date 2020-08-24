@@ -1,6 +1,6 @@
 
-@mixin  tabletSize {
-    @media (min-width:600px) {
+@mixin  tabletSize($size) {
+    @media (min-width:$size) {
         @content;
     }
     
