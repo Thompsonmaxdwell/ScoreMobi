@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54e1ffd0353c7f80c9d7d69562e3a452031667dd
 .scoreMobi_header {
   background-color: #7FA302;
   display: flex;
@@ -386,4 +390,9 @@ body {
 .scoreMobi_footer .copyright .scoreMobi_copyRight i {
   font-size: 25px;
   padding-top: 10px;
+<<<<<<< HEAD
+=======
+body {
+  background-color: red;
+>>>>>>> 54e1ffd0353c7f80c9d7d69562e3a452031667dd
 }
