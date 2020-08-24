@@ -1,4 +1,3 @@
-
 .scoreMobi_header {
   background-color: #7FA302;
   display: flex;
@@ -383,6 +382,4 @@
 .scoreMobi_footer .copyright .scoreMobi_copyRight i {
   font-size: 25px;
   padding-top: 10px;
-body {
-  background-color: red;
 }
