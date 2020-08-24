@@ -119,6 +119,10 @@
   background-color: #7FA302;
 }
 
+body {
+  background-color: red;
+}
+
 .showcase_wrapper {
   position: relative;
   height: 350px;
