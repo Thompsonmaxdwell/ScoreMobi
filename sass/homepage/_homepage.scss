@@ -2,8 +2,11 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap:15px;
-	padding:20px 45px;
+	padding:20px 10px;
 
+	@include tabletSize(850px) {
+		padding:20px 45px;
+	}
 	grid-template-areas:
      "asideLeft asideLeft asideLeft asideLeft"
      "main main main main"
@@ -22,12 +25,12 @@
 
 	#aside_left {
 		grid-area: asideLeft;
+		height: auto;
 	}
 	#main {
-		background-color: yellow;
-		height: 200px;
 		grid-area: main;
-			// border: 1px solid grey;
+		height: auto;
+
 	}
 	#aside_right {
 		height: 200px;

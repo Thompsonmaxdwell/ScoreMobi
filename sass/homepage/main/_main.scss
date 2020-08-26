@@ -1,0 +1,43 @@
+.ScoreMobi_slide_container {
+	padding: 0px !important;
+	background-color: unset !important;
+
+	.ScoreMobi_slide_wrapper {
+		margin: 0 !important;
+	}
+	.slide_btn_wrapper {
+		position: unset !important;
+		width: 100% !important;
+		margin-top: -30px;
+
+		button {
+			background: #ffffff;
+			width: 30px!important;
+			border-radius: 50%;
+			height: 30px!important;
+			border: 2px solid #000000!important;
+			box-sizing: border-box;
+			color: #000000!important;
+			font-weight: 200;
+		}
+	}
+	.ScoreMobi_slide_indicator {
+		position: unset;
+		bottom: 0px;
+		padding: 5px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.slide_dot {
+			border-radius: 50%;
+			border: 2px solid #000000;
+			box-sizing: border-box;
+		}
+		.current {
+			background: #7fa302;
+			border: 2px solid #7fa302;
+			box-sizing: border-box;
+		}
+	}
+}

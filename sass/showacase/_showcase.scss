@@ -1,7 +1,8 @@
 // <!-- Showcase image section -->
 .showcase_wrapper {
 	position: relative;
-	height:260px;
+	height: 270px;
+	font-family: 'Montserrat';
 
 	img {
 		width: 100%;
@@ -18,21 +19,22 @@
 		left: 0;
 		padding: 40px 10px;
 		color: #fff;
-		font-family: Montserrat;
+	
 
 		@include tabletSize(900px) {
 			padding: 40px 45px;
 		}
 
 		h1 {
+			font-family: inherit;
 			font-style: normal;
 			font-weight: 500;
-			font-size: 22px;
+			font-size: 16px;
+			line-height:1.4;
 			color: #ffffff;
-			
 			@include tabletSize(900px) {
-				font-size: 35px;
-				line-height: 43px;
+				font-size: 25px;
+				line-height:1.5;
 			}
 		}
 		.showacase_btn_flex {
@@ -45,8 +47,10 @@
 				background-color: #fff;
 				margin-right: 10px;
 				font-weight: 500;
-				font-size: 18px;
+				font-size: 14px;
 				color: $black_color;
+				font-family: inherit;
+
 			}
 			p {
 				padding: 10px;
