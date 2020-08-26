@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+#aside_left {
+	//  Get The Template Mobil Experince  in Aside Left in Homepage   
+	.ScoreMobi_mobile_Template {
+		width: 100%;
+		background: #ffffff;
+		border: 1px solid #898686;
+		box-sizing: border-box;
+		padding: 10px 15px;
+
+		h2 {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			color: $text_color_2;
+		}
+		img {
+			max-width: 100%;
+			height: 50px;
+			border-radius: 10px;
+			margin-top: 10px;
+			object-fit: cover;
+		}
+	}
+}
+//  Competitions in Aside Left in Homepage   ==============   Competitions in Aside Left in Homepage   
+
+.ScoreMobi_popular_competitions {
+	font-family: 'Montserrat';
+
+	h1 {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		padding: 7px 0;
+
+		/* navbar color-1 */
+
+		color: #6f8b0a;
+		/* navbar color-1 */
+
+		color: $text_color_1;
+	}
+	// ************** TOP PLAYERS Aside Left in Homepage   -************** --> <!--************** TOP PLAYERS  Aside Left in Homepage  -**************
+	.top_players {
+		font-style: normal;
+		font-weight: normal;
+		h3 {
+			font-family: Roboto;
+			font-weight: 500;
+			font-size: 16px;
+
+			color: #000000;
+		}
+		p {
+			font-family: 'Montserrat';
+			font-size: 13px;
+			margin: 3px 0;
+			/* black */
+
+			color: #000000;
+		}
+	}
+	//Competitions  styling  reused here  in Aside Left in Homepage 
+	.popular_competitions_li {
+		display: flex;
+		align-items: center;
+		background: #ffffff;
+		border: 0.6px solid $border_color_1;
+		padding: 7px 8px;
+		box-sizing: border-box;
+		margin-top: 7px;
+
+		.top_players_flex {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-self: center;
+
+			p {
+				color: #000;
+			}
+		}
+		.top_player_score {
+			background-color: #c1e3fa;
+			border: 0.5px solid $border_color_1;
+			border-radius: 50%;
+			padding: 3px;
+			font-size: 13px;
+		}
+
+		img {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 0.6px solid $border_color_1;
+			margin: 0 7px;
+		}
+		figure {
+			display: flex;
+			align-items: center;
+		}
+		figcaption {
+			font-size: 14px;
+			font-family: inherit;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 17px;
+			color: #000000;
+		}
+		h6 {
+			color: #9ea09d;
+			text-shadow: 0px 0px 2px #9ea09d;
+		}
+	}
+	.top_players_justified {
+		justify-content: space-between;
+	}
+}
+// Aside Left in Homepage Show More
+.show_more {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	background: #ffffff;
+	border: 0.6px solid $border_color_2;
+	box-sizing: border-box;
+	color: $header_light;
+	padding: 5px;
+	text-align: center;
+	margin: 10px 0;
+	cursor: pointer;
+}
+
+// ScoreMobi_card  Aside Left in Homepage Card styling here
+.ScoreMobi_card_flex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+	grid-gap: 20px;
+	margin-top: 10px;
+}
+.ScoreMobi_card {
+	font-family: 'Montserrat';
+	position: relative;
+	img {
+		width: 100%;
+		height: 150px;
+		object-fit: cover;
+	}
+	.ScoreMobi_card_padding {
+		padding: 10px 10px 5px;
+
+		figcaption {
+			color: $text_color_2;
+			font-family: inherit;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+		}
+		.ScoreMobi_card_post_time {
+			font-family: inherit;
+			font-size: 12px;
+			padding-top: 3px;
+			color: #666666;
+			opacity: 0.8;
+		}
+		.card_news {
+			background-color: $text_color_2;
+			color: white;
+			text-align: center;
+			padding: 3px 20px 5px 5px;
+			height: 100px;
+			width: 80px;
+			clip-path: polygon(0 0, 100% 0%, 100% 19%, 0 36%);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
