@@ -1,0 +1,318 @@
+@import '../reset/mixins.scss';
+
+// league page styling
+
+.league_wrapper {
+    width:100%;
+    margin: 30px 0;
+    display: grid;
+	grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    
+    @include max_desktopSize($tablet) {
+        display: block;
+    }
+    @include tablet($tablet) {
+        padding: 30px 12px;
+    }
+}
+
+
+
+.league_left_g {
+    width: 100%;
+    height: auto;
+
+    
+}
+
+
+.league_right_g {
+    width: 100%;
+    @include border_line;
+    height: auto;
+
+    @include tablet($tablet) {
+        margin-top: 30px;
+    }
+}
+
+
+
+// left side styling
+
+.league_title {
+    @include border_line;
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    background-color: white;
+
+    .league_wrap {
+        display: flex;
+        
+
+        & img {
+            width: 50px;
+            height: 50px;
+            margin-right: 8px;
+        }
+    }
+}
+
+
+.active {
+    border-bottom: 1px solid $text_color_1;
+}
+
+.league_navigation {
+    width: 100%;
+    margin: 20px 0;
+    @include border_line;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    overflow-y: auto;
+    
+
+    & ul {
+        @include align_items;
+        
+        & li {
+            padding: 8px 10px;
+
+            & a {
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: $link_color;
+                padding: 8px 10px ;
+                
+                
+                &:hover:not(.active) {
+                    color: $text_color;
+                }
+            }
+        }
+    }
+}
+
+
+// league card styling
+.league_card_container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 12px;
+
+    @include tablet($tablet) {
+        grid-template-columns: repeat(2,1fr);;
+    }
+    @include mobile($mobile) {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+
+    }
+}
+.l_card {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    @include border_line;
+
+    @include tablet($tablet) {
+        max-width: 100%;
+    }
+
+    &_title {
+        background-color:$text_color_1;
+        padding: 8px;
+        color: $white;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    &_versus {
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 7px 0;
+    }
+
+    &_d_t_container {
+        @include flex(space-between);
+        padding: 8px 12px;
+        font-size: 0.8rem;
+
+        
+
+        .l_card_t,.l_card_d {
+            color: $link_color;
+
+            & span {
+                color: $dark;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &_teams_container {
+        text-align: center;
+        padding: 8px;
+        
+        & span > img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &_button {
+        font-size: 0.9rem;
+        border-radius: 0;
+        color: $text_color_1;
+        padding: 10px 15px;
+        border: 1px solid $text_color_1;
+        cursor: pointer;
+        background-color: transparent;
+        transition: 350ms ease-in-out;
+        margin: 12px auto;
+        display: block;
+
+
+
+        &:hover {
+            background-color: $text_color_1;
+            color: white;
+        }
+    }
+}
+
+
+
+// LEAGUE TABLE
+
+.l_table {
+    width: 100%;
+
+    &_lineup {
+        border-collapse: collapse;
+        width: 100%;
+        border: none;
+
+        .l_teams {
+            text-align: left;
+            align-content: flex-start;
+
+            .t_team {
+                display: flex;
+                align-items: center;
+                 
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 12px 0px 12px;
+
+                    @include mobile($mobile) {
+                        width: 20px;
+                        height: 20px;
+                        margin: 0 5px 0px 0px;
+                    }
+                }
+                
+            }
+            & #num {
+                color: $dark;
+                font-weight: bold;
+                padding-right: 16px;
+            }
+        }
+
+        & td{
+            // @include border_line;
+            padding: 8px;
+
+            span {
+                font-size: 0.9rem;
+                font-weight: 500;
+
+                @include mobile($mobile) {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+        td,th {
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+                font-size: 0.9rem;
+                font-weight: bold;
+                padding-bottom: 12px;
+
+        @include mobile($mobile) {
+            font-size: 0.6rem;
+        }
+        }
+
+        td {
+            text-align: center;
+            margin: 9px 0px;
+            
+            &:first-child {
+                border-left: 5px solid $text_color_1;
+            }
+        }
+       
+    }
+}
+
+.form_bit {
+    padding: 0px;
+
+    & span {
+        display: inline-block;
+        width: 7px;
+        height: 5px;
+        background-color: $text_color_2;
+        padding: 4px;
+        margin-right: 3px;
+
+        @include mobile($mobile) {
+            width: 5px;
+            height: 3px;
+            padding: 3px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

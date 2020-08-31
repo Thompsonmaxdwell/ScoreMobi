@@ -1,0 +1,60 @@
+
+
+// minimum sizing
+@mixin  desktopSize($size) {
+    @media (min-width:$size) {
+        @content;
+    }
+    
+}
+
+@mixin  tabletSize($size) {
+    @media (min-width:$size) {
+        @content;
+    }
+    
+}
+
+
+
+$max_width: 1500px;
+$desktop: 1400px;
+$tablet: 969px;
+$max_tablet: 969px;
+$mobile: 533px;
+
+
+
+// this media query is for my own styling method you can use it if u want
+// maximum sizing
+
+@mixin max_desktopSize($desktop) {
+    @media (max-width:$desktop) {
+        @content;
+    }
+}
+
+@mixin max_tablet($max_tablet) {
+    @media (max-width:$max_tablet) {
+        @content;
+    }
+}
+
+@mixin tablet($tablet) {
+    @media (max-width:$tablet) {
+        @content;
+    }
+}
+
+
+@mixin mobile($mobile) {
+    @media (max-width:$mobile) {
+        @content;
+    }
+}
+
+
+
+
+
+

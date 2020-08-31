@@ -1,0 +1,43 @@
+
+
+// ALL MIXINS
+
+@mixin border_line {
+    border: 1px solid $border_color;
+}
+
+
+@mixin align_items {
+    display: flex;
+    align-items: center;
+}
+
+
+@mixin transition {
+    transition: 0.5s ease-in-out;
+}
+
+@mixin flex($btw) {
+    display: flex;
+    align-items: center;
+    justify-content: ($btw);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
