@@ -13,7 +13,8 @@
 </head>
 <body>
        <!-- scoreMobi top header started here -->
-       <!-- scoreMobi top header started here -->
+
+       <!-- CHECK FOOTER  FILE FOR THE STYLING  -->
  <div class="scoreMobi_header"> 
     <div class="scoreMobi_logo">
         <h2>SCOREMOBI</h2>
@@ -31,11 +32,11 @@
   </div>
 </div>
     <!-- scoreMobi top header Ended here -->
-    <!-- scoreMobi top header Ended here -->
 
 
     <!--  Nav header  styling Starte here -->
-    <!--  Nav header  styling Starte here -->
+
+     <!-- CHECK FOOTER  FILE FOR THE STYLING  -->
   <section>
     <header class="scoreMobi_header_color">
         <div class="header_content scoreMobi_header_content"> 
@@ -95,6 +96,8 @@
 <!--  Nav header  styling Ended here -->
 
 <!-- Showcase image section -->
+
+    <!-- CHECK SHOWCASE  FILE FOR THE STYLING  -->
 <div class="showcase_wrapper">
     <img src="/assets/img/Rectangle 1.png" alt="">
     <div class="showcase_test">
@@ -111,17 +114,21 @@
     <!-- ScoreMobi_main_prediction -->
 <div class="ScoreMobi_main_prediction">
 <!-- ASIDE LEFT  -->
-    <aside id="aside_left">
-        <div class="ScoreMobi_mobile_Template">
+<aside id="aside_left">
+    <!-- CHECK ASIDELEFT.SCSS  FILE FOR THE STYLING  -->
+  <div id="aside_left_order_1">
+     <section class="ScoreMobi_mobile_Template">
             <h2>Get The Template Mobile Experience </h2>
             <div class="ScoreMobi_template_flex">
                <img src="/assets/img/Download_on_the_App_Store_Badge_EN_135x40.svg" alt="">
                <img src="/assets/img/googleplayStore.jpg" alt="">
             </div>
-        </div>
-     <!--**************  Competitions  -************** -->     <!--**************  Competitions  -************** -->
-     <div class="ScoreMobi_popular_competitions ScoreMobi_card_flex">
-         <article>
+        </section>
+     
+           <!-- ScoreMobi Homepage Competitions -->
+               <!-- CHECK ASIDELEFT.SCSS  FILE FOR THE STYLING  -->
+     <section class="ScoreMobi_popular_competitions ScoreMobi_card_flex">
+         <div>
                 <h1>Popular Competitions</h1>
               <ul class="popular_competitions_ul ">
                   <li class="popular_competitions_li">
@@ -166,12 +173,14 @@
                 </li>
               </ul>
               <p class="show_more">Show More</p>
-          </article>
-                            <!--************** TOP PLAYERS  -************** --> <!--************** TOP PLAYERS  -************** -->
-         <article>
+            </div>
+              <!--************** TOP PLAYERS  -************** --> <!--************** TOP PLAYERS  -************** -->
+         <div>
+             <!-- ScoreMobi Homepage Top Players -->
+                 <!-- CHECK ASIDELEFT.SCSS  FILE FOR THE STYLING  -->
             <ul class="popular_competitions_ul top_players">
                   <h3>Top Players</h3>
-                  <p>Best reletd player from recent matches</p>
+                  <p>Best relatd player from recent matches</p>
                 <li class="popular_competitions_li top_players_justified">
                       <div class="top_players_flex">
                         <p>1</p>
@@ -252,10 +261,14 @@
                 </li>
          </ul>
               <p class="show_more">Show More</p>
-        </article>
-  </div>
-        <!-- CARD  -->
-        <section class="ScoreMobi_card_flex">
+    </div>
+  </section>
+ </div>
+        
+ <!-- ================================================================================== -->
+        <!--ScoreMobi  CARD nes for Aside left in   -->
+            <!-- CHECK ASIDELEFT.SCSS  FILE FOR THE STYLING  -->
+  <section class="ScoreMobi_card_flex" id="aside_left_order_2">
             <div class="card ScoreMobi_card">
                 <figure>
                     <img src="/assets/img/news2.jpg" alt="">
@@ -266,7 +279,8 @@
                     <div class="card_news">News</div>
                 </div>
            </div>
-
+ <!-- ================================================================================== -->
+        <!--ScoreMobi  CARD nes for Aside left in   -->
            <div class="card ScoreMobi_card">
                 <figure>
                     <img src="/assets/img/news1.jpg" alt="">
@@ -277,6 +291,8 @@
                     <div class="card_news">News</div>
                 </div>
           </div>
+         <!-- ================================================================================== -->
+          <!--ScoreMobi  CARD nes for Aside left in   -->
            <div class="card ScoreMobi_card">
                 <figure>
                     <img src="/assets/img/images (3).jpeg" alt="">
@@ -287,6 +303,8 @@
                     <div class="card_news">News</div>
                 </div>
           </div>
+             <!-- ================================================================================== -->
+              <!--ScoreMobi  CARD nes for Aside left in   -->
            <div class="card ScoreMobi_card">
                 <figure>
                   <img src="/assets/img/news3.jpg" alt="">
@@ -302,6 +320,9 @@
  </aside>
     <!-- Main Section  -->
 <main id="main">
+       <!-- ================================================================================== -->
+                                        <!-- ScoreMobi Slider here -->
+                                  <!-- CHECK MAIN.SCSS  FILE FOR THE STYLING  -->
     <div class="slider_wrapper_tracker ScoreMobi_slide_container">
         <div class="slider_content_tracker ScoreMobi_slide_wrapper">
           <div class="slide_container">
@@ -328,6 +349,8 @@
                 </div>
         </div>
         </div>
+        <!-- ============================================================================-====== -->
+        <!-- ScoreMobi Slide indication OR Dot -->
         <div class="indicator_wrapper ScoreMobi_slide_indicator">
             <button class="indicator indicator1 slide_dot current"></button>
             <button class="indicator indicator2 slide_dot"></button>
@@ -336,14 +359,328 @@
             <button class="indicator indicator5 slide_dot "></button>
         </div>
         <div class="carousel_btn_wrapper slide_btn_wrapper">
+            <!-- ScoreMobi Slide Buton -->
             <div><button class="prev_slide"><i class="fa fa-arrow-left"></i></button></div>
             <div><button class="next_slide"><i class="fa fa-arrow-right"></i></button></div>
         </div>
     </div>
 
+    <!-- ScoremMobi Matches Tables-->
+    <section class="todays_pricdiction">
+   <!-- CHECK MAIN.SCSS  FILE FOR THE STYLING  -->
+        <div class="todays_pricdiction_wrapper">
+            <div><button class="btn btn_md todays_pricdiction_btn">Today's Pridictions</button></div>
+            <div class="lives_mode_wrapper">
+                <p class="live_match_update">(94)</p>
+                <div class="lives_mode">
+                    <p class="Lives_match_toggle">Lives</p>
+                </div>
+            </div>
+        </div>
+        <div class="today_pridiction_seletction">
+
+            <!-- ScoreMbi Homepage  Left Icon construct here -->
+            <div class="left_btn_matches"></div>
+
+            <!-- ScoreMbi Homepage today's Matches Dropdown  here -->
+            <div>
+                <select name="" id="match_select">
+                    <option value="Today">Today</option>
+                    <option value="Tommorrow">Today</option>
+                    <option value="Next">Next</option>
+                </select>
+            </div>
+
+            <!-- ScoreMbi Homepage  Right Icon construct here -->
+            <div class="right_btn_matches"></div>
+        </div>
+
+        <!-- ============================================================================================================= -->
+        <!-- ScoreMobi Homepage Matchs table Styling here started here -->
+        <!-- ============================================================================================================= -->
+      <article>
+             <!-- CHECK MAIN.SCSS  FILE FOR THE STYLING  -->
+            <table id="SocreMobi_match_table">
+                <!-- Match Table Heading  -->
+                <thead>
+                    <tr>
+                        <th><p>Time</p></th>
+                        <th><p class="match">Match</p></th>
+                        <th><p>Tips</p></th>
+                        <th><p>FT</p></th>
+                    </tr>
+                </thead>
+
+                <!-- Match Table data 1-->
+                <tbody>
+                    <tr class="ScoreMobi_matches">
+                        <td><p>3:00</p></td>
+                        <td class="football_clubs_wrapper">
+                            <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                <p class="clubs_name">FC Bayern</p>
+                                <div class="clubs_img"> <img src="/assets/img/football_2672.png" alt=""></div>
+                            </div>
+                                <p class="vs">Vs</p>
+                            <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                <div class="clubs_img first_clubs"><img src="/assets/img/football_2735.png" alt=""></div>
+                                <p class="clubs_name">Spezio</p>
+                            </div>
+                        </td>
+                        <td><p>12</p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                </tbody>
+                           <!-- Match Table data 2-->
+                <tbody>
+                    <tr class="ScoreMobi_matches">
+                        <td><p>12:00</p></td>
+                        <td class="football_clubs_wrapper">
+                            <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                <p class="clubs_name">Brasil</p>
+                                <div class="clubs_img"><img src="/assets/img/football_3050.png" alt=""></div>
+                            </div>
+                                <p class="vs">Vs</p>
+                            <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                <div class="clubs_img first_clubs"> <img src="/assets/img/log1.png" alt=""></div>
+                                <p class="clubs_name">Aston Villa</p>
+                            </div>
+                        </td>
+                        <td><p>x2</p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                </tbody>
+                        <!-- Match Table data 3-->
+                <tbody>
+                    <tr class="ScoreMobi_matches">
+                        <td><p><i class="wi wi-wind-beaufort-11"></i>13:00</p></td>
+                        <td class="football_clubs_wrapper">
+                            <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                <p class="clubs_name">Fiazil</p>
+                                <div class="clubs_img"><img src="/assets/img/football_2534.png" alt=""></div>
+                            </div>
+                                <p class="vs">Vs</p>
+                            <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                <div class="clubs_img first_clubs"> <img src="/assets/img/LAZIO.png" alt=""></div>
+                                <p class="clubs_name">Lazio</p>
+                            </div>
+                        </td>
+                        <td><p>1</p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                </tbody>
+
+                            <!-- Match Table data 4-->
+                <tbody>
+                    <tr class="ScoreMobi_matches">
+                        <td><p>11:00</p></td>
+                        <td class="football_clubs_wrapper">
+                            <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                <p class="clubs_name">Arsenal</p>
+                                <div class="clubs_img"><img src="/assets/img/fiona.png" alt=""></div>
+                            </div>
+                                <p class="vs">Vs</p>
+                            <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                <div class="clubs_img first_clubs"> <img src="/assets/img/juve.png" alt=""></div>
+                                <p class="clubs_name">Juventus</p>
+                            </div>
+                        </td>
+                        <td><p>1x</p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                </tbody>
+
+                            <!-- Match Table data 5-->
+                <tbody>
+                    <tr class="ScoreMobi_matches">
+                        <td><p>10:30</p></td>
+                        <td class="football_clubs_wrapper">
+                            <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                <p class="clubs_name">Real Madrid</p>
+                                <div class="clubs_img"><img src="/assets/img/real.png" alt=""></div>
+                            </div>
+                                <p class="vs">Vs</p>
+                            <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                <div class="clubs_img first_clubs"> <img src="/assets/img/liverpool.png" alt=""></div>
+                                <p class="clubs_name">Liverpool</p>
+                            </div>
+                        </td>
+                        <td><p>1x</p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                </tbody>
+
+                <!-- Match Table data 6-->
+                <tbody>
+                    <tr class="ScoreMobi_matches">
+                        <td><p>02:00</p></td>
+                        <td class="football_clubs_wrapper">
+                            <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                <p class="clubs_name">Olympiaque</p>
+                                <div class="clubs_img"><img src="/assets/img/liona.png" alt=""></div>
+                            </div>
+                                <p class="vs">Vs</p>
+                            <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                <div class="clubs_img first_clubs"> <img src="/assets/img/LAZIO.png" alt=""></div>
+                                <p class="clubs_name">Lazio</p>
+                            </div>
+                        </td>
+                        <td><p>12</p></td>
+                        <td><p>--</p></td>
+                        </tr>
+                            </tbody>            
+                            
+                            <!-- Match Table data 7-->
+                    <tbody>
+                        <tr class="ScoreMobi_matches">
+                            <td><p>0:00</p></td>
+                            <td class="football_clubs_wrapper">
+                                <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                    <p class="clubs_name">Rangers</p>
+                                    <div class="clubs_img"><img src="/assets/img/ranges.png" alt=""></div>
+                                </div>
+                                    <p class="vs">Vs</p>
+                                <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                    <div class="clubs_img first_clubs"> <img src="/assets/img/wolves.png" alt=""></div>
+                                    <p class="clubs_name">Wolves</p>
+                                </div>
+                            </td>
+                            <td><p>2x</p></td>
+                            <td><p>--</p></td>
+                            </tr>
+                    </tbody>          
+                    
+                                <!-- Match Table data  8-->
+                <tbody>
+                    <tr class="ScoreMobi_matches">
+                        <td><p>01:00</p></td>
+                        <td class="football_clubs_wrapper">
+                            <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                <p class="clubs_name">Fiazil</p>
+                                <div class="clubs_img"><img src="/assets/img/Dontsk.png" alt=""></div>
+                            </div>
+                                <p class="vs">Vs</p>
+                            <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                <div class="clubs_img first_clubs"> <img src="/assets/img/football_2735.png" alt=""></div>
+                                <p class="clubs_name">Spezia</p>
+                            </div>
+                        </td>
+                        <td><p>2x</p></td>
+                        <td><p>--</p></td>
+                    </tr>
+                </tbody>
+
+                            <!-- Match Table data 9-->
+                <tbody>
+                    <tr class="ScoreMobi_matches">
+                        <td><p>12:00</p></td>
+                        <td class="football_clubs_wrapper">
+                            <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                <p class="clubs_name">Juventus</p>
+                                <div class="clubs_img"><img src="/assets/img/juve.png" alt=""></div>
+                            </div>
+                                <p class="vs">Vs</p>
+                            <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                <div class="clubs_img first_clubs"> <img src="/assets/img/real.png" alt=""></div>
+                                <p class="clubs_name">Real Madrid</p>
+                            </div>
+                        </td>
+                        <td><p>1</p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                </tbody>
+
+                            <!-- Match Table data 10</i>-->
+                <tbody>
+                    <tr class="ScoreMobi_matches">
+                        <td><p>12:00</p></td>
+                        <td class="football_clubs_wrapper">
+                            <div class="clubs">   <!-- Match Clubs Wrappepr -->
+                                <p class="clubs_name">Wiazil</p>
+                                <div class="clubs_img"><img src="/assets/img/football_3050.png" alt=""></div>
+                            </div>
+                                <p class="vs">Vs</p>
+                            <div class="clubs">  <!-- Match Clubs Wrappepr -->
+                                <div class="clubs_img first_clubs"> <img src="/assets/img/LAZIO.png" alt=""></div>
+                                <p class="clubs_name">Lazio</p>
+                            </div>
+                        </td>
+                        <td><p>2</p></td>
+                        <td><p>--</p></td>
+                      </tr>
+                </tbody>
+               
+            </table>
+            
+        </article>
+    </section>
+    <!-- ScoreMobi Homepage Matchs table Styling here Ended -->
+
+
+
+    <!-- ScoreMobi Homepage middle section news here,Pleae take note the full styling for news card is in Aside Left file  -->
+                                                     <!-- ORDERWISE -->
+                                        <!-- CHECK MAIN.SCSS  FILE FOR THE STYLING  -->
+ <div ID="ScoremMobi_main_section_news_wrapper">
+    <div class="ScoreMobi_card_flex main_news_wrapper">
+          <!-- ================================================================================== -->
+              <!--ScoreMobi  CARD nes for Main section in   -->
+                <div class="ScoreMobi_card">
+                    <figure>
+                        <img src="/assets/img/img.jpg" alt="">
+                    </figure>
+                    <div class="ScoreMobi_card_padding">
+                        <h2 class="news_title">Cup action in England resumes thid weekend while the German top-flight comes to an end </h2>
+                        <figcaption>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut impedit id, amet animi doloremque est autem facere nam culpa aspernatur laborum nesciunt voluptate natus!</figcaption>
+                        <p class="ScoreMobi_card_post_time">Scoremobi -4hrs Ago</p>
+                        <div class="card_news">News</div>
+                    </div>
+            </div>
+  <!-- ================================================================================== -->
+              <!--ScoreMobi  CARD nes for Main section in   -->
+            <div class="ScoreMobi_card">
+                    <figure>
+                        <img src="/assets/img/img_4.jpg" alt="">
+                    </figure>
+                    <div class="ScoreMobi_card_padding"> 
+                        <h2 class="news_title">Cup action in England resumes thid weekend while the German top-flight comes to an end </h2>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ratione impedit quo voluptatibus, obcaecati nostrum corporis eos quis fuga exercitationem sed voluptates! Voluptate, quis!</figcaption>
+                        <p class="ScoreMobi_card_post_time">Scoremobi -4hrs Ago</p>
+                        <div class="card_news">News</div>
+                    </div>
+            </div>
+              <!-- ================================================================================== -->
+            <div class="show_more">Showmore</div>
+          
+     </div>
+  </div>
  </main>
+
  <!-- ASIDE  RIGHT  -->
-    <aside id="aside_right"><h1>Aside</h1></aside>
+    <aside id="aside_right">
+        <div class="ScoreMobi_sigin_form">
+            <!-- ScoreMoi -->
+            <form action="" class="card">
+                <h1>ScoreMobi</h1>
+                <div class="input_wrap">
+                    <span><i class="fas fa-envelope fa-lg "></i></span>
+                    <input type="text" class="form_input" placeholder="Email">
+                </div>
+                <div class="input_wrap">
+                    <span><i class="fas fa-key"></i></span>
+                    <input type="text" class="form_input" placeholder="Password">
+                </div>
+                 <div class="ScoreMobi_form_button">
+                     <button class="btn btn_sm">Sign up</button>
+                     <button class="btn btn_sm">Sign in</button>
+
+                 </div>
+            </form>
+              <div class="ScoreMobi_signup_via_social_media">
+                  
+              </div>
+
+        </div>
+    </aside>
     
 </div>
 </section>

@@ -1,0 +1,64 @@
+.ScoreMobi_sigin_form {
+    font-family: 'Montserrat';
+    font-style: normal;
+
+    h1 {
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+        color: #7FA302;
+    }
+
+    //   ScoreMobi Form
+    form {
+        padding: 10px 15px;
+
+        .input_wrap {
+            background: #EBEBEB;
+            border: none;
+            margin: 5px 0;
+
+            :focus {
+                box-shadow: 0px 0px 1px 1.5px $form_btn_color;
+            }
+
+            span,
+            i {
+                color: $form_btn_color;
+            }
+
+            input {
+                background: #EBEBEB;
+                color: #000;
+                // padding: 12px;
+
+                ::placeholder {
+                    font-family: inherit;
+                    font-weight: normal;
+                    font-size: 14px;
+                }
+
+                :focus {
+                    box-shadow: 0px 0px 1px 1.5px $form_btn_color;
+
+                }
+            }
+        }
+
+        // ScoreMobi_form_button 
+        .ScoreMobi_form_button {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+
+            button {
+                background-color: $form_btn_color;
+                color: #fff;
+
+            }
+        }
+
+    }
+}

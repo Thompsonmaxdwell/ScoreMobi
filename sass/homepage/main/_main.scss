@@ -4,27 +4,36 @@
 
 	.ScoreMobi_slide_wrapper {
 		margin: 0 !important;
+
+		// ScoreMobi Slide Imaged
+		img {
+			display: block !important;
+		}
 	}
+
+	// // ScoreMobi Slide Buton
 	.slide_btn_wrapper {
 		position: unset !important;
 		width: 100% !important;
-		margin-top: -30px;
+		margin-top: -35px;
 
 		button {
 			background: #ffffff;
-			width: 30px!important;
+			width: 40px !important;
 			border-radius: 50%;
-			height: 30px!important;
-			border: 2px solid #000000!important;
+			height: 40px !important;
+			border: 1.6px solid #000000 !important;
 			box-sizing: border-box;
-			color: #000000!important;
+			color: #000000 !important;
 			font-weight: 200;
 		}
 	}
+
+	// ScoreMobi Slide indication OR Dot
 	.ScoreMobi_slide_indicator {
 		position: unset;
 		bottom: 0px;
-		padding: 5px 0;
+		padding: 10px 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -34,10 +43,338 @@
 			border: 2px solid #000000;
 			box-sizing: border-box;
 		}
+
 		.current {
-			background: #7fa302;
-			border: 2px solid #7fa302;
+			background: $text_color_2;
+			border: 2px solid$text_color_2;
 			box-sizing: border-box;
 		}
 	}
+}
+
+// ScoreMobi today  pridiction table and live Wrapepr 
+.todays_pricdiction_wrapper {
+	margin-top: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Montserrat';
+	align-items: center;
+	border-bottom: 0.6px solid #D2D2D2;
+
+	// ScoreMbi Homepage Today's prediction Button here close to Slider
+	.todays_pricdiction_btn {
+		background-color: $text_color_2;
+		color: white;
+		border-bottom-left-radius: unset !important;
+		border-bottom-right-radius: unset !important;
+		padding: 5px;
+		font-size: 1em;
+
+		@include tabletSize(500px) {
+			padding: 7px 14px;
+			font-size: 1.1em;
+		}
+
+		&:hover {
+			background-color: $text_color_2;
+		}
+	}
+
+	//ScoreMbi Homepage  Live Mode wrapper here 
+	.lives_mode_wrapper {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+
+		// ScoreMobi Live Update number here
+		.live_match_update {
+			padding: 0 5px;
+			justify-self: center;
+			font-size: 17px;
+			color: $text_color_2;
+			font-weight: 500;
+
+			@include tabletSize(500px) {
+				padding: 0 20px;
+				font-size: 20px;
+				padding: 0 10px;
+			}
+		}
+
+		//ScoreMbi Homepage  Live Mode  
+		.lives_mode {
+			width: 90px;
+			border-radius: 14px;
+			cursor: pointer;
+			box-sizing: border-box;
+			padding: 1px 2px;
+			border: 0.7px solid #C3C3C3;
+
+			@include tabletSize(500px) {
+				width: 100px;
+			}
+
+		}
+
+		//ScoreMbi Homepage  Live Mode green background   here 
+		.Lives_match_toggle {
+			background-color: $live;
+			padding: 2px 0;
+			color: white;
+			border-radius: 25px;
+			text-align: center;
+			font-size: 17px;
+			width: 70%;
+
+			@include tabletSize(500px) {
+				width: 70%;
+			}
+
+		}
+	}
+}
+
+// ScoreMbi Homepage today's prediction 
+.today_pridiction_seletction {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 0.6px solid #D2D2D2;
+	padding: 10px 0;
+	margin-bottom: 5px;
+
+	// ScoreMbi Homepage today Matches Dropdown styling here
+	#match_select {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		background-color: unset;
+
+		/* navbar color-1 */
+
+		color: #6F8B0A;
+		border: none;
+		outline: none;
+	}
+
+	// 	// ScoreMbi Homepage  Left and  Right Icon construct here close to Match table 
+	.left_btn_matches,
+	.right_btn_matches {
+		height: 15px;
+		width: 15px;
+		background-color: #000000;
+		transform: rotate(-44deg);
+		position: relative;
+		display: block;
+		border: none;
+
+		&::after {
+			content: '';
+			height: 100%;
+			width: 100%;
+			background-color: #ffffff;
+			transform: rotate(44deg) translate(50%, -50%);
+			z-index: 2;
+			position: absolute;
+		}
+
+		&::before {
+			content: '';
+			height: 100%;
+			width: 100%;
+			background-color: #ffffff;
+			transform: rotate(44deg) translate(50%, 45%);
+			z-index: 3;
+			position: absolute;
+		}
+	}
+
+	.right_btn_matches {
+		transform: rotate(-55deg);
+
+		&::after {
+			transform: rotate(50deg) translate(-50%, -50%);
+		}
+
+		&::before {
+			transform: rotate(50deg) translate(-50%, 45%);
+		}
+	}
+}
+
+// ScoreMbi Homepage  Left and  Right Icon construct here close to Mathes table it Ended here
+
+// ScoreMobi Homepage Matchs table Styling here started
+table#SocreMobi_match_table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	font-family: 'Montserrat';
+
+	// ScoreMobi Homepage Matchs  Table content Styling here
+	tbody::before {
+		height: 16px;
+		display: table-row;
+		content: "";
+	}
+
+	thead {
+		background: #E9E9E9;
+	}
+
+	thead tr th {
+		text-align: center;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	thead tr th p {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		color: #000000;
+	}
+
+	th,
+	td {
+		padding: 5px 3px;
+
+		@include tabletSize(500px) {
+			padding: 5px 10px;
+		}
+	}
+
+	p,
+	.clubs_name {
+		font-family: inherit;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: #000000;
+		cursor: pointer;
+	}
+
+	.ScoreMobi_matches {
+		background: #ffffff;
+		border: 0.6px solid #898686;
+		box-sizing: border-box;
+
+		// ScoreMobi Homepage Matchs Clubs Wrapper
+		// 
+		.football_clubs_wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.vs {
+				margin: 10px;
+
+				@include tabletSize(500px) {
+					margin: 0px;
+				}
+			}
+
+			.clubs {
+				display: flex;
+				flex-direction: column;
+
+
+				@include tabletSize(500px) {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+				}
+
+				// ScoreMobi Homepage Match Clubs NAme
+				.clubs_name {
+					text-align: end;
+					width: 70px;
+					order: 1;
+					font-size: 13px;
+
+					@include tabletSize(500px) {
+						order: unset;
+						font-size: 15px;
+						min-width: 100px;
+					}
+				}
+
+				.clubs_name:last-child {
+					text-align: start;
+				}
+			}
+
+			// ScoreMobi Homepage Match Clubs images
+			.clubs_img {
+				display: flex;
+				justify-content: flex-end;
+
+				img {
+					width: 30px;
+					height: 30px;
+
+					@include tabletSize(500px) {
+						width: 35px;
+						height: 35px;
+						margin: 0 25px;
+					}
+				}
+			}
+
+			.first_clubs {
+				justify-content: flex-start;
+			}
+
+		}
+	}
+}
+
+// ScoreMobi Homepage Matchs table Styling here Ended
+
+
+// ========================================================================================================================
+// ScoreMobi Homepage middle section news here,Pleae take note the full styling for news card is not in this file check Aside Left file 
+// ========================================================================================================================
+
+#ScoremMobi_main_section_news_wrapper {
+
+
+	.main_news_wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+		grid-gap: 20px;
+		margin-top: 10px;
+		background-color: #ffff;
+	
+
+		.ScoreMobi_card {
+				.ScoreMobi_card_padding {
+					padding: 10px 0px 5px;
+				}
+			img {
+				width: 100%;
+				height: 270px;
+				object-fit: cover;
+			}
+
+			.news_title {
+				font-family: 'Montserrat';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 20px;
+				padding-bottom: 20px;
+				color: #000000;
+			}
+
+			figcaption {
+				color: black;
+
+			}
+		}
+	}
+
 }
