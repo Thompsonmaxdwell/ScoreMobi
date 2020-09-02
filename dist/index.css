@@ -25,7 +25,7 @@ body {
 }
 @media (min-width: 900px) {
   .scoreMobi_header {
-    padding: 10px 45px;
+    padding: 10px 35px;
   }
 }
 .scoreMobi_header h2 {
@@ -71,7 +71,7 @@ body {
 }
 @media (min-width: 900px) {
   .scoreMobi_header_color .scoreMobi_header_content {
-    padding: 0px 45px;
+    padding: 0px 35px;
   }
 }
 .scoreMobi_header_color .scoreMobi_logo_menu_section {
@@ -179,7 +179,7 @@ body {
 }
 @media (min-width: 900px) {
   .showcase_wrapper .showcase_test {
-    padding: 40px 45px;
+    padding: 40px 35px;
   }
 }
 .showcase_wrapper .showcase_test h1 {
@@ -228,7 +228,7 @@ body {
 }
 @media (min-width: 850px) {
   .ScoreMobi_main_prediction {
-    padding: 20px 45px;
+    padding: 20px 35px;
   }
 }
 @media (min-width: 850px) {
@@ -251,8 +251,7 @@ body {
   height: auto;
 }
 .ScoreMobi_main_prediction #aside_right {
-  height: 200px;
-  width: 100%;
+  height: auto;
   grid-area: asideRight;
 }
 
@@ -633,7 +632,7 @@ table#SocreMobi_match_table {
   font-family: "Montserrat";
 }
 table#SocreMobi_match_table tbody::before {
-  height: 16px;
+  height: 12px;
   display: table-row;
   content: "";
 }
@@ -763,11 +762,14 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   color: black;
 }
 
-.ScoreMobi_sigin_form {
+.ScoreMobi_form {
   font-family: "Montserrat";
   font-style: normal;
+  border: 1px solid #b1b2b6;
+  width: 100%;
+  padding: 10px 10px;
 }
-.ScoreMobi_sigin_form h1 {
+.ScoreMobi_form h1 {
   font-family: inherit;
   font-style: normal;
   font-weight: 600;
@@ -775,41 +777,203 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   line-height: 34px;
   color: #7FA302;
 }
-.ScoreMobi_sigin_form form {
-  padding: 10px 15px;
+.ScoreMobi_form form .top_space {
+  margin-top: 10px;
 }
-.ScoreMobi_sigin_form form .input_wrap {
-  background: #EBEBEB;
+.ScoreMobi_form form .ScoreMobi_input_wrapper {
+  background: #e0e0e0;
   border: none;
-  margin: 5px 0;
 }
-.ScoreMobi_sigin_form form .input_wrap :focus {
+.ScoreMobi_form form .ScoreMobi_input_wrapper :focus {
   box-shadow: 0px 0px 1px 1.5px #636363;
 }
-.ScoreMobi_sigin_form form .input_wrap span,
-.ScoreMobi_sigin_form form .input_wrap i {
+.ScoreMobi_form form .ScoreMobi_input_wrapper span,
+.ScoreMobi_form form .ScoreMobi_input_wrapper i {
   color: #636363;
+  padding-left: 5px;
+  padding-right: 0px;
 }
-.ScoreMobi_sigin_form form .input_wrap input {
-  background: #EBEBEB;
+.ScoreMobi_form form .ScoreMobi_input_wrapper input {
+  background: #e0e0e0;
   color: #000;
+  width: 100%;
+  padding: 10px 5px;
 }
-.ScoreMobi_sigin_form form .input_wrap input ::placeholder {
+.ScoreMobi_form form .ScoreMobi_input_wrapper input ::placeholder {
   font-family: inherit;
   font-weight: normal;
   font-size: 14px;
+  padding: 0;
 }
-.ScoreMobi_sigin_form form .input_wrap input :focus {
+.ScoreMobi_form form .ScoreMobi_input_wrapper input :focus {
   box-shadow: 0px 0px 1px 1.5px #636363;
 }
-.ScoreMobi_sigin_form form .ScoreMobi_form_button {
+.ScoreMobi_form form .ScoreMobi_form_button {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 20px 0 5px 0;
 }
-.ScoreMobi_sigin_form form .ScoreMobi_form_button button {
+.ScoreMobi_form form .ScoreMobi_form_button button {
   background-color: #636363;
   color: #fff;
+  border-radius: 4px;
+  padding: 6px 20px;
+}
+.ScoreMobi_form .form_or {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+.ScoreMobi_form .form_or:after, .ScoreMobi_form .form_or:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: 2px solid #b1b2b6;
+  width: 43%;
+  right: 0;
+  top: 50%;
+}
+.ScoreMobi_form .form_or:before {
+  left: 0;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+  font-family: "Montserrat";
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media p {
+  font-family: inherit;
+  font-size: 15px;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook {
+  background-color: #3b5998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 0;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook i {
+  font-size: 20px;
+  padding-right: 10px;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook:hover {
+  background-color: #3b5898ec;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook:focus {
+  box-shadow: 0px 0px 0px 2px #3b5898cc;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .google:hover {
+  background-color: #e0e0e091;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .google:focus {
+  box-shadow: 0px 0px 0px 2px #e0e0e09f;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .google P {
+  color: #c1c1c1;
+}
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .google img {
+  width: 40px;
+  padding-right: 10px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.ScoreMobi_Featured_matches {
+  margin-top: 20px;
+}
+.ScoreMobi_Featured_matches h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 13px 0;
+  color: #7FA302;
+}
+.ScoreMobi_Featured_matches .featured_matches {
+  display: flex;
+  align-items: center;
+  border: 1px solid #898686;
+  margin-bottom: 4px;
+}
+.ScoreMobi_Featured_matches .featured_matches h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+}
+.ScoreMobi_Featured_matches .featured_matches p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: #888888;
+}
+.ScoreMobi_Featured_matches .featured_matches img {
+  width: 40px;
+  height: 40px;
+}
+.ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  font-family: "Montserrat";
+}
+.ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table tbody::before {
+  height: 2px;
+  display: table-row;
+  content: "";
+}
+.ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table p {
+  font-size: 13px;
+  color: #000000;
+  font-family: inherit;
+}
+.ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table .ScoreMobi_featured_matches {
+  border: 1px solid #898686;
+  box-sizing: border-box;
+}
+.ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table .ScoreMobi_featured_matches .ScoreMobi_feature_matches_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 4px 3px;
+}
+.ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table .ScoreMobi_featured_matches .ScoreMobi_feature_matches_wrapper img {
+  width: 35px;
+  height: 35px;
+  margin: 0 2px;
+}
+.ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table .ScoreMobi_featured_matches td:first-child p {
+  text-align: start;
+  width: 100%;
+  padding-left: 10px;
+}
+.ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table .ScoreMobi_featured_matches td:last-child .ScoreMobi_feature_matches_wrapper {
+  justify-content: flex-start;
 }
 
 .scoreMobi_footer {
