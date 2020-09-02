@@ -10,7 +10,7 @@
 	font-family: 'Montserrat';
 
 	@include desktopSize(900px) {
-		padding: 10px 45px;
+		padding: 10px 35px;
 
 	}
 	h2 {
@@ -60,7 +60,7 @@
 		padding: 0px;
 
 		@include desktopSize(900px) {
-			padding: 0px 45px;
+			padding: 0px 35px;
 		}
 	}
 	.scoreMobi_logo_menu_section {

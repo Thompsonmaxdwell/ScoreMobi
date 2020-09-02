@@ -13,7 +13,7 @@ slide_container.style.transform = 'translateX(' + -slide_width * slide_counter +
 // Next Slide
 const nextSlideEventFun = () => {
 	if (slide_counter >= slides.length - 1) return;
-	slide_container.style.transition = 'transform 250ms ease-in-out';
+	slide_container.style.transition = 'transform 100ms ';
 	slide_counter++;
 	slide_container.style.transform = 'translateX(' + -slide_width * slide_counter + 'px' + ')';
 	rightSlideIndicator(slide_counter);
@@ -22,7 +22,7 @@ const nextSlideEventFun = () => {
 // Previous Slide
 const prevSlideEventFun = () => {
 	if (slide_counter <= 0) return;
-	slide_container.style.transition = 'transform 250ms ease-in-out';
+	slide_container.style.transition = 'transform 100ms ease-in-out';
 	slide_counter--;
 	slide_container.style.transform = 'translateX(' + -slide_width * slide_counter + 'px' + ')';
 	leftSlideIndicator(slide_counter);
@@ -56,7 +56,7 @@ const dostSlide = (e) => {
 	e.target.classList.add('current');
 
 	slide_counter = Array.from(indicator).indexOf(e.target) + 1;
-	slide_container.style.transition = 'transform 250ms ease-in-out';
+	slide_container.style.transition = 'transform 100ms ease-in-out';
 	slide_container.style.transform = 'translateX(' + -slide_width * slide_counter + 'px' + ')';
 };
 

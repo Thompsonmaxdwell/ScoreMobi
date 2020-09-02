@@ -1,0 +1,273 @@
+.ScoreMobi_form {
+    font-family: 'Montserrat';
+    font-style: normal;
+    border: 1px solid #b1b2b6;
+    width: 100%;
+    padding: 10px 10px;
+
+    h1 {
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+        color: #7FA302;
+    }
+
+    //   ScoreMobi Form
+    form {
+        .top_space {
+            margin-top: 10px;
+        }
+
+        .ScoreMobi_input_wrapper {
+            background: #e0e0e0;
+            border: none;
+
+            :focus {
+                box-shadow: 0px 0px 1px 1.5px $form_btn_color;
+            }
+
+            span,
+            i {
+                color: $form_btn_color;
+                padding-left: 5px;
+                padding-right: 0px;
+            }
+
+            input {
+                background: #e0e0e0;
+                color: #000;
+                width: 100%;
+                padding: 10px 5px;
+
+                ::placeholder {
+                    font-family: inherit;
+                    font-weight: normal;
+                    font-size: 14px;
+                    padding: 0;
+                }
+
+                :focus {
+                    box-shadow: 0px 0px 1px 1.5px $form_btn_color;
+
+                }
+            }
+        }
+
+        // ScoreMobi_form_button 
+        .ScoreMobi_form_button {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0 5px 0;
+
+            button {
+                background-color: $form_btn_color;
+                color: #fff;
+                border-radius: 4px;
+                padding: 6px 20px;
+            }
+        }
+    }
+
+    //ScoreMobi Form Optional signing up form_or
+    .form_or {
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            border-bottom: 2px solid #b1b2b6;
+            width: 43%;
+            right: 0;
+            top: 50%;
+            // left: 0;
+        }
+
+        &:before {
+            left: 0;
+        }
+    }
+
+    .ScoreMobi_signup_via_social_media {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 10px;
+        font-family: 'Montserrat';
+
+        p {
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        .facebook {
+            background-color: #3b5998;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7px 0;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            transition: box-shadow 0.2s ease-in-out;
+
+            i {
+                font-size: 20px;
+                padding-right: 10px;
+            }
+
+            &:hover {
+                background-color: #3b5898ec;
+            }
+
+            &:focus {
+                box-shadow: 0px 0px 0px 2px #3b5898cc;
+            }
+        }
+
+        .google {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e0e0e0;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            transition: box-shadow 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #e0e0e091;
+            }
+
+            &:focus {
+                box-shadow: 0px 0px 0px 2px #e0e0e09f;
+            }
+
+            P {
+                color: #c1c1c1;
+            }
+
+            img {
+                width: 40px;
+                padding-right: 10px;
+                height: 30px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+// ScoreMobi Features Match Container
+.ScoreMobi_Featured_matches {
+    margin-top: 20px;
+
+    h1 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 13px 0;
+        color: $header_light;
+
+    }
+
+// ScoreMobi Featured Box
+    .featured_matches {
+        display: flex;
+        align-items: center;
+        border: 1px solid $border_color;
+        margin-bottom: 4px;
+
+        h2 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: #000000;
+            padding: 0;
+            margin:0;
+        }
+
+        p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            padding: 0;
+            margin:0;
+            color: #888888;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+
+    // ScoreMobi Featured Matches   Table
+
+.ScoreMobi_featured_matches_table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: 'Montserrat';
+
+    tbody::before {
+        height: 2px;
+        display: table-row;
+        content: "";
+    }
+
+    p {
+        font-size: 13px;
+        color: #000000;
+        font-family: inherit;
+    }
+
+    .ScoreMobi_featured_matches {
+        border: 1px solid $border_color;
+        box-sizing: border-box;
+
+
+        .ScoreMobi_feature_matches_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 4px 3px;
+
+            img {
+                width: 35px;
+                height: 35px;
+                margin: 0 2px;
+            }
+        }
+
+        td:first-child {
+
+            p {
+                text-align: start;
+                width: 100%;
+                padding-left: 10px;
+
+            }
+        }
+
+        td:last-child {
+
+            .ScoreMobi_feature_matches_wrapper {
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+}
