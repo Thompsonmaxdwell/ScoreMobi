@@ -754,6 +754,11 @@ ul {
   color: #888888;
   padding: 8px 10px;
 }
+@media (max-width: 533px) {
+  .league_navigation ul li a {
+    font-size: 0.7rem;
+  }
+}
 .league_navigation ul li a:hover:not(.active) {
   color: #252525;
 }
@@ -921,5 +926,114 @@ ul {
     width: 5px;
     height: 3px;
     padding: 3px;
+  }
+}
+
+.league_stat_container {
+  margin-top: 40px;
+}
+.league_stat_container .league_stat_head {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+  padding: 8px 0;
+}
+.league_stat_container .league_stat_head h2 {
+  padding-bottom: 8px;
+}
+@media (max-width: 533px) {
+  .league_stat_container .league_stat_head h2 {
+    font-size: 1.2rem;
+  }
+}
+.league_stat_container .league_stat_wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12px;
+}
+@media (max-width: 969px) {
+  .league_stat_container .league_stat_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 533px) {
+  .league_stat_container .league_stat_wrapper {
+    grid-gap: 10px;
+  }
+}
+
+.league_stat_card {
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  transition: 0.2s ease-in-out;
+}
+.league_stat_card:hover {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.league_stat_card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+@media (max-width: 533px) {
+  .league_stat_card img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.league_stat_card_l {
+  background-color: transparent;
+}
+.league_stat_card_l h2 {
+  font-size: 1rem;
+}
+@media (max-width: 533px) {
+  .league_stat_card_l h2 {
+    font-size: 0.9rem;
+  }
+}
+.league_stat_card_l_pteam {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+.league_stat_card_l_pteam span {
+  font-size: 1rem;
+}
+@media (max-width: 533px) {
+  .league_stat_card_l_pteam span {
+    font-size: 0.7rem;
+  }
+}
+.league_stat_card_l_pteam img {
+  width: 35px;
+  height: 35px;
+  padding-right: 12px;
+}
+@media (max-width: 533px) {
+  .league_stat_card_l_pteam img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.league_stat_card_l_goals {
+  border-radius: 50%;
+  display: inline-block;
+  padding: 6px 8px;
+  text-align: center;
+  color: #000;
+  margin-top: 12px;
+  background: #ddd;
+}
+@media (max-width: 533px) {
+  .league_stat_card_l_goals {
+    padding: 3px 4px;
+    font-size: 0.8rem;
   }
 }

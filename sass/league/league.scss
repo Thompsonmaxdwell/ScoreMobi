@@ -74,7 +74,7 @@
     border-top: none;
     overflow-y: auto;
     
-
+                
     & ul {
         @include align_items;
         
@@ -85,9 +85,11 @@
                 font-size: 0.9rem;
                 font-weight: 500;
                 color: $link_color;
-                padding: 8px 10px ;
+                padding: 8px 10px;
                 
-                
+                @include mobile($mobile) {
+                    font-size: 0.7rem;
+                }
                 &:hover:not(.active) {
                     color: $text_color;
                 }
@@ -101,9 +103,7 @@
 .league_card_container {
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 12px;
+    @include grid-col-3;
 
     @include tablet($tablet) {
         grid-template-columns: repeat(2,1fr);;
@@ -285,11 +285,115 @@
 
 
 
+// ===================league stats=============================
+
+.league_stat_container {
+    margin-top: 40px;
+
+    .league_stat_head {
+        width: 100%;
+        border-bottom: 1px solid $border_color;
+        margin-bottom: 30px;
+        padding: 8px 0;
 
 
+        h2 {
+            padding-bottom: 8px;
+
+            @include mobile($mobile) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    & .league_stat_wrapper {
+        width: 100%;
+        @include grid-col-3;
+
+        @include tablet($tablet) {
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include mobile($mobile) {
+            grid-gap: 10px;
+        }
+    }
+}
+
+.league_stat_card {
+    max-width: 100%;
+    width: 100%;
+    @include border_line;
+    @include flex(space-between);
+    padding: 20px;
+    transition: .2s ease-in-out;
 
 
+    &:hover {
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+    }
 
+    & img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+
+        @include mobile($mobile) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &_l {
+        background-color: transparent;
+
+        h2 {
+            font-size: 1rem;
+
+            @include mobile($mobile) {
+                font-size: 0.9rem;
+            }
+        }
+        &_pteam {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+
+            span {
+                font-size: 1rem;
+
+                @include mobile($mobile) {
+                    font-size: 0.7rem;
+                }
+            }
+
+            img {
+                width:35px;
+                height: 35px;
+                padding-right: 12px;
+
+                @include mobile($mobile) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    
+        &_goals {
+            border-radius: 50%;
+            display: inline-block;
+            padding: 6px 8px;
+            text-align: center;
+            color: $dark;
+            margin-top: 12px;
+            background: $border_color;
+
+            @include mobile($mobile) {
+                padding: 3px 4px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
 
 
 
