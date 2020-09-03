@@ -5,12 +5,12 @@
 	padding:20px 10px;
 
 	@include tabletSize(850px) {
-		padding:20px 45px;
+		padding:20px 35px;
 	}
 	grid-template-areas:
-     "asideLeft asideLeft asideLeft asideLeft"
-     "main main main main"
-	 "asideRight asideRight asideRight asideRight";
+	"main main main main"
+	"asideLeft asideLeft asideLeft asideLeft"
+	"asideRight asideRight asideRight asideRight";
 	 
 
 	@include tabletSize(850px) {
@@ -33,9 +33,7 @@
 
 	}
 	#aside_right {
-		height: 200px;
-		width: 100%;
-		background-color: blue;
+		height:auto;
 		grid-area: asideRight;
 	}
 }
