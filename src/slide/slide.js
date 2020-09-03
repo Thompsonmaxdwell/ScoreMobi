@@ -70,7 +70,7 @@ const imgSliding = () => {
 	//    remove   transition when it reaches lastElemnt and FirstElement
 	slide_container.addEventListener('transitionend', slide_container_Event);
 	// Auto slid
-	setInterval(nextSlideEventFun, 5000);
+	setInterval(prevSlideEventFun, 5000);
 	// click  indicator to move the  slide
 	indicators.addEventListener('click', dostSlide);
 };
