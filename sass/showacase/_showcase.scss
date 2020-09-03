@@ -22,15 +22,15 @@
 	
 
 		@include tabletSize(900px) {
-			padding: 40px 45px;
+			padding: 40px 35px;
 		}
 
 		h1 {
 			font-family: inherit;
 			font-style: normal;
 			font-weight: 500;
-			font-size: 16px;
-			line-height:1.4;
+			font-size: 23px;
+			line-height:1.2;
 			color: #ffffff;
 			@include tabletSize(900px) {
 				font-size: 25px;
