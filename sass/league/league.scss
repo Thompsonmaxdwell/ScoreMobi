@@ -29,7 +29,6 @@
 
 .league_right_g {
     width: 100%;
-    @include border_line;
     height: auto;
 
     @include tablet($tablet) {
@@ -53,9 +52,16 @@
         
 
         & img {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             margin-right: 8px;
+        }
+
+        & h4 {
+            font-size: 1.1rem;
+        }
+        & p {
+            font-size: 0.9rem;
         }
     }
 }
@@ -80,20 +86,19 @@
         
         & li {
             padding: 8px 10px;
-
-            & a {
-                font-size: 0.9rem;
-                font-weight: 500;
-                color: $link_color;
-                padding: 8px 10px;
-                
-                @include mobile($mobile) {
-                    font-size: 0.7rem;
-                }
-                &:hover:not(.active) {
-                    color: $text_color;
-                }
+            font-size: 0.9rem;
+            margin-right: 12px;
+            font-weight: 500;
+            color: $link_color;
+            cursor: pointer;
+            
+            @include mobile($mobile) {
+                font-size: 0.7rem;
             }
+            &:hover:not(.active) {
+                color: $text_color;
+            }
+            
         }
     }
 }
@@ -326,7 +331,7 @@
     @include flex(space-between);
     padding: 20px;
     transition: .2s ease-in-out;
-
+    position: relative;
 
     &:hover {
         box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
@@ -368,11 +373,11 @@
 
             img {
                 width:35px;
-                height: 35px;
+                height: 25px;
                 padding-right: 12px;
 
                 @include mobile($mobile) {
-                    width: 20px;
+                    width: 30px;
                     height: 20px;
                 }
             }
@@ -381,15 +386,16 @@
         &_goals {
             border-radius: 50%;
             display: inline-block;
-            padding: 6px 8px;
+            padding: 6px 7px;
             text-align: center;
             color: $dark;
             margin-top: 12px;
-            background: $border_color;
+            background: $green_light;
+            font-size: 0.8rem;
 
             @include mobile($mobile) {
                 padding: 3px 4px;
-                font-size: 0.8rem;
+                font-size: 0.7rem;
             }
         }
     }
@@ -397,17 +403,100 @@
 
 
 
+// ===================league Transfer=============================
+
+.league_transfer_section {
+    margin-top: 30px;
+    @include grid-col-3;
+
+    @include tablet($tablet) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include mobile($mobile) {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}
+
+.league_transfer_label_wrapper {
+    margin: 5px 0;
+}
+.l_transfer_labels {
+    display: flex;
+    align-items: center;
+    padding-top: 7px;
+    color: $mute;
+    
+    span i {
+        font-size: 16px;
+        padding-right: 12px;
+        color:$mute;
+    }
+
+    .label_title {
+        font-size: 0.8rem;
+    }
+}
+#i_green {
+    color: $green;
+}
+.l_transfer_date {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: $text_color_2
+}
 
 
+// card section
+.league_blog_section {
+    @include grid-col-3;
+
+    @include tablet($tablet) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include mobile($mobile) {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}
 
 
+// ===================league video=============================
+
+.league_video_section {
 
 
+    & h2 {
+        font-size: 1.1rem;
+        padding-bottom: 14px;
+    }
 
+    .league_video_wrapper {
+        width: 100%;
+        @include grid-col-3;
 
+        @include tablet($tablet) {
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include mobile($mobile) {
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+        }
 
+        .highlight {
+            width: 300px;
+            height: 1500px;
 
-
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+}
 
 
 
