@@ -222,22 +222,26 @@ table#SocreMobi_match_table {
 
 	thead {
 		background: #E9E9E9;
+		align-items: center;
 	}
 
 	thead tr th {
 		text-align: center;
-		padding-top: 15px;
-		padding-bottom: 15px;
+		padding: 10px 0;
+		
 	}
 
 	thead tr th p {
 		font-family: 'Montserrat';
 		font-style: normal;
-		font-weight: 500;
-		font-size: 18px;
-		color: #000000;
+		font-weight: 700;
+		font-size: 0.9rem;
+		color: $text_color_2;
 	}
-
+	#clock {
+		font-size: 1.5rem;
+		color: $text_color_2;
+	}
 	th,
 	td {
 		padding: 5px 3px;
