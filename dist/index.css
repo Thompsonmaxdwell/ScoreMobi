@@ -1687,8 +1687,12 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   }
 }
 .league_video_section .league_video_wrapper .highlight {
-  width: 300px;
-  height: 1500px;
+  max-width: 100%;
+}
+@media (max-width: 533px) {
+  .league_video_section .league_video_wrapper .highlight {
+    grid-gap: 20px;
+  }
 }
 .league_video_section .league_video_wrapper .highlight iframe {
   width: 100%;
