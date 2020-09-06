@@ -314,12 +314,12 @@ table#SocreMobi_match_table {
 				justify-content: flex-end;
 
 				img {
-					width: 30px;
-					height: 30px;
+					width: 20px;
+					height: 20px;
 
 					@include tabletSize(500px) {
-						width: 35px;
-						height: 35px;
+						width: 25px;
+						height: 25px;
 						margin: 0 25px;
 					}
 				}

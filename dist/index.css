@@ -9,8 +9,7 @@
 body {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow-x: hidden;
-  font-size: 100%;
-  font-variant: 1rem;
+  font-size: 14px;
   color: #444444;
 }
 
@@ -57,8 +56,14 @@ body {
   font-family: inherit;
 }
 .scoreMobi_header .login {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   color: white;
   font-size: 18px;
+}
+.scoreMobi_header .login span {
+  padding-left: 5px;
 }
 
 .scoreMobi_header_color {
@@ -253,6 +258,11 @@ body {
 .ScoreMobi_main_prediction #aside_right {
   height: auto;
   grid-area: asideRight;
+}
+
+.content_wrapper {
+  width: 95%;
+  margin: 0 auto;
 }
 
 aside#aside_left {
@@ -721,13 +731,13 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs_im
   justify-content: flex-end;
 }
 table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs_img img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 @media (min-width: 500px) {
   table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs_img img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     margin: 0 25px;
   }
 }

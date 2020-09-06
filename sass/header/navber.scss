@@ -42,8 +42,15 @@
 		font-family: inherit;
 	}
 	.login {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
 		color: white;
 		font-size: 18px;
+
+		span{
+			padding-left: 5px;
+		}
 	}
 }
 //***********************  top header logo styling  Ended here***********************
