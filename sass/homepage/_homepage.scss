@@ -1,13 +1,16 @@
+
 .ScoreMobi_main_prediction {
-	display: grid;
+	width: 90%;
+	margin: 0 auto;
+	// display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap:15px;
 	padding:20px 10px;
-
+	
 	@include tabletSize(850px) {
 		padding:20px 35px;
 	}
-	grid-template-areas:
+	grid-template-areas:      
 	"main main main main"
 	"asideLeft asideLeft asideLeft asideLeft"
 	"asideRight asideRight asideRight asideRight";

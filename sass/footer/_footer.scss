@@ -13,9 +13,6 @@
 	// ScoreMobi footer_flex_wrapper
 	.scoreMobi_footer_flex_wrapper {
 		color: #fff;
-		font-family: Montserrat;
-		font-style: normal;
-		font-weight: normal;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 		grid-column-gap: 20px;
@@ -37,7 +34,7 @@
 			}
 
 			P {
-				font-size: 16px;
+				font-size: 26px;
 				line-height: 1.6;
 				color: #cbc8c8;
 			}
@@ -46,8 +43,6 @@
 				margin: 30px 0;
 
 				h4 {
-					font-family: Montserrat;
-					font-style: normal;
 					font-weight: 600;
 					font-size: 18px;
 					line-height: 22px;
@@ -70,10 +65,8 @@
 					}
 
 					a {
-						font-family: Montserrat;
-						font-style: normal;
 						font-weight: normal;
-						font-size: 16px;
+						font-size: inherit;
 						line-height: 2.5;
 
 						@include desktopSize(900px) {
@@ -191,7 +184,6 @@
 			flex-direction: column;
 
 			a {
-				font-family: Montserrat;
 				font-style: normal;
 				font-size: 14px;
 				text-align: center;

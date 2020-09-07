@@ -1,4 +1,5 @@
 .ScoreMobi_form {
+    border: 1px solid #b1b2b6;
     font-family: 'Montserrat';
     font-style: normal;
     @include border_line;
@@ -6,8 +7,6 @@
     padding: 10px 10px;
 
     h1 {
-        font-family: inherit;
-        font-style: normal;
         font-weight: 600;
         font-size: 1.3rem;
         line-height: 34px;
@@ -17,7 +16,6 @@
         font-size: 0.8rem;
         padding-bottom: 12px;
     }
-
     //   ScoreMobi Form
     form {
         .top_space {
@@ -50,7 +48,7 @@
                 ::placeholder {
                     font-family: inherit;
                     font-weight: normal;
-                    font-size: 14px;
+                    font-size: inherit;
                     padding: 0;
                 }
 
@@ -66,10 +64,13 @@
             justify-content: space-between;
             margin: 20px 0 5px 0;
 
+           
             button {
                 background-color: $form_btn_color;
                 color: #fff;
                 border-radius: 4px;
+                padding: 6px 20px;
+                font-size: inherit;
                 padding: 8px 20px;
                 font-weight: 500;
                 transition: 350ms ease-in-out;
@@ -111,8 +112,10 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         grid-gap: 10px;
-        font-family: 'Montserrat';
 
+        p {
+            font-size: inherit;
+            
         button {
             font-family: inherit;
             font-size: 15px;
@@ -121,13 +124,15 @@
             transition: 0.2s ease-in-out;
         }
 
-        .facebook {
+        .facebook, .google {
             background-color: #3b5998;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 7px 0;
             outline: none;
+            font-size:unset;
+            font-family: unset;
             border: none;
             border-radius: 3px;
             color: #fff;
@@ -148,10 +153,11 @@
         }
 
         .google {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             background-color: #e0e0e0;
+            color: #fff;
+            justify-content: center;
+             padding: 0;
+            transition: box-shadow 0.2s ease-in-out;
             outline: none;
             border: none;
             border-radius: 3px;
@@ -182,8 +188,6 @@
     margin-top: 20px;
 
     h1 {
-        font-family: 'Montserrat';
-        font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 20px;
@@ -201,9 +205,8 @@
         padding: 4px;
 
         h2 {
-            font-family: 'Montserrat';
-            font-style: normal;
             font-weight: normal;
+            font-size: 16px;
             font-size: 1rem;
             color: #000000;
             padding: 0;
@@ -211,9 +214,8 @@
         }
 
         p {
-            font-family: 'Montserrat';
-            font-style: normal;
             font-weight: normal;
+            font-size: 13px;
             font-size: 0.8rem;
             padding: 0;
             margin:0;
@@ -234,7 +236,6 @@
     width: 100%;
     text-align: center;
     border-collapse: collapse;
-    font-family: 'Montserrat';
 
     tbody::before {
         height: 4px;
@@ -243,9 +244,10 @@
     }
 
     p {
-        font-size: 13px;
+        font-size: inherit;
         color: #000000;
         font-family: inherit;
+        font-weight: normal;
     }
 
     .ScoreMobi_featured_matches {
@@ -260,6 +262,9 @@
             padding: 8px 3px;
 
             img {
+                width: 30px;
+                height: 30px;
+                margin: 0 2px;
                 width: 28px;
                 height: 28px;
                 margin: 0 4px;
