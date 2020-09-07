@@ -8,7 +8,7 @@ aside#aside_left {
 	"order_2"
 	"order_1";
 	@include tabletSize(900px) {
-		all:unset;;
+		all:unset;
 	}
 	
 	#aside_left_order_1{
@@ -39,11 +39,8 @@ aside#aside_left {
 		padding: 10px 15px;
 
 		h2 {
-			font-family: 'Montserrat';
-			font-style: normal;
 			font-weight: 600;
 			font-size: 16px;
-			line-height: 20px;
 			color: $text_color_2;
 		}
 
@@ -60,43 +57,28 @@ aside#aside_left {
 //  Competitions in Aside Left in Homepage   ==============   Competitions in Aside Left in Homepage   
 
 .ScoreMobi_popular_competitions {
-	font-family: 'Montserrat';
 
 	h1 {
 		font-family: 'Roboto';
-		font-style: normal;
 		font-weight: normal;
 		font-size: 18px;
-		line-height: 21px;
 		padding: 7px 0;
-
-		/* navbar color-1 */
-
 		color: #6f8b0a;
-		/* navbar color-1 */
-
 		color: $text_color_1;
 	}
 
 	// ************** TOP PLAYERS Aside Left in Homepage   -************** --> <!--************** TOP PLAYERS  Aside Left in Homepage  -**************
 	.top_players {
-		font-style: normal;
-		font-weight: normal;
 
 		h3 {
-			font-family: 'Montserrat';
 			font-weight: 500;
 			font-size: 16px;
-
 			color: #000000;
 		}
 
 		p {
-			font-family: 'Montserrat';
-			font-size: 13px;
+			font-size: inherit;
 			margin: 3px 0;
-			/* black */
-
 			color: #000000;
 		}
 	}
@@ -145,11 +127,8 @@ aside#aside_left {
 		}
 
 		figcaption {
-			font-size: 14px;
-			font-family: inheit;
-			font-style: normal;
+			font-size: inherit;
 			font-weight: normal;
-			line-height: 17px;
 			color: #000000;
 		}
 
@@ -167,8 +146,7 @@ aside#aside_left {
 // Aside Left in Homepage Show More
 .show_more {
 	font-weight: 500;
-	font-size: 15px;
-	line-height: 18px;
+	font-size: inherit;
 	background: #ffffff;
 	@include border_line;
 	box-sizing: border-box;
@@ -194,7 +172,6 @@ aside#aside_left {
 }
 
 .ScoreMobi_card {
-	font-family: 'Montserrat';
 	position: relative;
 	transition: .350ms ease-in-out;
 	@include border_line;
@@ -227,6 +204,8 @@ aside#aside_left {
 
 		a {
 			color: $text_color_2;
+			font-weight: 500;
+			font-size: inherit;
 			width: 100%;
 			font-family: inherit;
 			font-style: normal;
@@ -241,7 +220,6 @@ aside#aside_left {
 		}
 
 		.ScoreMobi_card_post_time {
-			font-family: inherit;
 			font-size: 12px;
 			padding-top: 3px;
 			color: #666666;

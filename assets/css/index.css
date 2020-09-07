@@ -3342,11 +3342,12 @@ p {
   margin: 0; }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   overflow-x: hidden;
   font-size: 100%;
   font-variant: 1rem;
-  color: #444444; }
+  color: #444444;
+ }
 
 .full_w {
   width: 100%; }
@@ -3605,7 +3606,7 @@ button {
   .section__btn_wrap .dis {
     margin: 12px 6px 0px 0px; }
   .section__btn_wrap p.btn_radius {
-    font-family: 'Poppins';
+    /* font-family: 'Poppins'; */
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
