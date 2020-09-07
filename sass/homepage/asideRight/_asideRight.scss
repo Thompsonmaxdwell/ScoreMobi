@@ -12,10 +12,11 @@
         line-height: 34px;
         color: $text_color_1;
     }
+
     p {
         font-size: 0.8rem;
-        padding-bottom: 12px;
     }
+
     //   ScoreMobi Form
     form {
         .top_space {
@@ -43,7 +44,7 @@
                 background: transparent;
                 color: #000;
                 width: 100%;
-                padding: 10px 5px;                border: 0;
+                padding: 10px 5px;
 
                 ::placeholder {
                     font-family: inherit;
@@ -64,7 +65,7 @@
             justify-content: space-between;
             margin: 20px 0 5px 0;
 
-           
+
             button {
                 background-color: $form_btn_color;
                 color: #fff;
@@ -80,7 +81,7 @@
                     background-color: $form_btn_hover;
                 }
 
-                
+
             }
         }
     }
@@ -115,178 +116,180 @@
 
         p {
             font-size: inherit;
-            
-        button {
-            font-family: inherit;
-            font-size: 15px;
-            padding: 10px 0;
-            cursor: pointer;
-            transition: 0.2s ease-in-out;
         }
-
-        .facebook, .google {
-            background-color: #3b5998;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 7px 0;
-            outline: none;
-            font-size:unset;
-            font-family: unset;
-            border: none;
-            border-radius: 3px;
-            color: #fff;
-
-
-            i {
-                font-size: 20px;
-                padding-right: 10px;
+            button {
+                font-family: inherit;
+                font-size: 15px;
+                padding: 10px 0;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
             }
 
-            &:hover {
-                background-color: #2652b1ec;
+            .facebook,
+            .google {
+                background-color: #3b5998;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 7px 0;
+                outline: none;
+                font-size: unset;
+                font-family: unset;
+                border: none;
+                border-radius: 3px;
+                color: #fff;
+
+
+                i {
+                    font-size: 20px;
+                    padding-right: 10px;
+                }
+
+                &:hover {
+                    background-color: #2652b1ec;
+                }
+
+                &:focus {
+                    box-shadow: 0px 0px 0px 2px #2652b1ec;
+                }
             }
 
-            &:focus {
-                box-shadow: 0px 0px 0px 2px #2652b1ec;
-            }
-        }
+            .google {
+                background-color: #e0e0e0;
+                color: #fff;
+                justify-content: center;
+                padding: 0;
+                transition: box-shadow 0.2s ease-in-out;
+                outline: none;
+                border: none;
+                border-radius: 3px;
+                color: rgb(122, 122, 122);
+               
 
-        .google {
-            background-color: #e0e0e0;
-            color: #fff;
-            justify-content: center;
-             padding: 0;
-            transition: box-shadow 0.2s ease-in-out;
-            outline: none;
-            border: none;
-            border-radius: 3px;
-            color: rgb(122, 122, 122);
+                &:hover {
+                    background-color: #e0e0e091;
+                }
 
-            &:hover {
-                background-color: #e0e0e091;
-            }
+                &:focus {
+                    box-shadow: 0px 0px 0px 2px #e0e0e09f;
+                }
 
-            &:focus {
-                box-shadow: 0px 0px 0px 2px #e0e0e09f;
+                img {
+                    width: 30px;
+                    padding-right: 10px;
+                    height: 20px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
             }
-
-            img {
-                width: 30px;
-                padding-right: 10px;
-                height: 20px;
-                object-fit: cover;
-                border-radius: 50%;
-            }
-        }
+        
     }
 }
 
+    // ScoreMobi Features Match Container
+    .ScoreMobi_Featured_matches {
+        margin-top: 20px;
 
-// ScoreMobi Features Match Container
-.ScoreMobi_Featured_matches {
-    margin-top: 20px;
-
-    h1 {
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 20px;
-        padding: 13px 0;
-        color: $header_light;
-
-    }
-
-// ScoreMobi Featured Box
-    .featured_matches {
-        display: flex;
-        align-items: center;
-        border: 1px solid $border_color;
-        margin-bottom: 4px;
-        padding: 4px;
-
-        h2 {
+        h1 {
             font-weight: normal;
             font-size: 16px;
-            font-size: 1rem;
-            color: #000000;
-            padding: 0;
-            margin:0;
+            line-height: 20px;
+            padding: 13px 0;
+            color: $header_light;
+
         }
 
-        p {
-            font-weight: normal;
-            font-size: 13px;
-            font-size: 0.8rem;
-            padding: 0;
-            margin:0;
-            color: #888888;
-        }
-
-        img {
-            width: 35px;
-            height: 35px;
-            margin-right: 7px;
-        }
-    }
-
-
-    // ScoreMobi Featured Matches   Table
-
-.ScoreMobi_featured_matches_table {
-    width: 100%;
-    text-align: center;
-    border-collapse: collapse;
-
-    tbody::before {
-        height: 4px;
-        display: table-row;
-        content: "";
-    }
-
-    p {
-        font-size: inherit;
-        color: #000000;
-        font-family: inherit;
-        font-weight: normal;
-    }
-
-    .ScoreMobi_featured_matches {
-        border: 1px solid $border_color;
-        box-sizing: border-box;
-
-
-        .ScoreMobi_feature_matches_wrapper {
+        // ScoreMobi Featured Box
+        .featured_matches {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            padding: 8px 3px;
+            border: 1px solid $border_color;
+            margin-bottom: 4px;
+            padding: 4px;
 
-            img {
-                width: 30px;
-                height: 30px;
-                margin: 0 2px;
-                width: 28px;
-                height: 28px;
-                margin: 0 4px;
+            h2 {
+                font-weight: normal;
+                font-size: 16px;
+                font-size: 1rem;
+                color: #000000;
+                padding: 0;
+                margin: 0;
             }
-        }
-
-        td:first-child {
 
             p {
-                text-align: start;
-                width: 100%;
-                padding-left: 10px;
+                font-weight: normal;
+                font-size: 13px;
+                font-size: 0.8rem;
+                padding: 0;
+                margin: 0;
+                color: #888888;
+            }
 
+            img {
+                width: 35px;
+                height: 35px;
+                margin-right: 7px;
             }
         }
 
-        td:last-child {
 
-            .ScoreMobi_feature_matches_wrapper {
-                justify-content: flex-start;
+        // ScoreMobi Featured Matches   Table
+
+        .ScoreMobi_featured_matches_table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+
+            tbody::before {
+                height: 4px;
+                display: table-row;
+                content: "";
+            }
+
+            p {
+                font-size: inherit;
+                color: #000000;
+                font-family: inherit;
+                font-weight: normal;
+            }
+
+            .ScoreMobi_featured_matches {
+                border: 1px solid $border_color;
+                box-sizing: border-box;
+
+
+                .ScoreMobi_feature_matches_wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 8px 3px;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        margin: 0 2px;
+                        width: 28px;
+                        height: 28px;
+                        margin: 0 4px;
+                    }
+                }
+
+                td:first-child {
+
+                    p {
+                        text-align: start;
+                        width: 100%;
+                        padding-left: 10px;
+
+                    }
+                }
+
+                td:last-child {
+
+                    .ScoreMobi_feature_matches_wrapper {
+                        justify-content: flex-start;
+                    }
+                }
             }
         }
     }
-}
-}
