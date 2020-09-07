@@ -4,6 +4,8 @@
 @import './reset/reset.scss';
 // @import "../node_modules/pelvris-ui/sass/style.scss";
 
+@import './reset/mixins.scss'; // all mixins
+
 @import "./color/all_color.scss";  //All ScoreMobi colors
 
 @import './mediaQuery/all_media_query';   // Media for all Size
@@ -25,6 +27,6 @@
 
 @import './league/league';  //league page style
 
-@import './reset/mixins.scss'; // all mixins
+
 
 @import './anima/anima.scss'
