@@ -7,7 +7,6 @@
 	align-items: center;
 	align-content: center;
 	padding: 10px;
-	font-family: 'Montserrat';
 
 	@include desktopSize(900px) {
 		padding: 10px 35px;
@@ -15,7 +14,6 @@
 	}
 	h2 {
 		font-style: normal;
-		font-family: inherit;
 		font-weight: 600;
 		font-size: 20px;
 
@@ -39,7 +37,6 @@
 	}
 	.header_sign {
 		display: flex;
-		font-family: inherit;
 	}
 	.login {
 		color: white;
@@ -53,7 +50,6 @@
 //*********************** Nav header  styling Starte here ***********************
 .scoreMobi_header_color {
 	background-color: $header_dark;
-	font-family: 'Montserrat';
 
 	.scoreMobi_header_content {
 		width: 100%;
@@ -87,7 +83,6 @@
 			color: white;
 			font-size: 1.1em;
 			cursor: pointer;
-			font-family: inherit;
 
 			&:hover {
 				color: rgba(255, 255, 255, 0.493);

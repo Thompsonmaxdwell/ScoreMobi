@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
 
-
 aside#aside_left {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -8,21 +7,21 @@ aside#aside_left {
 	"order_2"
 	"order_1";
 	@include tabletSize(900px) {
-		all:unset;;
+		all:unset;
 	}
 	
 	#aside_left_order_1{
 		grid-area: order_1;
 		
 		@include tabletSize(900px) {
-			rid-area:unset;
+			grid-area:unset;
 		}
 	}
 	#aside_left_order_2{
 		grid-area: order_2;
 
 		@include tabletSize(900px) {
-			rid-area:unset;
+			grid-area:unset;
 		}
 	}
 	
@@ -39,11 +38,8 @@ aside#aside_left {
 		padding: 10px 15px;
 
 		h2 {
-			font-family: 'Montserrat';
-			font-style: normal;
 			font-weight: 600;
 			font-size: 16px;
-			line-height: 20px;
 			color: $text_color_2;
 		}
 
@@ -60,43 +56,28 @@ aside#aside_left {
 //  Competitions in Aside Left in Homepage   ==============   Competitions in Aside Left in Homepage   
 
 .ScoreMobi_popular_competitions {
-	font-family: 'Montserrat';
 
 	h1 {
 		font-family: 'Roboto';
-		font-style: normal;
 		font-weight: normal;
 		font-size: 18px;
-		line-height: 21px;
 		padding: 7px 0;
-
-		/* navbar color-1 */
-
 		color: #6f8b0a;
-		/* navbar color-1 */
-
 		color: $text_color_1;
 	}
 
 	// ************** TOP PLAYERS Aside Left in Homepage   -************** --> <!--************** TOP PLAYERS  Aside Left in Homepage  -**************
 	.top_players {
-		font-style: normal;
-		font-weight: normal;
 
 		h3 {
-			font-family: 'Montserrat';
 			font-weight: 500;
 			font-size: 16px;
-
 			color: #000000;
 		}
 
 		p {
-			font-family: 'Montserrat';
-			font-size: 13px;
+			font-size: inherit;
 			margin: 3px 0;
-			/* black */
-
 			color: #000000;
 		}
 	}
@@ -145,11 +126,8 @@ aside#aside_left {
 		}
 
 		figcaption {
-			font-size: 14px;
-			font-family: inheit;
-			font-style: normal;
+			font-size: inherit;
 			font-weight: normal;
-			line-height: 17px;
 			color: #000000;
 		}
 
@@ -167,8 +145,7 @@ aside#aside_left {
 // Aside Left in Homepage Show More
 .show_more {
 	font-weight: 500;
-	font-size: 15px;
-	line-height: 18px;
+	font-size: inherit;
 	background: #ffffff;
 	border: 0.6px solid $border_color_2;
 	box-sizing: border-box;
@@ -188,7 +165,6 @@ aside#aside_left {
 }
 
 .ScoreMobi_card {
-	font-family: 'Montserrat';
 	position: relative;
 
 	img {
@@ -202,14 +178,11 @@ aside#aside_left {
 
 		figcaption {
 			color: $text_color_2;
-			font-family: inherit;
-			font-style: normal;
 			font-weight: 500;
-			font-size: 14px;
+			font-size: inherit
 		}
 
 		.ScoreMobi_card_post_time {
-			font-family: inherit;
 			font-size: 12px;
 			padding-top: 3px;
 			color: #666666;
