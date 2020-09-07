@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import '../ScoreMobi-1/sass/reset/mixins.scss';
 
 aside#aside_left {
 	display: grid;
@@ -147,13 +148,19 @@ aside#aside_left {
 	font-weight: 500;
 	font-size: inherit;
 	background: #ffffff;
-	border: 0.6px solid $border_color_2;
+	@include border_line;
 	box-sizing: border-box;
 	color: $header_light;
 	padding: 5px;	
 	text-align: center;
 	margin: 10px 0;
 	cursor: pointer;
+	transition: 350ms ease-in-out;
+
+	&:hover {
+		background-color: $text_color_1;
+		color:$white;
+	}
 }
 
 // ScoreMobi_card  Aside Left in Homepage Card styling here
@@ -166,20 +173,50 @@ aside#aside_left {
 
 .ScoreMobi_card {
 	position: relative;
+	transition: .350ms ease-in-out;
+	@include border_line;
 
+	// & figure {
+	// 	background-color: red;
+	// 	width: 100%;
+	// 	height: 100px;
+	// 	position: relative;
+	// }
 	img {
 		width: 100%;
-		height: 120px;
+		height: 100px;
 		object-fit: cover;
+		
+
+		&::after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: red;
+		}
 	}
 
 	.ScoreMobi_card_padding {
-		padding: 10px 10px 5px;
+		padding: 10px 10px 10px;
 
-		figcaption {
+		a {
 			color: $text_color_2;
 			font-weight: 500;
-			font-size: inherit
+			font-size: inherit;
+			width: 100%;
+			font-family: inherit;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 0.9rem;
+			transition: all 350ms ease-in-out;
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 
 		.ScoreMobi_card_post_time {
@@ -193,13 +230,18 @@ aside#aside_left {
 			background-color: $text_color_2;
 			color: white;
 			text-align: center;
-			padding: 3px 20px 5px 5px;
-			height: 100px;
-			width: 80px;
-			clip-path: polygon(0 0, 100% 0%, 100% 19%, 0 36%);
+			padding: 5px 10px;
+			text-align: center;
+			margin: 9px;
+			font-weight: 500;
+			border-radius: 20px;
+			height: auto;
+			width: auto;
+			// clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
 			position: absolute;
 			top: 0;
 			left: 0;
+			font-size: 0.7rem;
 		}
 	}
 }

@@ -6,9 +6,7 @@
 
 @import "./color/all_color.scss";  //All ScoreMobi colors
 
-@import './mediaQuery/tablet';     // Media for Tablet Size
-
-@import './mediaQuery/deskatop';   // Media for Dektop Size
+@import './mediaQuery/all_media_query';   // Media for all Size
 
 @import "./header/navber.scss";    // Navbar 
 
@@ -25,6 +23,8 @@
 
 @import './footer/footer';// footer
 
+@import './league/league';  //league page style
 
+@import './reset/mixins.scss'; // all mixins
 
-
+@import './anima/anima.scss'
