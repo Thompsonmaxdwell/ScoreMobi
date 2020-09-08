@@ -6,19 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Montserrat";
-  overflow-x: hidden;
-<<<<<<< HEAD
-  font-size: 14px;
-=======
-  font-size: 14px !important;
-  font-variant: 1rem;
->>>>>>> victor-upstream/master
-  color: #444444;
-  width: 100%;
-}
-
 ul {
   list-style-type: none;
 }
@@ -244,6 +231,8 @@ ul {
 }
 
 .ScoreMobi_main_prediction {
+  width: 90%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
@@ -252,7 +241,7 @@ ul {
 }
 @media (min-width: 850px) {
   .ScoreMobi_main_prediction {
-    padding: 20px 35px;
+    padding: 20px 17px;
   }
 }
 @media (min-width: 850px) {
@@ -262,8 +251,8 @@ ul {
 }
 @media (min-width: 1100px) {
   .ScoreMobi_main_prediction {
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-areas: "asideLeft asideLeft main main main main  main asideRight asideRight";
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-areas: "asideLeft asideLeft asideLeft main main main main  main asideRight asideRight asideRight";
   }
 }
 .ScoreMobi_main_prediction #aside_left {
@@ -489,9 +478,16 @@ aside#aside_left .ScoreMobi_mobile_Template img {
 }
 .ScoreMobi_slide_container .ScoreMobi_slide_wrapper {
   margin: 0 !important;
+  height: 200px !important;
+  overflow-x: hidden !important;
 }
-.ScoreMobi_slide_container .ScoreMobi_slide_wrapper img {
+.ScoreMobi_slide_container .ScoreMobi_slide_wrapper .slide {
+  height: 100% !important;
+}
+.ScoreMobi_slide_container .ScoreMobi_slide_wrapper .slide img {
   display: block !important;
+  width: 100%;
+  height: 100% !important;
 }
 .ScoreMobi_slide_container .slide_btn_wrapper {
   position: unset !important;
@@ -669,27 +665,16 @@ table#SocreMobi_match_table tbody::before {
 }
 table#SocreMobi_match_table thead {
   background: #E9E9E9;
-  align-items: center;
 }
 table#SocreMobi_match_table thead tr th {
   text-align: center;
-  padding: 10px 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 table#SocreMobi_match_table thead tr th .table_header {
   font-weight: 500;
   font-size: 18px;
   color: #000000;
-}
-table#SocreMobi_match_table thead tr th p {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #7fa302;
-}
-table#SocreMobi_match_table #clock {
-  font-size: 1.5rem;
-  color: #7fa302;
 }
 table#SocreMobi_match_table th,
 table#SocreMobi_match_table td {
@@ -746,7 +731,7 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs .c
 @media (min-width: 500px) {
   table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs .clubs_name {
     order: unset;
-    min-width: 100px;
+    width: 60px;
   }
 }
 table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs .clubs_name:last-child {
@@ -812,7 +797,6 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
 }
 .ScoreMobi_form p {
   font-size: 0.8rem;
-  padding-bottom: 12px;
 }
 .ScoreMobi_form form .top_space {
   margin-top: 10px;
@@ -837,7 +821,6 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   color: #000;
   width: 100%;
   padding: 10px 5px;
-  border: 0;
 }
 .ScoreMobi_form form .ScoreMobi_input_wrapper input ::placeholder {
   font-family: inherit;
@@ -899,7 +882,8 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
-.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook, .ScoreMobi_form .ScoreMobi_signup_via_social_media .google {
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook,
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .google {
   background-color: #3b5998;
   display: flex;
   align-items: center;
@@ -912,20 +896,17 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   border-radius: 3px;
   color: #fff;
 }
-.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook i, .ScoreMobi_form .ScoreMobi_signup_via_social_media .google i {
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook i,
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .google i {
   font-size: 20px;
   padding-right: 10px;
 }
-.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook:hover, .ScoreMobi_form .ScoreMobi_signup_via_social_media .google:hover {
-  background-color: #3b5898ec;
-}
-.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook:focus, .ScoreMobi_form .ScoreMobi_signup_via_social_media .google:focus {
-  box-shadow: 0px 0px 0px 2px #3b5898cc;
-}
-.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook:hover {
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook:hover,
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .google:hover {
   background-color: #2652b1ec;
 }
-.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook:focus {
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .facebook:focus,
+.ScoreMobi_form .ScoreMobi_signup_via_social_media .google:focus {
   box-shadow: 0px 0px 0px 2px #2652b1ec;
 }
 .ScoreMobi_form .ScoreMobi_signup_via_social_media .google {
@@ -972,8 +953,11 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
 }
 .ScoreMobi_Featured_matches .featured_matches h2 {
   font-weight: normal;
+  font-size: 16px;
   font-size: 1rem;
+  color: #000000;
   padding: 0;
+  margin: 0;
 }
 .ScoreMobi_Featured_matches .featured_matches p {
   font-weight: normal;

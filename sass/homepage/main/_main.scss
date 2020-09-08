@@ -6,10 +6,17 @@
 
 	.ScoreMobi_slide_wrapper {
 		margin: 0 !important;
+		height:200px!important;
+		overflow-x: hidden!important;
 
 		// ScoreMobi Slide Imaged
-		img {
-			display: block !important;
+		.slide{
+			height: 100%!important;
+			img {
+				display: block !important;
+				width:100%;
+				height: 100%!important;
+			}
 		}
 	}
 
@@ -294,7 +301,7 @@ table#SocreMobi_match_table {
 
 					@include tabletSize(500px) {
 						order: unset;
-						min-width: 100px;
+						width: 60px;
 					}
 				}
 

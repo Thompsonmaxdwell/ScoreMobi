@@ -2,13 +2,13 @@
 .ScoreMobi_main_prediction {
 	width: 90%;
 	margin: 0 auto;
-	// display: grid;
+	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap:15px;
 	padding:20px 10px;
 	
 	@include tabletSize(850px) {
-		padding:20px 35px;
+		padding:20px 17px;
 	}
 	grid-template-areas:      
 	"main main main main"
@@ -22,8 +22,8 @@
         "asideLeft asideLeft asideRight asideRight";
 	}
 	@include desktopSize(1100px) {
-		grid-template-columns: repeat(9, 1fr);
-		grid-template-areas: "asideLeft asideLeft main main main main  main asideRight asideRight";
+		grid-template-columns: repeat(11, 1fr);
+		grid-template-areas: "asideLeft asideLeft asideLeft main main main main  main asideRight asideRight asideRight";
 	}
 
 	#aside_left {

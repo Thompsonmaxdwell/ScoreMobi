@@ -3342,9 +3342,9 @@ p {
   margin: 0; }
 
 body {
-  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Montserrat';
   overflow-x: hidden;
-  font-size: 100%;
+  font-size: 14px;
   font-variant: 1rem;
   color: #444444;
  }
@@ -4119,7 +4119,7 @@ Using display: grid;
     width: 100%;
     margin: 30px auto;
     overflow-x: hidden;
-    height: 300px;
+    height: 200px;
     box-sizing: border-box;
     background-color: #3737ce;
     border-radius: 9px; }
@@ -4140,7 +4140,8 @@ Using display: grid;
       top: 0;
       bottom: 0;
       display: block;
-      object-fit: cover; }
+      object-fit: cover;
+     }
     .slider_wrapper_tracker .slide .caption {
       position: relative;
       z-index: 1;
