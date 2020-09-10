@@ -172,16 +172,10 @@ aside#aside_left {
 }
 
 .ScoreMobi_card {
+	margin-top: 15px;
 	position: relative;
 	transition: .350ms ease-in-out;
-	@include border_line;
 
-	// & figure {
-	// 	background-color: red;
-	// 	width: 100%;
-	// 	height: 100px;
-	// 	position: relative;
-	// }
 	img {
 		width: 100%;
 		height: 100px;
@@ -237,7 +231,6 @@ aside#aside_left {
 			border-radius: 20px;
 			height: auto;
 			width: auto;
-			// clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
 			position: absolute;
 			top: 0;
 			left: 0;

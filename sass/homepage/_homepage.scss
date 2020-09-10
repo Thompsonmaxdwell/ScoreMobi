@@ -1,7 +1,5 @@
 
 .ScoreMobi_main_prediction {
-	width: 90%;
-	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap:15px;
@@ -22,8 +20,33 @@
         "asideLeft asideLeft asideRight asideRight";
 	}
 	@include desktopSize(1100px) {
+		width: 100%;
+		max-width: 1350px;
+		margin: 0 auto;
 		grid-template-columns: repeat(11, 1fr);
 		grid-template-areas: "asideLeft asideLeft asideLeft main main main main  main asideRight asideRight asideRight";
+		grid-gap:20px;
+	}
+
+	&.news_details{
+		@include desktopSize(1100px) {
+			width: 100%;
+			max-width: 1100px;
+			margin: 0 auto;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-areas: " main main asideRight";
+			grid-gap:20px;
+		}
+
+		#main img{
+			border-radius: 12px;
+		}
+
+		.news_article{
+			p{
+				line-height: 2;
+			}
+		}
 	}
 
 	#aside_left {
