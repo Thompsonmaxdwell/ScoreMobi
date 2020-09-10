@@ -62,8 +62,14 @@ ul {
   display: flex;
 }
 .scoreMobi_header .login {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   color: white;
   font-size: 18px;
+}
+.scoreMobi_header .login span {
+  padding-left: 5px;
 }
 
 .scoreMobi_header_color {
@@ -229,8 +235,6 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
   padding: 20px 10px;
-  width: 96%;
-  margin: 0 auto;
   grid-template-areas: "main main main main" "asideLeft asideLeft asideLeft asideLeft" "asideRight asideRight asideRight asideRight";
 }
 @media (min-width: 850px) {
@@ -245,9 +249,29 @@ ul {
 }
 @media (min-width: 1100px) {
   .ScoreMobi_main_prediction {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
     grid-template-columns: repeat(11, 1fr);
     grid-template-areas: "asideLeft asideLeft asideLeft main main main main  main asideRight asideRight asideRight";
+    grid-gap: 20px;
   }
+}
+@media (min-width: 1100px) {
+  .ScoreMobi_main_prediction.news_details {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: " main main asideRight";
+    grid-gap: 20px;
+  }
+}
+.ScoreMobi_main_prediction.news_details #main img {
+  border-radius: 12px;
+}
+.ScoreMobi_main_prediction.news_details .news_article p {
+  line-height: 2;
 }
 .ScoreMobi_main_prediction #aside_left {
   grid-area: asideLeft;
@@ -260,6 +284,11 @@ ul {
 .ScoreMobi_main_prediction #aside_right {
   height: auto;
   grid-area: asideRight;
+}
+
+.content_wrapper {
+  width: 95%;
+  margin: 0 auto;
 }
 
 aside#aside_left {
@@ -402,9 +431,9 @@ aside#aside_left .ScoreMobi_mobile_Template img {
 }
 
 .ScoreMobi_card {
+  margin-top: 15px;
   position: relative;
   transition: 0.35ms ease-in-out;
-  border: 1px solid #b4b4b4;
 }
 .ScoreMobi_card img {
   width: 100%;
@@ -731,13 +760,13 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs_im
   justify-content: flex-end;
 }
 table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs_img img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 @media (min-width: 500px) {
   table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs_img img {
-    width: 27px;
-    height: 27px;
+    width: 25px;
+    height: 25px;
     margin: 0 25px;
   }
 }
@@ -1656,6 +1685,40 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
 }
 .league_video_section .league_video_wrapper .highlight iframe {
   width: 100%;
+}
+
+.comment_section_wapper {
+  margin-top: 40px;
+}
+.comment_section_wapper .comment_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+.comment_section_wapper .comment_details_container .comment_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin: 8px 0px 10px 0px;
+  border-bottom: 1px solid black;
+}
+.comment_section_wapper .comment_details_container .comment_details .comment_date {
+  width: 55%;
+  max-width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment_section_wapper .comment_details_container .comment_details .comment_date .cm_time {
+  font-size: 12px;
+}
+.comment_section_wapper .comment_details_container .comment_details .comment_name {
+  color: black;
 }
 
 .loading_container {
