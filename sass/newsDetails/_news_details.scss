@@ -1,3 +1,7 @@
+.sm_title{
+    cursor: pointer;
+}
+
 .comment_section_wapper{
     margin-top: 40px;
 
@@ -8,7 +12,12 @@
         margin-top: 30px;
         padding: 15px;
         border-radius: 8px;
-        border: 1px solid black;
+        border: 1px solid $border_color;
+
+        @include tabletSize(420px) {
+            flex-direction: row;
+        }
+
     }
 
     .comment_details_container{
@@ -21,7 +30,7 @@
             align-items: center;
             padding-bottom: 10px;
             margin: 8px 0px 10px 0px;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $border_color;
 
             .comment_date{
                 width: 55%;
@@ -34,12 +43,71 @@
                     font-size: 12px;
                 }
             }
-
+                @include desktopSize(1100px) {}
+            
 
             .comment_name{
-                color: black;
+                color: $dark;
             }
         }
 
     }
+
+    .more_btn{
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: transparent;
+        margin-top: 20px;
+        color: $text_color_2;
+    }
+    
+    .comment_form{
+        max-width: 550px;
+        margin-top: 25px;
+
+        .input_wrap{
+            margin-top: 10px;
+            border-color: $border_color;
+       
+            input:focus{
+                box-shadow: 0px 0px 1px 1.5px $border_color;
+            }
+        }
+
+
+        textarea{
+            margin-top: 20px;
+            border-color: $border_color;
+
+            &:focus{
+                box-shadow: 0px 0px 1px 1.5px $border_color;
+            }
+        }
+
+        .sm_input{
+            color: $white;
+            margin-top: 15px;
+            border-radius: 0px;
+            background-color: $btn_light;
+        
+            &:hover{
+                background-color: $btn_hover;
+            }
+        }
+    }
+}
+
+.ScoreMobi_main_prediction{
+    &.news_details{
+		@include desktopSize(1100px) {
+			width: 100%;
+			max-width: 1100px;
+			margin: 0 auto;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-areas: " main main asideRight";
+			grid-gap:20px;
+        }
+    }   
 }

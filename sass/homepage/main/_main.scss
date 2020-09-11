@@ -129,7 +129,7 @@
 		.Lives_match_toggle {
 			background-color: $live;
 			padding: 2px 0;
-			color: white;
+			color: $white;
 			border-radius: 25px;
 			text-align: center;
 			font-size: 17px;
@@ -147,7 +147,7 @@
 .today_pridiction_seletction {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 0.6px solid #D2D2D2;
+	border-bottom: 0.6px solid $link_color;
 	padding: 10px 0;
 	margin-bottom: 5px;
 
@@ -171,7 +171,7 @@
 	.right_btn_matches {
 		height: 15px;
 		width: 15px;
-		background-color: #000000;
+		background-color: $dark;
 		transform: rotate(-44deg);
 		position: relative;
 		display: block;
@@ -181,7 +181,7 @@
 			content: '';
 			height: 100%;
 			width: 100%;
-			background-color: #ffffff;
+			background-color: $white;
 			transform: rotate(44deg) translate(50%, -50%);
 			z-index: 2;
 			position: absolute;
@@ -191,7 +191,7 @@
 			content: '';
 			height: 100%;
 			width: 100%;
-			background-color: #ffffff;
+			background-color: $white;
 			transform: rotate(44deg) translate(50%, 45%);
 			z-index: 3;
 			position: absolute;
@@ -228,7 +228,7 @@ table#SocreMobi_match_table {
 	}
 
 	thead {
-		background: #E9E9E9;
+		background: $border_color;
 	}
 
 	thead tr th {
@@ -240,7 +240,7 @@ table#SocreMobi_match_table {
 	thead tr th .table_header {
 		font-weight: 500;
 		font-size: 18px;
-		color: #000000;
+		color: $dark;
 	}
 
 	th,
@@ -261,8 +261,8 @@ table#SocreMobi_match_table {
 	}
 
 	.ScoreMobi_matches {
-		background: #ffffff;
-		border: 0.6px solid #898686;
+		background: $white;
+		border: 0.6px solid $form_btn_hover;
 		box-sizing: border-box;
 
 		// ScoreMobi Homepage Matchs Clubs Wrapper
@@ -350,7 +350,7 @@ table#SocreMobi_match_table {
 		grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 		grid-gap: 20px;
 		margin-top: 10px;
-		background-color: #ffff;
+		background-color: $white;
 
 
 		.ScoreMobi_card {
@@ -368,11 +368,11 @@ table#SocreMobi_match_table {
 				font-weight: 500;
 				font-size: 20px;
 				padding-bottom: 20px;
-				color: #000000;
+				color: $dark;
 			}
 
 			figcaption {
-				color: black;
+				color: $dark;
 
 			}
 		}
