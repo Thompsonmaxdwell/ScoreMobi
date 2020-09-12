@@ -99,3 +99,11 @@ dotsNav.addEventListener('click', e => {
 
 
 
+	//    remove   transition when it reaches lastElemnt and FirstElement
+	slide_container.addEventListener('transitionend', slide_container_Event);
+	// Auto slid
+	setInterval(prevSlideEventFun, 5000);
+	// click  indicator to move the  slide
+	indicators.addEventListener('click', dostSlide);
+};
+export default imgSliding;
