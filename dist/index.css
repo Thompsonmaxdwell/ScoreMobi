@@ -1859,18 +1859,11 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   }
 }
 
-.info_table {
-  width: 100%;
-  display: flex;
-  margin-top: 20px;
-  justify-content: space-evenly;
-  align-items: center;
-  border: 1px solid #b4b4b4;
+table {
+  display: table-column;
+  background-color: red;
 }
-.info_table .info_details {
-  border-left: 1px solid #b4b4b4;
-  padding: 8px;
-}
+
 .info_table .info_details p {
   font-size: 12px;
 }
