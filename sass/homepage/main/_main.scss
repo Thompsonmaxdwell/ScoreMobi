@@ -1,62 +1,52 @@
 
-.ScoreMobi_slide_container {
-	padding: 0px !important;
+.carousel_wrapper {
 	background-color: unset !important;
+	width:100%!important;
+	height: 300px!important;
+	padding-bottom:45px;
 	
-
-	.ScoreMobi_slide_wrapper {
-		margin: 0 !important;
-		height:200px!important;
+	.carousel_track_container_wrapper {
+		margin:0 !important;
+		height:100%!important;
 		overflow-x: hidden!important;
 
-		// ScoreMobi Slide Imaged
-		.slide{
-			height: 100%!important;
-			img {
-				display: block !important;
-				width:100%;
-				height: 100%!important;
-			}
+		img{
+			display: block;
+			min-width:100%;
 		}
 	}
 
 	// // ScoreMobi Slide Buton
-	.slide_btn_wrapper {
-		position: unset !important;
-		width: 100% !important;
-		margin-top: -35px;
+	.slide_buttons {
+		width: 100%!important;
+		bottom:unset!important;
+		justify-content: space-between!important; 
+		margin: 7px 0;
 
 		button {
-			background: #ffffff;
-			width: 40px !important;
-			border-radius: 50%;
-			height: 40px !important;
-			border: 1.6px solid #000000 !important;
-			box-sizing: border-box;
+			border: 2px solid #000000 !important;
 			color: #000000 !important;
-			font-weight: 200;
+			height: 30px;
+			width: 30px;
+			padding:17px;
 		}
 	}
 
 	// ScoreMobi Slide indication OR Dot
-	.ScoreMobi_slide_indicator {
-		position: unset;
-		bottom: 0px;
-		padding: 10px 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	.carousel_nav_wrapper {
+		position: unset!important;
+		padding: 5px 0;
 
-		.slide_dot {
+
+		.carousel_ind {
 			border-radius: 50%;
-			border: 2px solid #000000;
+			border: 2px solid #000000!important;
 			box-sizing: border-box;
 		}
 
-		.current {
-			background: $text_color_2;
-			border: 2px solid$text_color_2;
-			box-sizing: border-box;
+		.current_slide {
+			background: $text_color_2!important;
+			border:none!important;
 		}
 	}
 }
@@ -301,7 +291,7 @@ table#SocreMobi_match_table {
 
 					@include tabletSize(500px) {
 						order: unset;
-						width: 60px;
+						width: 90px;
 					}
 				}
 

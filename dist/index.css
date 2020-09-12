@@ -229,13 +229,13 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
   padding: 20px 10px;
-  width: 96%;
+  width: 90%;
   margin: 0 auto;
   grid-template-areas: "main main main main" "asideLeft asideLeft asideLeft asideLeft" "asideRight asideRight asideRight asideRight";
 }
 @media (min-width: 850px) {
   .ScoreMobi_main_prediction {
-    padding: 20px 17px;
+    padding: 20px 0px;
   }
 }
 @media (min-width: 850px) {
@@ -245,8 +245,8 @@ ul {
 }
 @media (min-width: 1100px) {
   .ScoreMobi_main_prediction {
-    grid-template-columns: repeat(11, 1fr);
-    grid-template-areas: "asideLeft asideLeft asideLeft main main main main  main asideRight asideRight asideRight";
+    grid-template-columns: repeat(11, auto);
+    grid-template-areas: "asideLeft asideLeft asideLeft main main main main main asideRight asideRight asideRight";
   }
 }
 .ScoreMobi_main_prediction #aside_left {
@@ -461,55 +461,46 @@ aside#aside_left .ScoreMobi_mobile_Template img {
   font-size: 0.7rem;
 }
 
-.ScoreMobi_slide_container {
-  padding: 0px !important;
+.carousel_wrapper {
   background-color: unset !important;
+  width: 100% !important;
+  height: 300px !important;
+  padding-bottom: 45px;
 }
-.ScoreMobi_slide_container .ScoreMobi_slide_wrapper {
+.carousel_wrapper .carousel_track_container_wrapper {
   margin: 0 !important;
-  height: 200px !important;
+  height: 100% !important;
   overflow-x: hidden !important;
 }
-.ScoreMobi_slide_container .ScoreMobi_slide_wrapper .slide {
-  height: 100% !important;
+.carousel_wrapper .carousel_track_container_wrapper img {
+  display: block;
+  min-width: 100%;
 }
-.ScoreMobi_slide_container .ScoreMobi_slide_wrapper .slide img {
-  display: block !important;
-  width: 100%;
-  height: 100% !important;
-}
-.ScoreMobi_slide_container .slide_btn_wrapper {
-  position: unset !important;
+.carousel_wrapper .slide_buttons {
   width: 100% !important;
-  margin-top: -35px;
+  bottom: unset !important;
+  justify-content: space-between !important;
+  margin: 7px 0;
 }
-.ScoreMobi_slide_container .slide_btn_wrapper button {
-  background: #ffffff;
-  width: 40px !important;
-  border-radius: 50%;
-  height: 40px !important;
-  border: 1.6px solid #000000 !important;
-  box-sizing: border-box;
+.carousel_wrapper .slide_buttons button {
+  border: 2px solid #000000 !important;
   color: #000000 !important;
-  font-weight: 200;
+  height: 30px;
+  width: 30px;
+  padding: 17px;
 }
-.ScoreMobi_slide_container .ScoreMobi_slide_indicator {
-  position: unset;
-  bottom: 0px;
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.carousel_wrapper .carousel_nav_wrapper {
+  position: unset !important;
+  padding: 5px 0;
 }
-.ScoreMobi_slide_container .ScoreMobi_slide_indicator .slide_dot {
+.carousel_wrapper .carousel_nav_wrapper .carousel_ind {
   border-radius: 50%;
-  border: 2px solid #000000;
+  border: 2px solid #000000 !important;
   box-sizing: border-box;
 }
-.ScoreMobi_slide_container .ScoreMobi_slide_indicator .current {
-  background: #7fa302;
-  border: 2px solid #7fa302;
-  box-sizing: border-box;
+.carousel_wrapper .carousel_nav_wrapper .current_slide {
+  background: #7fa302 !important;
+  border: none !important;
 }
 
 .todays_pricdiction_wrapper {
@@ -720,7 +711,7 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs .c
 @media (min-width: 500px) {
   table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs .clubs_name {
     order: unset;
-    width: 60px;
+    width: 90px;
   }
 }
 table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .clubs .clubs_name:last-child {
@@ -921,6 +912,14 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   height: 20px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.premier_legue_wrapper {
+  height: 50px !important;
+  background-color: red !important;
+}
+.premier_legue_wrapper .carousel_slide:after {
+  all: unset !important;
 }
 
 .ScoreMobi_Featured_matches {

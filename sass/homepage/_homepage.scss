@@ -3,11 +3,11 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap:15px;
 	padding:20px 10px;
-	width:96%;
+	width:90%;
 	margin: 0 auto;
 	
 	@include tabletSize(850px) {
-		padding:20px 17px;
+		padding:20px 0px;
 	}
 	grid-template-areas:      
 	"main main main main"
@@ -21,8 +21,8 @@
         "asideLeft asideLeft asideRight asideRight";
 	}
 	@include desktopSize(1100px) {
-		grid-template-columns: repeat(11, 1fr);
-		grid-template-areas: "asideLeft asideLeft asideLeft main main main main  main asideRight asideRight asideRight";
+		grid-template-columns: repeat(11, auto);
+		grid-template-areas: "asideLeft asideLeft asideLeft main main main main main asideRight asideRight asideRight";
 	}
 
 	#aside_left {
@@ -37,5 +37,6 @@
 	#aside_right {
 		height:auto;
 		grid-area: asideRight;
+		
 	}
 }

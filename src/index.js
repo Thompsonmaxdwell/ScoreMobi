@@ -1,16 +1,20 @@
+const nextButton = document.querySelector('.carousel_button-right');
+const prevButton = document.querySelector('.carousel_button-left');
 
-//dropdown function
+import {moveSlideToRight, moveSlideToLeft } from './slide/slide';
 import navFun  from './header/navbar';
-//slider function
-// import imgSliding from './slide/slide';
-//tabs funtion
 import tab from './tabs/tabs';
 
-navFun()
 
-// imgSliding();
+
+/*****************************************************************************/
+nextButton.addEventListener('click', moveSlideToRight);
+prevButton.addEventListener('click', moveSlideToLeft);
+setInterval(moveSlideToRight, 5000);
+/*****************************************************************************/
 
 // tabs of the league page section
+navFun()
 tab()
 
 
