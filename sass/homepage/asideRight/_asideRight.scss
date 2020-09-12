@@ -101,7 +101,7 @@
             width: 43%;
             right: 0;
             top: 50%;
-            // left: 0;
+          
         }
 
         &:before {
@@ -183,6 +183,23 @@
                 }
             }
         
+    }
+}
+
+// premier_legue_wrapper
+.premier_legue_wrapper{
+    height: 50px!important;
+    background-color:red!important;
+
+
+    .carousel_slide{
+        .primier_legue_table{
+            // height:100px!important;
+         
+        }
+        &:after{
+            all:unset!important;
+        }
     }
 }
 
