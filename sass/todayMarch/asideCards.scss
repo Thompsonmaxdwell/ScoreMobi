@@ -1,0 +1,138 @@
+.table{
+    max-width: 100%;
+}
+
+@include tabletSize(800px){
+    .today_mobile{
+        display: none;
+    }
+}
+
+.pl_table{
+    width: 100%;
+    border: 1px solid $border_color;
+}
+
+.pl_table{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .table_head{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid $border_color;
+    }
+
+    .today_match{
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .scores{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .points{
+                // background-color: red;
+                padding: 12px 0 12px 0;
+            }
+        }
+
+        .pl_team{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            .team_img{
+                width: 45px;
+                padding-bottom: 8px;
+
+                @include tabletSize(700px){
+                    width: 40%;
+                }
+            }
+        }
+  
+    }
+            .win{
+                width: 100%;
+                padding: 10px;
+                font-weight: bold;
+                text-align: left;
+                color: $text_color_2;
+            }
+
+    .prediction{
+        // background-color: red;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-top: 1px solid $border_color ;
+        // padding: 10px;
+        width: 100%;
+        margin-top: 1px solid $border_color;
+
+        .border_left{
+            padding: 10px 10px 10px 40px;
+            border-left: 1px solid $border_color;
+            
+            @include tabletSize(320px) {
+                padding: 10px 10px 10px 20px; 
+            }
+
+            @include tabletSize(700px) {
+                padding: 10px 10px 10px 100px; 
+            }
+
+            @include tabletSize(1000px) {
+                padding: 10px 10px 10px 65px; 
+            }
+        }
+    }
+    
+}
+
+.info_table{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid $border_color;
+
+    // .info_header{
+    //     line-height: 1.5;
+    //     padding: 5px;
+
+    //     h4:first-of-type{
+    //         padding-bottom: 10px;
+    //     }
+
+    //     .tournament{
+    //         padding-bottom: 20px;
+    //     }
+
+    //     .stadium{
+    //         padding-bottom: 36px;
+    //     }
+    // }
+
+    .info_details{
+        border-left: 1px solid $border_color;
+        padding: 8px;
+        // line-height: 1.5;
+
+        p{
+            font-size: 12px;
+        }
+    }
+}
