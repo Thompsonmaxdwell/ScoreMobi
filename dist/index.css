@@ -1770,11 +1770,6 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   max-width: 100%;
 }
 
-@media (min-width: 800px) {
-  .today_mobile {
-    display: none;
-  }
-}
 .pl_table {
   width: 100%;
   border: 1px solid #b4b4b4;
