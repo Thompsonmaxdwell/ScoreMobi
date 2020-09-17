@@ -330,7 +330,7 @@
                 <img class="carousel_images" src="../assets/img/Chelsea-Manchester-United.-VivaroNews-min.jpg" alt="">
             </li>
             <li class="carousel_slide">
-                <img class="carousel_images"  src="../assets/img/Chelsea-Manchester-United.-VivaroNews-min.jpg" alt="">
+                <img class="carousel_images"  src="../assets/img/fauzan-saari-687562-unsplash.jpg" alt="">
             </li>
             <li class="carousel_slide">
                 <img class="carousel_images"  src="../assets/img/news2.jpg" alt="">
@@ -343,21 +343,25 @@
                 <img class="carousel_images" src="../assets/img/fauzan-saari-687562-unsplash.jpg" alt="">
             </li>
             <li class="carousel_slide">
-                <img class="carousel_images" src="../assets/img/Chelsea-Manchester-United.-VivaroNews-min.jpg" alt="">
+                <img class="carousel_images" src="../assets/img/coach.jpeg" alt="">
             </li>
         </ul>
     </div>
-    <div class="slide_button_wrapper slide_buttons">
-        <button class="carousel_button carousel_button-left"><i class="fa fa-arrow-left"></i></button>
-        <button class="carousel_button carousel_button-right"><i class="fa fa-arrow-right"></i></button>
-    </div>
-    <div class="carousel_nav carousel_nav_wrapper">
-        <button class="carousel_indicator carousel_ind current_slide"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-        <button class="carousel_indicator carousel_ind"></button>
+    <div class="flex_slide_button_and_ind">
+        <div class="slide_button_wrapper slide_buttons">
+            <button class="carousel_button carousel_button-left"><i class="fa fa-arrow-left"></i></button>
+        </div>
+        <div class="carousel_nav carousel_nav_wrapper">
+            <button class="carousel_indicator carousel_ind current_slide"></button>
+            <button class="carousel_indicator carousel_ind"></button>
+            <button class="carousel_indicator carousel_ind"></button>
+            <button class="carousel_indicator carousel_ind"></button>
+            <button class="carousel_indicator carousel_ind"></button>
+            <button class="carousel_indicator carousel_ind"></button>
+        </div>
+        <div class="slide_button_wrapper slide_buttons">
+            <button class="carousel_button carousel_button-right"><i class="fa fa-arrow-right"></i></button>
+        </div>
     </div>
 </div>
 <!-- ***************************************************************************** -->
@@ -366,6 +370,7 @@
     <section class="todays_pricdiction">
    <!-- CHECK MAIN.SCSS  FILE FOR THE STYLING  -->
         <div class="todays_pricdiction_wrapper">
+
             <div><button class="btn btn_md todays_pricdiction_btn">Today's Pridictions</button></div>
             <div class="lives_mode_wrapper">
                 <p class="live_match_update">(94)</p>
@@ -375,11 +380,9 @@
             </div>
         </div>
         <div class="today_pridiction_seletction">
-
-            <!-- ScoreMbi Homepage  Left Icon construct here -->
-            <div class="left_btn_matches"></div>
-
-            <!-- ScoreMbi Homepage today's Matches Dropdown  here -->
+            <div class="left_btn_matches">
+                <i class="fas fa-sort-down"></i>
+            </div>
             <div>
                 <select name="" id="match_select">
                     <option value="Today">Today</option>
@@ -388,8 +391,9 @@
                 </select>
             </div>
 
-            <!-- ScoreMbi Homepage  Right Icon construct here -->
-            <div class="right_btn_matches"></div>
+            <div class="right_btn_matches">
+                <i class="fas fa-sort-up"></i>
+            </div>
             
         </div>
 
@@ -669,7 +673,7 @@
                     <span><i class="fa fa-envelope fa-lg "></i></span>
                     <input type="text" class="form_input" placeholder="Email">
                 </div>
-                <div class="input_wrap ScoreMobi_input_wrapper top_space">
+                <div class="input_wrap ScoreMobi_input_wrapper input_space">
                     <span><i class="fa fa-key"></i></span>
                     <input type="text" class="form_input" placeholder="Password">
                 </div>
@@ -678,7 +682,7 @@
                      <button class="btn btn_sm">Sign in</button>
                  </div>
             </form>
-               <div class="form_or">OR</div>
+               <div class="or">OR</div>
               <div class="ScoreMobi_signup_via_social_media">
                     <button  class="facebook"><i class="fab fa-facebook-f"></i><p>Facebook</p></button>
                     <button  class="google"><img src="../assets/img/google.jpg" alt=""> <p>Google</p> </button>
@@ -687,44 +691,191 @@
 
 
   <!-- ***************************************************************************** -->
-  <div class="carousel premier_legue_wrapper">
-    <div class="carousel_track-container carousel_track_container_wrapper">
-        <ul class="carousel_track">
-            <li class="carousel_slide current_slide">
-                <table class="primier_legue_table"> 
-                    <thead>
-                       <tr>
-                           <th>Chealse</th>
-                           <th>16:00</th>
-                           <th>Man UTD</th>
-                       </tr>
-                    <thead>
-                    <tbody>
-                        <tr>
-                            <td>Who</td>
-                            <td>Will</td>
-                            <td>Win</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </li>
-           
-        </ul>
+  <!-- Premier League -->
+  <section>
+    <div class="carousel premier_legue_wrapper">
+        <div class="carousel_track-container">
+            <ul class="carousel_track">
+    
+                <!-- ==========================  slid 03 ==========================-->
+                <li class="carousel_slide current_slide">
+                    <p class="premier_league_title">Premier League</p>
+                    <table class="premier_league_table"> 
+                        <thead>
+                           <tr>
+                               <th>
+                                   <div class="premier_league_table_header">
+                                       <p>Chealse</p>
+                                        <img src="../assets/img/chealse.png" alt="">
+                                    </div>
+                                </th>
+                               <th>16:00</th>
+                               <th>
+                                   <div class="premier_league_table_header align_left">
+                                    <p class="premier_league_text_order">Man Utd</p>
+                                     <img src="../assets/img/man utd.png" alt="">
+                                   </div>
+                               </th>
+                           </tr>
+                        <thead>
+                        <tbody>
+                            <tr>
+                                <td class="who"><p>Who</p></td>
+                                <td class="will"><p>Will</p></td>
+                                <td class="win"><p>Win</p></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr class="premier_league_table_body">
+                                <td>
+                                    <div class="premier_league_club">
+                                        <img src="../assets/img/chealse.png" alt="">
+                                        <div class="premier_league_odd"><i class="fa fa-sort-up"></i> <p>3.55</p></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="premier_league_club">
+                                        <h2 class="drawn">Drawn</h2>
+                                        <div class="premier_league_odd"><i class="fa fa-sort-down"></i> <p>3.55</p></div>
+                                    </div>
+                                </td>
+                                <td class="premier_league_club">
+                                    <div class="premier_league_club">
+                                        <img src="../assets/img/man utd.png" alt="">
+                                        <div class="premier_league_odd"><i class="fa fa-sort-up"></i> <p>3.55</p></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+               
+                <!-- ================================== slid 02 ==========================-->
+                <li class="carousel_slide current_slide">
+                    <p class="premier_league_title">Premier League</p>
+                    <table class="premier_league_table"> 
+                        <thead>
+                           <tr>
+                               <th>
+                                   <div class="premier_league_table_header">
+                                       <p>Spezio</p>
+                                        <img src="../assets/img/football_2735.png" alt="">
+                                    </div>
+                                </th>
+                               <th>16:00</th>
+                               <th>
+                                   <div class="premier_league_table_header align_left">
+                                    <p class="premier_league_text_order">liverpool</p>
+                                     <img src="../assets/img/liverpool.png" alt="">
+                                   </div>
+                               </th>
+                           </tr>
+                        <thead>
+                        <tbody>
+                            <tr>
+                                <td class="who"><p>Who</p></td>
+                                <td class="will"><p>Will</p></td>
+                                <td class="win"><p>Win</p></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr class="premier_league_table_body">
+                                <td>
+                                    <div class="premier_league_club">
+                                        <img src="../assets/img/football_2735.png" alt="">
+                                        <div class="premier_league_odd"><i class="fa fa-sort-up"></i> <p>3.55</p></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="premier_league_club">
+                                        <h2 class="drawn">Drawn</h2>
+                                        <div class="premier_league_odd"><i class="fa fa-sort-down"></i> <p>3.55</p></div>
+                                    </div>
+                                </td>
+                                <td class="premier_league_club">
+                                    <div class="premier_league_club">
+                                        <img src="../assets/img/liverpool.png" alt="">
+                                        <div class="premier_league_odd"><i class="fa fa-sort-up"></i> <p>3.55</p></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <!-- ============================================== slid 03 ==========================-->
+                <li class="carousel_slide current_slide">
+                    <p class="premier_league_title">Premier League</p>
+                    <table class="premier_league_table"> 
+                        <thead>
+                           <tr>
+                               <th>
+                                   <div class="premier_league_table_header">
+                                       <p>liona</p>
+                                        <img src="../assets/img/liona.png" alt="">
+                                    </div>
+                                </th>
+                               <th>16:00</th>
+                               <th>
+                                   <div class="premier_league_table_header align_left">
+                                    <p class="premier_league_text_order">LAZIO</p>
+                                     <img src="../assets/img/LAZIO.png" alt="">
+                                   </div>
+                               </th>
+                           </tr>
+                        <thead>
+                        <tbody>
+                            <tr>
+                                <td class="who"><p>Who</p></td>
+                                <td class="will"><p>Will</p></td>
+                                <td class="win"><p>Win</p></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr class="premier_league_table_body">
+                                <td>
+                                    <div class="premier_league_club">
+                                        <img src="../assets/img/liona.png" alt="">
+                                        <div class="premier_league_odd"><i class="fa fa-sort-up"></i> <p>3.55</p></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="premier_league_club">
+                                        <h2 class="drawn">Drawn</h2>
+                                        <div class="premier_league_odd"><i class="fa fa-sort-down"></i> <p>3.55</p></div>
+                                    </div>
+                                </td>
+                                <td class="premier_league_club">
+                                    <div class="premier_league_club">
+                                        <img src="../assets/img/LAZIO.png" alt="">
+                                        <div class="premier_league_odd"><i class="fa fa-sort-up"></i> <p>3.55</p></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </div>
+        <div class="flex">
+             <!-- <div class="slide_button_wrapper slide_buttons"> -->
+                 <button class="carousel_button carousel_button-left"><i class="fas fa-arrow-alt-circle-left"></i></button>
+             <!-- </div> -->
+             <div class="carousel_nav carousel_premier_league_nav">
+                 <button class="carousel_indicator current_slide"></button>
+                 <button class="carousel_indicator"></button>
+                 <button class="carousel_indicator"></button>
+             </div>
+             <!-- <div class="slide_button_wrapper slide_buttons flex_end"> -->
+                 <button class="carousel_button carousel_button-right"> <i class="fas fa-arrow-alt-circle-right"></i> </button>
+             <!-- </div> -->
+        </div>
+        
     </div>
-    <!-- <div class="slide_button_wrapper slide_buttons">
-        <button class="carousel_button carousel_button-left"><i class="fa fa-arrow-left"></i></button>
-        <button class="carousel_button carousel_button-right"><i class="fa fa-arrow-right"></i></button>
-    </div>
-    <div class="carousel_nav carousel_nav_wrapper">
-        <button class="carousel_indicator carousel_ind current_slide"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-        <button class="carousel_indicator carousel_ind"></button>
-    </div> -->
-</div>
+    
+
+  </section>
+
+
 <!-- ***************************************************************************** -->
 
         <!--ScoreMobi  Feature matches  -->
@@ -817,7 +968,6 @@
 <!-- ====================================================================== ===================================-->
         <!--ScoreMobi  Feature matches  -->
     <div class="ScoreMobi_Featured_matches">
-            <!-- ScoreMobi Featured Box -->
             <div class="featured_matches">
                 <img src="/assets/img/logo5.png" alt="">
                 <div>
@@ -899,8 +1049,6 @@
         <div class="show_more">Showmore</div>
     </div>
 
- <!-- ================================================================================== -->
- <!-- ================================================================================== -->
  <!-- ================================================================================== -->
 
      <!--ScoreMobi  CARD  for Aside Right in   -->
