@@ -105,5 +105,5 @@ dotsNav.addEventListener('click', e => {
 	setInterval(prevSlideEventFun, 5000);
 	// click  indicator to move the  slide
 	indicators.addEventListener('click', dostSlide);
-};
+// };
 export default imgSliding;
