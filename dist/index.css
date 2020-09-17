@@ -509,6 +509,10 @@ aside#aside_left .ScoreMobi_mobile_Template img {
   position: unset;
   justify-content: unset !important;
   margin: 0px 0;
+  width: 100% !important;
+  bottom: unset !important;
+  justify-content: space-between !important;
+  margin: 7px 0;
 }
 .carousel_wrapper .slide_buttons button {
   border: 2px solid #000000 !important;
@@ -1976,6 +1980,21 @@ table.shedule td h4 {
 table.shedule td p {
   padding: 3px 0 3px 10px;
   font-size: 13px;
+}
+
+table.info_section {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+table.info_section td {
+  border: 1px solid #b4b4b4;
+  padding: 10px;
+}
+@media (min-width: 320px) {
+  table.info_section td {
+    max-width: 200px;
+  }
 }
 
 .pl_team {
