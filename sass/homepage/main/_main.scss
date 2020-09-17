@@ -1,26 +1,25 @@
-
 .carousel_wrapper {
 	background-color: unset !important;
-	width:100%!important;
-	height: 300px!important;
-	padding-bottom:45px;
-	
-	.carousel_track_container_wrapper {
-		margin:0 !important;
-		height:100%!important;
-		overflow-x: hidden!important;
+	width: 100% !important;
+	height: 300px !important;
+	padding-bottom: 45px;
 
-		img{
+	.carousel_track_container_wrapper {
+		margin: 0 !important;
+		height: 100% !important;
+		overflow-x: hidden !important;
+
+		img {
 			display: block;
-			min-width:100%;
+			min-width: 100%;
 		}
 	}
 
 	// // ScoreMobi Slide Buton
 	.slide_buttons {
-		width: 100%!important;
-		bottom:unset!important;
-		justify-content: space-between!important; 
+		width: 100% !important;
+		bottom: unset !important;
+		justify-content: space-between !important;
 		margin: 7px 0;
 
 		button {
@@ -28,25 +27,25 @@
 			color: #000000 !important;
 			height: 30px;
 			width: 30px;
-			padding:17px;
+			padding: 17px;
 		}
 	}
 
 	// ScoreMobi Slide indication OR Dot
 	.carousel_nav_wrapper {
-		position: unset!important;
+		position: unset !important;
 		padding: 5px 0;
 
 
 		.carousel_ind {
 			border-radius: 50%;
-			border: 2px solid #000000!important;
+			border: 2px solid #000000 !important;
 			box-sizing: border-box;
 		}
 
 		.current_slide {
-			background: $text_color_2!important;
-			border:none!important;
+			background: $text_color_2 !important;
+			border: none !important;
 		}
 	}
 }
@@ -136,18 +135,18 @@
 // ScoreMbi Homepage today's prediction 
 .today_pridiction_seletction {
 	display: flex;
-	justify-content: space-between;
-	border-bottom: 0.6px solid $link_color;
 	padding: 10px 0;
 	margin-bottom: 5px;
+	justify-content: space-between;
+	border-bottom: 0.6px solid $border_color;
 
 	// ScoreMbi Homepage today Matches Dropdown styling here
 	#match_select {
-		font-weight: 600;
 		font-size: 20px;
+		font-weight: 600;
 		line-height: 24px;
-		background-color: unset;
 		font-family: inherit;
+		background-color: unset;
 
 		/* navbar color-1 */
 
@@ -208,7 +207,7 @@ table#SocreMobi_match_table {
 	width: 100%;
 	text-align: center;
 	border-collapse: collapse;
-	
+
 
 	// ScoreMobi Homepage Matchs  Table content Styling here
 	tbody::before {
@@ -252,7 +251,7 @@ table#SocreMobi_match_table {
 
 	.ScoreMobi_matches {
 		background: $white;
-		border: 0.6px solid $form_btn_hover;
+		border: 0.6px solid $border_color;
 		box-sizing: border-box;
 
 		// ScoreMobi Homepage Matchs Clubs Wrapper
@@ -261,6 +260,7 @@ table#SocreMobi_match_table {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 
 			.vs {
 				margin: 10px;
