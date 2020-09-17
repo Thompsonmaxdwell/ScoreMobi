@@ -62,8 +62,14 @@ ul {
   display: flex;
 }
 .scoreMobi_header .login {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   color: white;
   font-size: 18px;
+}
+.scoreMobi_header .login span {
+  padding-left: 5px;
 }
 
 .scoreMobi_header_color {
@@ -240,13 +246,25 @@ ul {
 }
 @media (min-width: 850px) {
   .ScoreMobi_main_prediction {
-    grid-template-areas: "main main main main" "asideLeft asideLeft asideRight asideRight";
+    grid-template-areas: "main main main main main main main " "asideLeft asideLeft asideRight asideRight";
   }
 }
 @media (min-width: 1100px) {
   .ScoreMobi_main_prediction {
     grid-template-columns: repeat(11, auto);
     grid-template-areas: "asideLeft asideLeft asideLeft main main main main main asideRight asideRight asideRight";
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-areas: "asideLeft asideLeft asideLeft main main main main  main asideRight asideRight asideRight";
+    grid-gap: 20px;
+  }
+  .ScoreMobi_main_prediction #main img {
+    border-radius: 12px;
+  }
+  .ScoreMobi_main_prediction .news_article p {
+    line-height: 2;
   }
 }
 .ScoreMobi_main_prediction #aside_left {
@@ -260,6 +278,11 @@ ul {
 .ScoreMobi_main_prediction #aside_right {
   height: auto;
   grid-area: asideRight;
+}
+
+.content_wrapper {
+  width: 95%;
+  margin: 0 auto;
 }
 
 aside#aside_left {
@@ -290,7 +313,6 @@ aside#aside_left #aside_left_order_2 {
 }
 aside#aside_left .ScoreMobi_mobile_Template {
   width: 100%;
-  background: #ffffff;
   border: 1px solid #898686;
   box-sizing: border-box;
   padding: 10px 15px;
@@ -402,9 +424,9 @@ aside#aside_left .ScoreMobi_mobile_Template img {
 }
 
 .ScoreMobi_card {
+  margin-top: 15px;
   position: relative;
   transition: 0.35ms ease-in-out;
-  border: 1px solid #b4b4b4;
 }
 .ScoreMobi_card img {
   width: 100%;
@@ -1786,6 +1808,198 @@ section .premier_legue_wrapper .flex .carousel_button i {
 }
 .league_video_section .league_video_wrapper .highlight iframe {
   width: 100%;
+}
+
+.sm_title {
+  cursor: pointer;
+}
+
+.comment_section_wapper {
+  margin-top: 40px;
+}
+.comment_section_wapper .comment_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #b4b4b4;
+}
+@media (min-width: 420px) {
+  .comment_section_wapper .comment_section {
+    flex-direction: row;
+  }
+}
+.comment_section_wapper .comment_details_container .comment_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin: 8px 0px 10px 0px;
+  border-bottom: 1px solid #b4b4b4;
+}
+.comment_section_wapper .comment_details_container .comment_details .comment_date {
+  width: 55%;
+  max-width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment_section_wapper .comment_details_container .comment_details .comment_date .cm_time {
+  font-size: 12px;
+}
+.comment_section_wapper .comment_details_container .comment_details .comment_name {
+  color: #000;
+}
+.comment_section_wapper .more_btn {
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+  margin-top: 20px;
+  color: #7fa302;
+}
+.comment_section_wapper .comment_form {
+  max-width: 550px;
+  margin-top: 25px;
+}
+.comment_section_wapper .comment_form .input_wrap {
+  margin-top: 10px;
+  border-color: #b4b4b4;
+}
+.comment_section_wapper .comment_form .input_wrap input:focus {
+  box-shadow: 0px 0px 1px 1.5px #b4b4b4;
+}
+.comment_section_wapper .comment_form textarea {
+  margin-top: 20px;
+  border-color: #b4b4b4;
+}
+.comment_section_wapper .comment_form textarea:focus {
+  box-shadow: 0px 0px 1px 1.5px #b4b4b4;
+}
+.comment_section_wapper .comment_form .sm_input {
+  color: #fff;
+  margin-top: 15px;
+  border-radius: 0px;
+  background-color: #7e9e09;
+}
+.comment_section_wapper .comment_form .sm_input:hover {
+  background-color: #6c8a00;
+}
+
+@media (min-width: 1100px) {
+  .ScoreMobi_main_prediction.news_details {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: " main main asideRight";
+    grid-gap: 20px;
+  }
+}
+
+.table {
+  max-width: 100%;
+}
+
+@media (min-width: 800px) {
+  .today_mobile {
+    display: none;
+  }
+}
+.pl_table {
+  width: 100%;
+  border: 1px solid #b4b4b4;
+}
+
+.pl_table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pl_table .table_head {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #b4b4b4;
+}
+.pl_table .today_match {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pl_table .today_match .scores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pl_table .today_match .scores .points {
+  padding: 12px 0 12px 0;
+}
+.pl_table .today_match .pl_team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pl_table .today_match .pl_team .team_img {
+  width: 45px;
+  padding-bottom: 8px;
+}
+@media (min-width: 700px) {
+  .pl_table .today_match .pl_team .team_img {
+    width: 40%;
+  }
+}
+.pl_table .win {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  text-align: left;
+  color: #7fa302;
+}
+.pl_table .prediction {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid #b4b4b4;
+  width: 100%;
+  margin-top: 1px solid #b4b4b4;
+}
+.pl_table .prediction .border_left {
+  padding: 10px 10px 10px 40px;
+  border-left: 1px solid #b4b4b4;
+}
+@media (min-width: 320px) {
+  .pl_table .prediction .border_left {
+    padding: 10px 10px 10px 20px;
+  }
+}
+@media (min-width: 700px) {
+  .pl_table .prediction .border_left {
+    padding: 10px 10px 10px 100px;
+  }
+}
+@media (min-width: 1000px) {
+  .pl_table .prediction .border_left {
+    padding: 10px 10px 10px 65px;
+  }
+}
+
+table {
+  display: table-column;
+  background-color: red;
+}
+
+.info_table .info_details p {
+  font-size: 12px;
 }
 
 .loading_container {
