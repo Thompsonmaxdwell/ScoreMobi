@@ -126,4 +126,5 @@ dotsNavs.forEach(dotsNav => {
 	// click  indicator to move the  slide
 	indicators.addEventListener('click', dostSlide);
 
+// };
 export default imgSliding;

@@ -3,7 +3,6 @@ const tabs = document.querySelectorAll('#tabs ul li');
 const tabs_contents = document.querySelectorAll('.tabs_content')
 const loader = document.querySelector('.loading_container');
 
-
  function tab() {
 return tabs.forEach(function(tab, tab_index) {
         tab.addEventListener('click',() => {
@@ -32,6 +31,7 @@ return tabs.forEach(function(tab, tab_index) {
         })
     })
 }
+console.log('hello');
 
 export default tab;
 

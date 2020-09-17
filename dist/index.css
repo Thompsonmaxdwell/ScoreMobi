@@ -610,14 +610,17 @@ aside#aside_left .ScoreMobi_mobile_Template img {
   border-bottom: 0.6px solid #D2D2D2;
   align-items: center;
   padding: 3px;
+  padding: 10px 0;
   margin-bottom: 5px;
+  justify-content: space-between;
+  border-bottom: 0.6px solid #b4b4b4;
 }
 .today_pridiction_seletction #match_select {
-  font-weight: 600;
   font-size: 20px;
+  font-weight: 600;
   line-height: 24px;
-  background-color: unset;
   font-family: inherit;
+  background-color: unset;
   /* navbar color-1 */
   color: #6F8B0A;
   border: none;
@@ -690,6 +693,8 @@ table#SocreMobi_match_table .clubs_name {
 table#SocreMobi_match_table .ScoreMobi_matches {
   background: #ffffff;
   border: 0.6px solid #898686;
+  background: #fff;
+  border: 0.6px solid #b4b4b4;
   box-sizing: border-box;
 }
 table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper {
@@ -1904,102 +1909,107 @@ section .premier_legue_wrapper .flex .carousel_button i {
   max-width: 100%;
 }
 
-@media (min-width: 800px) {
-  .today_mobile {
-    display: none;
-  }
-}
 .pl_table {
   width: 100%;
   border: 1px solid #b4b4b4;
 }
 
-.pl_table {
-  width: 100%;
+.score_wrapper .scores {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.pl_table .table_head {
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  border-bottom: 1px solid #b4b4b4;
-}
-.pl_table .today_match {
-  width: 100%;
-  display: flex;
-  padding: 10px;
+  width: 50px;
   justify-content: space-evenly;
   align-items: center;
-}
-.pl_table .today_match .scores {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
-.pl_table .today_match .scores .points {
+.score_wrapper .scores .points {
   padding: 12px 0 12px 0;
 }
-.pl_table .today_match .pl_team {
+
+.section_caption {
+  width: 100%;
+  padding-bottom: 8px;
+  text-align: left;
+  font-weight: bold;
+  color: #7fa302;
+  margin-top: 20px;
+}
+
+.win {
+  border: 1px solid #b4b4b4;
+  border-top: 0px;
+  border-bottom: 0px;
+  margin-top: 0px;
+}
+
+tr.table_head th.head {
+  border: 1px solid #b4b4b4;
+  border-bottom: none;
+  font-size: 18px;
+}
+
+table.prediction {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.prediction td {
+  border: 1px solid #b4b4b4;
+  text-align: center;
+  padding: 15px;
+}
+
+table.shedule {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+table.shedule td {
+  border: 1px solid #b4b4b4;
+}
+@media (min-width: 320px) {
+  table.shedule td {
+    max-width: 200px;
+  }
+}
+table.shedule td h4 {
+  padding: 3px 0 3px 10px;
+}
+table.shedule td p {
+  padding: 3px 0 3px 10px;
+  font-size: 13px;
+}
+
+.pl_team {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.pl_table .today_match .pl_team .team_img {
-  width: 45px;
+.pl_team .team_name {
+  width: 100%;
+}
+.pl_team img {
+  width: 100%;
   padding-bottom: 8px;
+  object-fit: contain;
 }
-@media (min-width: 700px) {
-  .pl_table .today_match .pl_team .team_img {
-    width: 40%;
-  }
-}
-.pl_table .win {
-  width: 100%;
-  padding: 10px;
-  font-weight: bold;
-  text-align: left;
-  color: #7fa302;
-}
-.pl_table .prediction {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-top: 1px solid #b4b4b4;
-  width: 100%;
-  margin-top: 1px solid #b4b4b4;
-}
-.pl_table .prediction .border_left {
-  padding: 10px 10px 10px 40px;
-  border-left: 1px solid #b4b4b4;
-}
-@media (min-width: 320px) {
-  .pl_table .prediction .border_left {
-    padding: 10px 10px 10px 20px;
-  }
-}
-@media (min-width: 700px) {
-  .pl_table .prediction .border_left {
-    padding: 10px 10px 10px 100px;
+@media (min-width: 800px) {
+  .pl_team img {
+    width: 80%;
   }
 }
 @media (min-width: 1000px) {
-  .pl_table .prediction .border_left {
-    padding: 10px 10px 10px 65px;
+  .pl_team img {
+    width: 70%;
   }
 }
 
-table {
-  display: table-column;
-  background-color: red;
-}
-
-.info_table .info_details p {
-  font-size: 12px;
+.td_premier {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
 }
 
 .loading_container {
