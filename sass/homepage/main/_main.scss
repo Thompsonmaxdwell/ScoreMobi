@@ -17,11 +17,17 @@
 	}
 
 	// // ScoreMobi Slide Buton
-	.slide_buttons {
-		width: 100%!important;
-		bottom:unset!important;
-		justify-content: space-between!important; 
+	.flex_slide_button_and_ind{
+		display:flex;
+		justify-content: space-between;
 		margin: 7px 0;
+	}
+	.slide_buttons {
+		width: unset;
+		bottom:unset!important;
+		position: unset;;
+		justify-content: unset!important; 
+		margin: 0px 0;
 
 		button {
 			border: 2px solid #000000 !important;
@@ -36,6 +42,7 @@
 	.carousel_nav_wrapper {
 		position: unset!important;
 		padding: 5px 0;
+		display:unset;
 
 
 		.carousel_ind {
@@ -138,10 +145,10 @@
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 0.6px solid #D2D2D2;
-	padding: 10px 0;
+	align-items: center;
+	padding: 3px;
 	margin-bottom: 5px;
 
-	// ScoreMbi Homepage today Matches Dropdown styling here
 	#match_select {
 		font-weight: 600;
 		font-size: 20px;
@@ -155,48 +162,35 @@
 		border: none;
 		outline: none;
 	}
+	
+	.left_btn_matches{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: rotate(90deg);
+		background: #E5E5E5;
+		border-radius: 50%;
+		padding:0px 5px;
+		
+		i{
+			font-size: 30px;
+			transform: translateY(-5px);
 
-	// 	// ScoreMbi Homepage  Left and  Right Icon construct here close to Match table 
-	.left_btn_matches,
-	.right_btn_matches {
-		height: 15px;
-		width: 15px;
-		background-color: #000000;
-		transform: rotate(-44deg);
-		position: relative;
-		display: block;
-		border: none;
-
-		&::after {
-			content: '';
-			height: 100%;
-			width: 100%;
-			background-color: #ffffff;
-			transform: rotate(44deg) translate(50%, -50%);
-			z-index: 2;
-			position: absolute;
-		}
-
-		&::before {
-			content: '';
-			height: 100%;
-			width: 100%;
-			background-color: #ffffff;
-			transform: rotate(44deg) translate(50%, 45%);
-			z-index: 3;
-			position: absolute;
 		}
 	}
-
 	.right_btn_matches {
-		transform: rotate(-55deg);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: rotate(90deg);
+		background: #E5E5E5;
+		border-radius: 50%;
+		padding:0px 5px;
+		
+		i{
+			font-size: 30px;
+			transform: translateY(7px);
 
-		&::after {
-			transform: rotate(50deg) translate(-50%, -50%);
-		}
-
-		&::before {
-			transform: rotate(50deg) translate(-50%, 45%);
 		}
 	}
 }
@@ -212,7 +206,7 @@ table#SocreMobi_match_table {
 
 	// ScoreMobi Homepage Matchs  Table content Styling here
 	tbody::before {
-		height: 12px;
+		height: 10px;
 		display: table-row;
 		content: "";
 	}
@@ -223,12 +217,10 @@ table#SocreMobi_match_table {
 
 	thead tr th {
 		text-align: center;
-		padding-top: 15px;
-		padding-bottom: 15px;
 	}
 
 	thead tr th .table_header {
-		font-weight: 500;
+		// font-weight: 500;
 		font-size: 18px;
 		color: #000000;
 	}
@@ -238,7 +230,7 @@ table#SocreMobi_match_table {
 		padding: 5px 3px;
 
 		@include tabletSize(500px) {
-			padding: 5px 10px;
+			padding: 5px;
 		}
 	}
 

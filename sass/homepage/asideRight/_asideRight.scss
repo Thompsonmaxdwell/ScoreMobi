@@ -1,6 +1,6 @@
 .ScoreMobi_form {
     border: 1px solid #b1b2b6;
-    font-family: 'Montserrat';
+    font-family: inherit;
     font-style: normal;
     @include border_line;
     width: 100%;
@@ -16,23 +16,24 @@
     p {
         font-size: 0.8rem;
     }
-
-    //   ScoreMobi Form
+}
+// ==========================================================================================================================================
+    //  ScoreMobi Form Section
     form {
-        .top_space {
-            margin-top: 10px;
-        }
-
         .ScoreMobi_input_wrapper {
             background: #ddd;
             border: none;
 
+            &.input_space {
+                margin-top: 10px;
+            }
+            
             :focus {
                 box-shadow: 0px 0px 1px 1.5px $form_btn_color;
             }
 
             span,
-            i {
+            i.fa {
                 color: #959595;
                 padding-left: 5px;
                 padding-right: 0px;
@@ -58,13 +59,13 @@
                 }
             }
         }
+        // ===========================================================================================================================================
 
         // ScoreMobi_form_button 
         .ScoreMobi_form_button {
             display: flex;
             justify-content: space-between;
             margin: 20px 0 5px 0;
-
 
             button {
                 background-color: $form_btn_color;
@@ -80,14 +81,15 @@
                 &:hover {
                     background-color: $form_btn_hover;
                 }
-
-
             }
         }
     }
 
-    //ScoreMobi Form Optional signing up form_or
-    .form_or {
+    // ==========================================================================================================================================
+
+
+    //ScoreMobi Form Optional signing up with facebok or  google
+    .or {
         text-align: center;
         position: relative;
         margin-bottom: 20px;
@@ -101,7 +103,6 @@
             width: 43%;
             right: 0;
             top: 50%;
-          
         }
 
         &:before {
@@ -109,6 +110,7 @@
         }
     }
 
+    // ==========================================================================================================================================
     .ScoreMobi_signup_via_social_media {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -117,196 +119,370 @@
         p {
             font-size: inherit;
         }
-            button {
-                font-family: inherit;
-                font-size: 15px;
-                padding: 10px 0;
-                cursor: pointer;
-                transition: 0.2s ease-in-out;
-            }
 
-            .facebook,
-            .google {
-                background-color: #3b5998;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 7px 0;
-                outline: none;
-                font-size: unset;
-                font-family: unset;
-                border: none;
-                border-radius: 3px;
-                color: #fff;
-
-
-                i {
-                    font-size: 20px;
-                    padding-right: 10px;
-                }
-
-                &:hover {
-                    background-color: #2652b1ec;
-                }
-
-                &:focus {
-                    box-shadow: 0px 0px 0px 2px #2652b1ec;
-                }
-            }
-
-            .google {
-                background-color: #e0e0e0;
-                color: #fff;
-                justify-content: center;
-                padding: 0;
-                transition: box-shadow 0.2s ease-in-out;
-                outline: none;
-                border: none;
-                border-radius: 3px;
-                color: rgb(122, 122, 122);
-               
-
-                &:hover {
-                    background-color: #e0e0e091;
-                }
-
-                &:focus {
-                    box-shadow: 0px 0px 0px 2px #e0e0e09f;
-                }
-
-                img {
-                    width: 30px;
-                    padding-right: 10px;
-                    height: 20px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                }
-            }
-        
-    }
-}
-
-// premier_legue_wrapper
-.premier_legue_wrapper{
-    height: 50px!important;
-    background-color:red!important;
-
-
-    .carousel_slide{
-        .primier_legue_table{
-            // height:100px!important;
-         
-        }
-        &:after{
-            all:unset!important;
-        }
-    }
-}
-
-    // ScoreMobi Features Match Container
-    .ScoreMobi_Featured_matches {
-        margin-top: 20px;
-
-        h1 {
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 20px;
-            padding: 13px 0;
-            color: $header_light;
-
+        button {
+            font-family: inherit;
+            font-size: 15px;
+            padding: 10px 0;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
         }
 
-        // ScoreMobi Featured Box
-        .featured_matches {
+        .facebook,
+        .google {
+            background-color: $facebook;
             display: flex;
             align-items: center;
-            border: 1px solid $border_color;
-            margin-bottom: 4px;
-            padding: 4px;
+            justify-content: center;
+            padding: 7px 0;
+            outline: none;
+            font-size: unset;
+            font-family: unset;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            transition: box-shadow 0.2s ease-in-out;
 
-            h2 {
-                font-weight: normal;
-                font-size: 16px;
-                font-size: 1rem;
-                color: #000000;
-                padding: 0;
-                margin: 0;
+            i {
+                font-size: 20px;
+                padding-right: 10px;
             }
 
-            p {
-                font-weight: normal;
-                font-size: 13px;
-                font-size: 0.8rem;
-                padding: 0;
-                margin: 0;
-                color: #888888;
+            &:hover {
+                background-color: $facebook_hover;
+            }
+
+            &:focus {
+                box-shadow: 0px 0px 0px 2px $facebook_hover;
+            }
+        }
+
+        .google {
+            background-color: $goolge;
+            padding: 0;
+            color: rgb(122, 122, 122);
+
+
+            &:hover {
+                background-color: #e0e0e091;
+            }
+
+            &:focus {
+                box-shadow: 0px 0px 0px 2px $border_radius;
             }
 
             img {
-                width: 35px;
-                height: 35px;
-                margin-right: 7px;
+                width: 30px;
+                padding-right: 10px;
+                height: 20px;
+                object-fit: cover;
+                border-radius: 50%;
             }
         }
 
+    }
 
-        // ScoreMobi Featured Matches   Table
+    // ==========================================================================================================================================
 
-        .ScoreMobi_featured_matches_table {
-            width: 100%;
+// premier_legue_wrapper
+
+ section .premier_legue_wrapper {
+    height: 290px;
+    border: 1px solid #b1b2b6;
+    margin-top: 10px;
+    width: 100% ;
+
+
+    .carousel_track-container {
+        // overflow: unset !important;
+        height: 100%;
+    }
+
+    .premier_league_title {
+        border-bottom: 1px solid #C8C8C8;
+        text-align: center;
+        font-weight: normal;
+        font-size: 17px;
+        padding: 5px 0;
+        color: #000000;
+
+    }
+
+    .carousel_slide {
+        &:after {
+            all: unset !important;
+        }
+    }
+
+    .premier_league_table {
+        text-align: center;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .premier_league_table_header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 2px;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 5px;
+        margin: 15px 0;
+
+        p {
+            font-style: normal;
+            font-weight: normal;
+            line-height: 17px;
+            color: #000000;
+            font-size: inherit;
+        }
+    }
+
+    .align_left {
+        justify-content: flex-start;
+
+        .premier_league_text_order {
+            order: 1;
+        }
+    }
+
+    th img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .who p,
+    .win p,
+    .will p {
+        font-weight: normal;
+        font-size: 16px;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+
+    .who {
+        text-align: end;
+    }
+
+    .win {
+        text-align: start;
+    }
+
+    .premier_league_table_body {
+        text-align: center;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .premier_league_club {
             text-align: center;
-            border-collapse: collapse;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            height:70px;
+            
 
-            tbody::before {
-                height: 4px;
-                display: table-row;
-                content: "";
-            }
-
-            p {
-                font-size: inherit;
+            .drawn {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
                 color: #000000;
-                font-family: inherit;
-                font-weight: normal;
+                padding-top: 15px;
             }
 
-            .ScoreMobi_featured_matches {
-                border: 1px solid $border_color;
-                box-sizing: border-box;
+        }
 
+        .premier_league_odd {
+            background: #C4C4C4;
+            padding: 2px 10px;
+            display: flex;
+            position: relative;
+            font-size: inherit;
+
+            i {
+                color: red;
+                padding-right: 5px;
+
+                &.fa-sort-up {
+                    position: relative;
+                    top: 20%;
+                    color: green;
+                }
+            }
+
+
+        }
+    }
+  
+
+    .carousel_premier_league_nav {
+        background-color: $header_light !important;
+        justify-content: unset;
+        gap:10px;
+        position: unset;
+        left: 0;
+
+        button {
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background-color: $header_light;
+            margin: 0;
+
+            &.current_slide {
+                background-color: #000000;
+            }
+        }
+    }
+
+
+   
+    .flex {
+        background-color: $header_light !important;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        position: absolute;
+        bottom:0;
+
+
+        
+
+        .carousel_button {
+            border: unset;
+            // display: flex;
+
+            align-items: center;
+            // justify-content: center;
+            gap: 5px;
+            border-radius: 50%;
+            height: unset;
+            width: unset;
+            padding: 0px;
+
+            p{
+                line-height: 100%;
+            }
+            i{
+                font-size:17px;
+                font-weight:bolder;
+            }
+        }
+    }
+
+
+}
+
+// ScoreMobi Features Match Container
+.ScoreMobi_Featured_matches {
+    margin-top: 20px;
+
+    h1 {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 13px 0;
+        color: $header_light;
+
+    }
+
+    // ScoreMobi Featured Box
+    .featured_matches {
+        display: flex;
+        align-items: center;
+        border: 1px solid $border_color;
+        margin-bottom: 4px;
+        padding: 4px;
+
+        h2 {
+            font-weight: normal;
+            font-size: 16px;
+            font-size: 1rem;
+            color: #000000;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-weight: normal;
+            font-size: 13px;
+            font-size: 0.8rem;
+            padding: 0;
+            margin: 0;
+            color: #888888;
+        }
+
+        img {
+            width: 35px;
+            height: 35px;
+            margin-right: 7px;
+        }
+    }
+
+
+    // ScoreMobi Featured Matches   Table
+
+    .ScoreMobi_featured_matches_table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+
+        tbody::before {
+            height: 4px;
+            display: table-row;
+            content: "";
+        }
+
+        p {
+            font-size: inherit;
+            color: #000000;
+            font-family: inherit;
+            font-weight: normal;
+        }
+
+        .ScoreMobi_featured_matches {
+            border: 1px solid $border_color;
+            box-sizing: border-box;
+
+
+            .ScoreMobi_feature_matches_wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 8px 3px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 2px;
+                    width: 28px;
+                    height: 28px;
+                    margin: 0 4px;
+                }
+            }
+
+            td:first-child {
+
+                p {
+                    text-align: start;
+                    width: 100%;
+                    padding-left: 10px;
+
+                }
+            }
+
+            td:last-child {
 
                 .ScoreMobi_feature_matches_wrapper {
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    padding: 8px 3px;
-
-                    img {
-                        width: 30px;
-                        height: 30px;
-                        margin: 0 2px;
-                        width: 28px;
-                        height: 28px;
-                        margin: 0 4px;
-                    }
-                }
-
-                td:first-child {
-
-                    p {
-                        text-align: start;
-                        width: 100%;
-                        padding-left: 10px;
-
-                    }
-                }
-
-                td:last-child {
-
-                    .ScoreMobi_feature_matches_wrapper {
-                        justify-content: flex-start;
-                    }
+                    justify-content: flex-start;
                 }
             }
         }
     }
+}
