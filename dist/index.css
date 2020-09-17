@@ -509,10 +509,6 @@ aside#aside_left .ScoreMobi_mobile_Template img {
   position: unset;
   justify-content: unset !important;
   margin: 0px 0;
-  width: 100% !important;
-  bottom: unset !important;
-  justify-content: space-between !important;
-  margin: 7px 0;
 }
 .carousel_wrapper .slide_buttons button {
   border: 2px solid #000000 !important;
@@ -614,17 +610,14 @@ aside#aside_left .ScoreMobi_mobile_Template img {
   border-bottom: 0.6px solid #D2D2D2;
   align-items: center;
   padding: 3px;
-  padding: 10px 0;
   margin-bottom: 5px;
-  justify-content: space-between;
-  border-bottom: 0.6px solid #b4b4b4;
 }
 .today_pridiction_seletction #match_select {
-  font-size: 20px;
   font-weight: 600;
+  font-size: 20px;
   line-height: 24px;
-  font-family: inherit;
   background-color: unset;
+  font-family: inherit;
   /* navbar color-1 */
   color: #6F8B0A;
   border: none;
@@ -697,8 +690,6 @@ table#SocreMobi_match_table .clubs_name {
 table#SocreMobi_match_table .ScoreMobi_matches {
   background: #ffffff;
   border: 0.6px solid #898686;
-  background: #fff;
-  border: 0.6px solid #b4b4b4;
   box-sizing: border-box;
 }
 table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper {
@@ -925,7 +916,7 @@ form .ScoreMobi_form_button button:hover {
   background-color: #e0e0e091;
 }
 .ScoreMobi_signup_via_social_media .google:focus {
-  box-shadow: 0px 0px 0px 2px #e0e0e09f;
+  box-shadow: 0px 0px 0px 2px #e0e0e091;
 }
 .ScoreMobi_signup_via_social_media .google img {
   width: 30px;
@@ -979,10 +970,10 @@ section .premier_legue_wrapper .premier_league_table_header p {
   color: #000000;
   font-size: inherit;
 }
-section .premier_legue_wrapper .align_left {
+section .premier_legue_wrapper .p_league_align {
   justify-content: flex-start;
 }
-section .premier_legue_wrapper .align_left .premier_league_text_order {
+section .premier_legue_wrapper .p_league_align .premier_league_text_order {
   order: 1;
 }
 section .premier_legue_wrapper th img {
@@ -1057,8 +1048,8 @@ section .premier_legue_wrapper .carousel_premier_league_nav button {
 section .premier_legue_wrapper .carousel_premier_league_nav button.current_slide {
   background-color: #000000;
 }
-section .premier_legue_wrapper .flex {
-  background-color: #7FA302 !important;
+section .premier_legue_wrapper .premier_league_buttons_wrapper {
+  background-color: #7FA302;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -1067,7 +1058,7 @@ section .premier_legue_wrapper .flex {
   position: absolute;
   bottom: 0;
 }
-section .premier_legue_wrapper .flex .carousel_button {
+section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn {
   border: unset;
   align-items: center;
   gap: 5px;
@@ -1076,10 +1067,10 @@ section .premier_legue_wrapper .flex .carousel_button {
   width: unset;
   padding: 0px;
 }
-section .premier_legue_wrapper .flex .carousel_button p {
+section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn p {
   line-height: 100%;
 }
-section .premier_legue_wrapper .flex .carousel_button i {
+section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn i {
   font-size: 17px;
   font-weight: bolder;
 }

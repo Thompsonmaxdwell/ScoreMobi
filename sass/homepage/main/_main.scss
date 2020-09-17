@@ -1,17 +1,18 @@
+
 .carousel_wrapper {
 	background-color: unset !important;
-	width: 100% !important;
-	height: 300px !important;
-	padding-bottom: 45px;
-
+	width:100%!important;
+	height: 300px!important;
+	padding-bottom:45px;
+	
 	.carousel_track_container_wrapper {
-		margin: 0 !important;
-		height: 100% !important;
-		overflow-x: hidden !important;
+		margin:0 !important;
+		height:100%!important;
+		overflow-x: hidden!important;
 
-		img {
+		img{
 			display: block;
-			min-width: 100%;
+			min-width:100%;
 		}
 	}
 
@@ -22,42 +23,37 @@
 		margin: 7px 0;
 	}
 	.slide_buttons {
-
 		width: unset;
 		bottom:unset!important;
 		position: unset;;
 		justify-content: unset!important; 
 		margin: 0px 0;
-		width: 100% !important;
-		bottom: unset !important;
-		justify-content: space-between !important;
-		margin: 7px 0;
 
 		button {
 			border: 2px solid #000000 !important;
 			color: #000000 !important;
 			height: 30px;
 			width: 30px;
-			padding: 17px;
+			padding:17px;
 		}
 	}
 
 	// ScoreMobi Slide indication OR Dot
 	.carousel_nav_wrapper {
-		position: unset !important;
+		position: unset!important;
 		padding: 5px 0;
 		display:unset;
 
 
 		.carousel_ind {
 			border-radius: 50%;
-			border: 2px solid #000000 !important;
+			border: 2px solid #000000!important;
 			box-sizing: border-box;
 		}
 
 		.current_slide {
-			background: $text_color_2 !important;
-			border: none !important;
+			background: $text_color_2!important;
+			border:none!important;
 		}
 	}
 }
@@ -147,23 +143,18 @@
 // ScoreMbi Homepage today's prediction 
 .today_pridiction_seletction {
 	display: flex;
-
 	justify-content: space-between;
 	border-bottom: 0.6px solid #D2D2D2;
 	align-items: center;
 	padding: 3px;
-
-	padding: 10px 0;
 	margin-bottom: 5px;
-	justify-content: space-between;
-	border-bottom: 0.6px solid $border_color;
 
 	#match_select {
-		font-size: 20px;
 		font-weight: 600;
+		font-size: 20px;
 		line-height: 24px;
-		font-family: inherit;
 		background-color: unset;
+		font-family: inherit;
 
 		/* navbar color-1 */
 
@@ -211,7 +202,7 @@ table#SocreMobi_match_table {
 	width: 100%;
 	text-align: center;
 	border-collapse: collapse;
-
+	
 
 	// ScoreMobi Homepage Matchs  Table content Styling here
 	tbody::before {
@@ -254,8 +245,6 @@ table#SocreMobi_match_table {
 	.ScoreMobi_matches {
 		background: #ffffff;
 		border: 0.6px solid #898686;
-		background: $white;
-		border: 0.6px solid $border_color;
 		box-sizing: border-box;
 
 		// ScoreMobi Homepage Matchs Clubs Wrapper
@@ -264,7 +253,6 @@ table#SocreMobi_match_table {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
 
 			.vs {
 				margin: 10px;
@@ -337,6 +325,7 @@ table#SocreMobi_match_table {
 // ========================================================================================================================
 
 #ScoremMobi_main_section_news_wrapper {
+
 
 	.main_news_wrapper {
 		display: grid;
