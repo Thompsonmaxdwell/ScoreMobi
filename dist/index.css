@@ -1935,7 +1935,7 @@ section .premier_legue_wrapper .flex .carousel_button i {
   text-align: left;
   font-weight: bold;
   color: #7fa302;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .win {
@@ -1989,12 +1989,36 @@ table.info_section {
 }
 table.info_section td {
   border: 1px solid #b4b4b4;
-  padding: 10px;
+  padding: 15px;
 }
 @media (min-width: 320px) {
   table.info_section td {
     max-width: 200px;
   }
+}
+table.info_section .active_info {
+  border-bottom: 4px solid #7fa302;
+}
+
+table.line_up {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+table.line_up th, table.line_up td {
+  border: 1px solid #b4b4b4;
+}
+table.line_up th .coach_line_up, table.line_up td .coach_line_up {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 9px;
+}
+table.line_up th .coach_line_up .coach_img, table.line_up td .coach_line_up .coach_img {
+  width: 20%;
+}
+table.line_up th .coach_line_up .coach_img img, table.line_up td .coach_line_up .coach_img img {
+  width: 100%;
 }
 
 .pl_team {
