@@ -132,7 +132,7 @@
     &_title {
         background-color:$text_color_1;
         padding: 8px;
-        color: $white;
+        color: $white_color;
         font-weight: 500;
         text-align: center;
     }
@@ -154,7 +154,7 @@
             color: $link_color;
 
             & span {
-                color: $dark;
+                color: $white_color;
                 font-weight: 500;
             }
         }
@@ -225,7 +225,7 @@
                 
             }
             & #num {
-                color: $dark;
+                color: $white_color;
                 font-weight: bold;
                 padding-right: 16px;
             }
@@ -388,7 +388,7 @@
             display: inline-block;
             padding: 6px 7px;
             text-align: center;
-            color: $dark;
+            color: $white_color;
             margin-top: 12px;
             background: $green_light;
             font-size: 0.8rem;

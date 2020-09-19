@@ -1,3 +1,4 @@
+// =================================ScoreMobi Form wrapper================================================================
 .ScoreMobi_form {
     border: 1px solid #b1b2b6;
     font-family: inherit;
@@ -18,8 +19,7 @@
     }
 }
 
-// =================================================================================================
-//  ScoreMobi Form Section
+// =================================ScoreMobi Form ================================================================
 form {
     .ScoreMobi_input_wrapper {
         background: #ddd;
@@ -61,7 +61,7 @@ form {
         }
     }
 
-    // ==================================================================================================
+    // ============================== ScoreMobi form button wrapper====================================================================
 
     // ScoreMobi_form_button 
     .ScoreMobi_form_button {
@@ -87,10 +87,8 @@ form {
     }
 }
 
-// =================================================================================================
+// ==================================Form Or===============================================================
 
-
-//ScoreMobi Form Optional signing up with facebok or  google
 .or {
     text-align: center;
     position: relative;
@@ -112,7 +110,7 @@ form {
     }
 }
 
-// =================================================================================================
+// ========================================ScoreMobi signup via social media=========================================================
 .ScoreMobi_signup_via_social_media {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -122,14 +120,9 @@ form {
         font-size: inherit;
     }
 
-    button {
-        font-family: inherit;
-        font-size: 15px;
-        padding: 10px 0;
-        cursor: pointer;
-        transition: 0.2s ease-in-out;
-    }
+    
 
+// ======================================ScoreMobi sign up with facebook button =========================================================== 
     .facebook,
     .google {
         background-color: $facebook;
@@ -144,6 +137,10 @@ form {
         border-radius: 3px;
         color: #fff;
         transition: box-shadow 0.2s ease-in-out;
+        font-family: inherit;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
 
         i {
             font-size: 20px;
@@ -159,13 +156,12 @@ form {
         }
     }
 
-    // =================================================================================================
+    // ===============================ScoreMobi sign up with goole button  ===========================================================
 
     .google {
         background-color: $goolge;
         padding: 0;
         color: rgb(122, 122, 122);
-
 
         &:hover {
             background-color: $google_hover;
@@ -186,10 +182,7 @@ form {
 
 }
 
-// =================================================================================================
-
-// premier_legue_wrapper
-
+// ==================================== premier legue wrapper=============================================================
 section .premier_legue_wrapper {
     height: 290px;
     border: 1px solid #b1b2b6;
@@ -197,7 +190,7 @@ section .premier_legue_wrapper {
     width: 100%;
 
 
-//=================================================================================================
+//====================================premier league slide Container=============================================================
     .carousel_track-container {
         height: 100%;
     }
@@ -225,7 +218,7 @@ section .premier_legue_wrapper {
     }
 
 
-    // =================================================================================================
+    // =================================premier league table header================================================================
     .premier_league_table_header {
         display: flex;
         flex-direction: row;
@@ -256,10 +249,6 @@ section .premier_legue_wrapper {
         }
     }
 
-    // =================================================================================================
-
-
-
     th img {
         width: 30px;
         height: 30px;
@@ -280,9 +269,10 @@ section .premier_legue_wrapper {
 
     .win {
         text-align: start;
+        border: none;;
     }
 
-    // =================================================================================================
+    // ==========================================premier league table body=======================================================
     .premier_league_table_body {
         text-align: center;
 
@@ -330,9 +320,24 @@ section .premier_legue_wrapper {
 
         }
     }
-    // =================================================================================================
+  
+    // ======================Premier leauge slide  Button wrapper====================================================================
 
-    .carousel_premier_league_nav {
+    .premier_league_buttons_wrapper {
+        background-color: $header_light;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+
+      // ====================================Premier leauge slide  indicatos =============================================================
+
+      .carousel_premier_league_nav {
         background-color: $header_light !important;
         justify-content: unset;
         gap: 10px;
@@ -350,19 +355,6 @@ section .premier_legue_wrapper {
             }
         }
     }
-
-    // =================================================================================================
-
-
-    .premier_league_buttons_wrapper {
-        background-color: $header_light;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        padding: 10px 0;
-        position: absolute;
-        bottom: 0;
 
 
         .carousel_btn {
@@ -383,12 +375,12 @@ section .premier_legue_wrapper {
                 font-weight: bolder;
             }
         }
-    }
+    
 
 
 }
+// ======================== ScoreMobi Features Match Container ============================================================
 
-// ScoreMobi Features Match Container
 .ScoreMobi_Featured_matches {
     margin-top: 20px;
 
@@ -433,10 +425,7 @@ section .premier_legue_wrapper {
             margin-right: 7px;
         }
     }
-
-
-    // ScoreMobi Featured Matches   Table
-
+// ========================  ScoreMobi Featured Matches Table ===============================================
     .ScoreMobi_featured_matches_table {
         width: 100%;
         text-align: center;
@@ -470,9 +459,6 @@ section .premier_legue_wrapper {
                     width: 30px;
                     height: 30px;
                     margin: 0 2px;
-                    width: 28px;
-                    height: 28px;
-                    margin: 0 4px;
                 }
             }
 
@@ -495,3 +481,5 @@ section .premier_legue_wrapper {
         }
     }
 }
+
+// =================================================================================================

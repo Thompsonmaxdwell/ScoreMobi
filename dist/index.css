@@ -230,7 +230,7 @@ ul {
   }
 }
 
-.ScoreMobi_main_prediction {
+.ScoreMobi_main_wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
@@ -240,49 +240,44 @@ ul {
   grid-template-areas: "main main main main" "asideLeft asideLeft asideLeft asideLeft" "asideRight asideRight asideRight asideRight";
 }
 @media (min-width: 850px) {
-  .ScoreMobi_main_prediction {
+  .ScoreMobi_main_wrapper {
     padding: 20px 0px;
   }
 }
 @media (min-width: 850px) {
-  .ScoreMobi_main_prediction {
+  .ScoreMobi_main_wrapper {
     grid-template-areas: "main main main main main main main " "asideLeft asideLeft asideRight asideRight";
   }
 }
 @media (min-width: 1100px) {
-  .ScoreMobi_main_prediction {
+  .ScoreMobi_main_wrapper {
     grid-template-columns: repeat(11, auto);
     grid-template-areas: "asideLeft asideLeft asideLeft main main main main main asideRight asideRight asideRight";
-    width: 100%;
+    width: 95%;
     max-width: 1350px;
     margin: 0 auto;
     grid-template-columns: repeat(11, 1fr);
     grid-template-areas: "asideLeft asideLeft asideLeft main main main main  main asideRight asideRight asideRight";
     grid-gap: 20px;
   }
-  .ScoreMobi_main_prediction #main img {
+  .ScoreMobi_main_wrapper #main img {
     border-radius: 12px;
   }
-  .ScoreMobi_main_prediction .news_article p {
+  .ScoreMobi_main_wrapper .news_article p {
     line-height: 2;
   }
 }
-.ScoreMobi_main_prediction #aside_left {
+.ScoreMobi_main_wrapper #aside_left {
   grid-area: asideLeft;
   height: auto;
 }
-.ScoreMobi_main_prediction #main {
+.ScoreMobi_main_wrapper #main {
   grid-area: main;
   height: auto;
 }
-.ScoreMobi_main_prediction #aside_right {
+.ScoreMobi_main_wrapper #aside_right {
   height: auto;
   grid-area: asideRight;
-}
-
-.content_wrapper {
-  width: 95%;
-  margin: 0 auto;
 }
 
 aside#aside_left {
@@ -311,35 +306,41 @@ aside#aside_left #aside_left_order_2 {
     grid-area: unset;
   }
 }
-aside#aside_left .ScoreMobi_mobile_Template {
+
+.ScoreMobi_mobile_Template {
   width: 100%;
   border: 1px solid #898686;
   box-sizing: border-box;
   padding: 10px 15px;
 }
-aside#aside_left .ScoreMobi_mobile_Template h2 {
+.ScoreMobi_mobile_Template h2 {
   font-weight: 600;
   font-size: 16px;
   color: #7fa302;
 }
-aside#aside_left .ScoreMobi_mobile_Template img {
-  max-width: 100%;
+.ScoreMobi_mobile_Template .ScoreMobi_template_image {
+  width: 100%;
+}
+.ScoreMobi_mobile_Template .ScoreMobi_template_image img {
   height: 50px;
-  border-radius: 10px;
-  margin-top: 10px;
-  object-fit: cover;
+  max-width: 100%;
+  display: block;
+  margin-top: 15px;
 }
 
 .ScoreMobi_popular_competitions h1 {
   font-family: "Roboto";
   font-weight: normal;
+  font-family: inherit;
+  font-style: normal;
   font-size: 18px;
   padding: 7px 0;
-  color: #6f8b0a;
-  color: #6f8b0a;
+  color: #7fa302;
 }
 .ScoreMobi_popular_competitions .top_players h3 {
-  font-weight: 500;
+  font-weight: 50;
+  font-family: inherit;
+  font-style: normal;
   font-size: 16px;
   color: #000000;
 }
@@ -349,9 +350,10 @@ aside#aside_left .ScoreMobi_mobile_Template img {
   color: #000000;
 }
 .ScoreMobi_popular_competitions .popular_competitions_li {
+  background: #Ffffff;
   display: flex;
   align-items: center;
-  background: #ffffff;
+  justify-content: unset;
   border: 0.6px solid #b4b4b4;
   padding: 7px 8px;
   box-sizing: border-box;
@@ -361,7 +363,6 @@ aside#aside_left .ScoreMobi_mobile_Template img {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-self: center;
 }
 .ScoreMobi_popular_competitions .popular_competitions_li .top_players_flex p {
   color: #000;
@@ -384,10 +385,13 @@ aside#aside_left .ScoreMobi_mobile_Template img {
 .ScoreMobi_popular_competitions .popular_competitions_li figure {
   display: flex;
   align-items: center;
+  justify-content: unset;
 }
 .ScoreMobi_popular_competitions .popular_competitions_li figcaption {
-  font-size: inherit;
   font-weight: normal;
+  font-family: inherit;
+  font-style: normal;
+  font-size: inherit;
   color: #000000;
 }
 .ScoreMobi_popular_competitions .popular_competitions_li h6 {
@@ -399,21 +403,23 @@ aside#aside_left .ScoreMobi_mobile_Template img {
 }
 
 .show_more {
+  background: #Ffffff;
   font-weight: 500;
+  font-family: inherit;
+  font-style: normal;
   font-size: inherit;
-  background: #ffffff;
   border: 1px solid #b4b4b4;
   box-sizing: border-box;
   color: #7FA302;
+  transition: all 0.5s ease-in-out;
   padding: 5px;
   text-align: center;
   margin: 10px 0;
   cursor: pointer;
-  transition: 350ms ease-in-out;
 }
 .show_more:hover {
   background-color: #6f8b0a;
-  color: #fff;
+  color: #Ffffff;
 }
 
 .ScoreMobi_card_flex {
@@ -426,21 +432,13 @@ aside#aside_left .ScoreMobi_mobile_Template img {
 .ScoreMobi_card {
   margin-top: 15px;
   position: relative;
-  transition: 0.35ms ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .ScoreMobi_card img {
   width: 100%;
   height: 100px;
   object-fit: cover;
-}
-.ScoreMobi_card img::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: red;
+  position: relative;
 }
 .ScoreMobi_card .ScoreMobi_card_padding {
   padding: 10px 10px 10px;
@@ -448,13 +446,11 @@ aside#aside_left .ScoreMobi_mobile_Template img {
 .ScoreMobi_card .ScoreMobi_card_padding a {
   color: #7fa302;
   font-weight: 500;
-  font-size: inherit;
-  width: 100%;
   font-family: inherit;
   font-style: normal;
-  font-weight: 400;
   font-size: 0.9rem;
-  transition: all 350ms ease-in-out;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 .ScoreMobi_card .ScoreMobi_card_padding a:hover {
@@ -469,69 +465,67 @@ aside#aside_left .ScoreMobi_mobile_Template img {
 .ScoreMobi_card .ScoreMobi_card_padding .card_news {
   background-color: #7fa302;
   color: white;
-  text-align: center;
-  padding: 5px 10px;
+  font-weight: 500;
+  font-family: inherit;
+  font-style: normal;
+  font-size: 0.7rem;
   text-align: center;
   margin: 9px;
-  font-weight: 500;
   border-radius: 20px;
   height: auto;
   width: auto;
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 0.7rem;
 }
 
-.carousel_wrapper {
-  background-color: unset !important;
-  width: 100% !important;
-  height: 300px !important;
+section .carousel_wrapper {
+  background-color: unset;
+  width: 100%;
+  height: 300px;
   padding-bottom: 45px;
 }
-.carousel_wrapper .carousel_track_container_wrapper {
-  margin: 0 !important;
-  height: 100% !important;
-  overflow-x: hidden !important;
+section .carousel_wrapper .carousel_track_container_wrapper {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
 }
-.carousel_wrapper .carousel_track_container_wrapper img {
+section .carousel_wrapper .carousel_track_container_wrapper img {
   display: block;
   min-width: 100%;
 }
-.carousel_wrapper .flex_slide_button_and_ind {
+section .carousel_wrapper .flex_slide_button_and_ind {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  align-items: unset;
   margin: 7px 0;
 }
-.carousel_wrapper .slide_buttons {
+section .carousel_wrapper .slide_buttons {
   width: unset;
-  bottom: unset !important;
+  bottom: unset;
   position: unset;
-  justify-content: unset !important;
+  justify-content: unset;
   margin: 0px 0;
-  width: 100% !important;
-  bottom: unset !important;
-  justify-content: space-between !important;
-  margin: 7px 0;
 }
-.carousel_wrapper .slide_buttons button {
-  border: 2px solid #000000 !important;
-  color: #000000 !important;
+section .carousel_wrapper .slide_buttons button {
+  border: 2px solid #000000;
+  color: #000000;
   height: 30px;
   width: 30px;
   padding: 17px;
 }
-.carousel_wrapper .carousel_nav_wrapper {
+section .carousel_wrapper .carousel_nav_wrapper {
   position: unset !important;
   padding: 5px 0;
   display: unset;
 }
-.carousel_wrapper .carousel_nav_wrapper .carousel_ind {
+section .carousel_wrapper .carousel_nav_wrapper .carousel_ind {
   border-radius: 50%;
   border: 2px solid #000000 !important;
   box-sizing: border-box;
 }
-.carousel_wrapper .carousel_nav_wrapper .current_slide {
+section .carousel_wrapper .carousel_nav_wrapper .current_slide {
   background: #7fa302 !important;
   border: none !important;
 }
@@ -622,7 +616,6 @@ aside#aside_left .ScoreMobi_mobile_Template img {
   line-height: 24px;
   background-color: unset;
   font-family: inherit;
-  /* navbar color-1 */
   color: #6F8B0A;
   border: none;
   outline: none;
@@ -660,7 +653,7 @@ table#SocreMobi_match_table {
   border-collapse: collapse;
 }
 table#SocreMobi_match_table tbody::before {
-  height: 10px;
+  height: 14px;
   display: table-row;
   content: "";
 }
@@ -764,7 +757,7 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
 #ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card .ScoreMobi_card_padding {
   padding: 10px 0px 5px;
 }
-#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card img {
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card * img {
   width: 100%;
   height: 270px;
   object-fit: cover;
@@ -876,13 +869,6 @@ form .ScoreMobi_form_button button:hover {
 .ScoreMobi_signup_via_social_media p {
   font-size: inherit;
 }
-.ScoreMobi_signup_via_social_media button {
-  font-family: inherit;
-  font-size: 15px;
-  padding: 10px 0;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-}
 .ScoreMobi_signup_via_social_media .facebook,
 .ScoreMobi_signup_via_social_media .google {
   background-color: #3b5998;
@@ -897,6 +883,10 @@ form .ScoreMobi_form_button button:hover {
   border-radius: 3px;
   color: #fff;
   transition: box-shadow 0.2s ease-in-out;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 .ScoreMobi_signup_via_social_media .facebook i,
 .ScoreMobi_signup_via_social_media .google i {
@@ -997,6 +987,7 @@ section .premier_legue_wrapper .who {
 }
 section .premier_legue_wrapper .win {
   text-align: start;
+  border: none;
 }
 section .premier_legue_wrapper .premier_league_table_body {
   text-align: center;
@@ -1036,6 +1027,16 @@ section .premier_legue_wrapper .premier_league_table_body .premier_league_odd i.
   top: 20%;
   color: green;
 }
+section .premier_legue_wrapper .premier_league_buttons_wrapper {
+  background-color: #7FA302;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+}
 section .premier_legue_wrapper .carousel_premier_league_nav {
   background-color: #7FA302 !important;
   justify-content: unset;
@@ -1052,17 +1053,7 @@ section .premier_legue_wrapper .carousel_premier_league_nav button {
 section .premier_legue_wrapper .carousel_premier_league_nav button.current_slide {
   background-color: #000000;
 }
-section .premier_legue_wrapper .premier_league_buttons_wrapper {
-  background-color: #7FA302;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  padding: 10px 0;
-  position: absolute;
-  bottom: 0;
-}
-section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn {
+section .premier_legue_wrapper .carousel_btn {
   border: unset;
   align-items: center;
   gap: 5px;
@@ -1071,10 +1062,10 @@ section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn {
   width: unset;
   padding: 0px;
 }
-section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn p {
+section .premier_legue_wrapper .carousel_btn p {
   line-height: 100%;
 }
-section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn i {
+section .premier_legue_wrapper .carousel_btn i {
   font-size: 17px;
   font-weight: bolder;
 }
@@ -1147,9 +1138,6 @@ section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn i {
   width: 30px;
   height: 30px;
   margin: 0 2px;
-  width: 28px;
-  height: 28px;
-  margin: 0 4px;
 }
 .ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table .ScoreMobi_featured_matches td:first-child p {
   text-align: start;
@@ -1469,7 +1457,7 @@ section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn i {
 .l_card_title {
   background-color: #6f8b0a;
   padding: 8px;
-  color: #fff;
+  color: #Ffffff;
   font-weight: 500;
   text-align: center;
 }
@@ -1489,7 +1477,7 @@ section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn i {
   color: #888888;
 }
 .l_card_d_t_container .l_card_t span, .l_card_d_t_container .l_card_d span {
-  color: #000;
+  color: #Ffffff;
   font-weight: 500;
 }
 .l_card_teams_container {
@@ -1546,7 +1534,7 @@ section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn i {
   }
 }
 .l_table_lineup .l_teams #num {
-  color: #000;
+  color: #Ffffff;
   font-weight: bold;
   padding-right: 16px;
 }
@@ -1701,7 +1689,7 @@ section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn i {
   display: inline-block;
   padding: 6px 7px;
   text-align: center;
-  color: #000;
+  color: #Ffffff;
   margin-top: 12px;
   background: #96af3da2;
   font-size: 0.8rem;
@@ -1854,7 +1842,7 @@ section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn i {
   font-size: 12px;
 }
 .comment_section_wapper .comment_details_container .comment_details .comment_name {
-  color: #000;
+  color: #000000;
 }
 .comment_section_wapper .more_btn {
   border: none;
@@ -1884,7 +1872,7 @@ section .premier_legue_wrapper .premier_league_buttons_wrapper .carousel_btn i {
   box-shadow: 0px 0px 1px 1.5px #b4b4b4;
 }
 .comment_section_wapper .comment_form .sm_input {
-  color: #fff;
+  color: #Ffffff;
   margin-top: 15px;
   border-radius: 0px;
   background-color: #7e9e09;

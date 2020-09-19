@@ -1,5 +1,5 @@
 
-.ScoreMobi_main_prediction {
+.ScoreMobi_main_wrapper {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap:15px;
@@ -25,7 +25,7 @@
 	@include desktopSize(1100px) {
 		grid-template-columns: repeat(11, auto);
 		grid-template-areas: "asideLeft asideLeft asideLeft main main main main main asideRight asideRight asideRight";
-		width: 100%;
+		width: 95%;
 		max-width: 1350px;
 		margin: 0 auto;
 		grid-template-columns: repeat(11, 1fr);
@@ -59,7 +59,7 @@
 	}
 }
 
-.content_wrapper{
-	width: 95%;
-	margin: 0 auto;
-}
+// .content_wrapper{
+// 	width: 95%;
+// 	margin: 0 auto;
+// }
