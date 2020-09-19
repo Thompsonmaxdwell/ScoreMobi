@@ -1935,7 +1935,7 @@ section .premier_legue_wrapper .flex .carousel_button i {
   text-align: left;
   font-weight: bold;
   color: #7fa302;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .win {
@@ -1945,10 +1945,10 @@ section .premier_legue_wrapper .flex .carousel_button i {
   margin-top: 0px;
 }
 
-tr.table_head th.head {
+tr.table_roll th.table_head {
   border: 1px solid #b4b4b4;
   border-bottom: none;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 table.prediction {
@@ -2000,25 +2000,35 @@ table.info_section .active_info {
   border-bottom: 4px solid #7fa302;
 }
 
-table.line_up {
+table.table_container {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 30px;
 }
-table.line_up th, table.line_up td {
+table.table_container th {
+  border: 1px solid #b4b4b4;
+  background: #E7E7E7;
+  padding: 10px;
+}
+table.table_container td {
+  background-color: #E7E7E7;
   border: 1px solid #b4b4b4;
 }
-table.line_up th .coach_line_up, table.line_up td .coach_line_up {
+table.table_container td .coach_line_up {
   display: flex;
-  justify-content: left;
+  justify-content: space-around;
   align-items: center;
-  margin: 9px;
+  padding: 9px;
+  background: linear-gradient(0deg, #FFFAFA, #FFFAFA), linear-gradient(0deg, #FFFAFA, #FFFAFA), #FFFFFF;
 }
-table.line_up th .coach_line_up .coach_img, table.line_up td .coach_line_up .coach_img {
+table.table_container td .coach_line_up .coach_img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 20%;
 }
-table.line_up th .coach_line_up .coach_img img, table.line_up td .coach_line_up .coach_img img {
-  width: 100%;
+table.table_container td .coach_line_up .coach_img img {
+  width: 70%;
 }
 
 .pl_team {
@@ -2053,6 +2063,33 @@ table.line_up th .coach_line_up .coach_img img, table.line_up td .coach_line_up 
   align-items: center;
   width: 100%;
   padding: 30px;
+}
+
+table.table_formation {
+  margin-top: 20px;
+  width: 100%;
+}
+table.table_formation tbody {
+  margin: 0 auto;
+  text-align: center;
+}
+table.table_formation tbody tr td {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+table.table_formation thead {
+  display: flex;
+}
+table.table_formation thead tr {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #E7E7E7;
+}
+table.table_formation thead tr td {
+  text-align: center;
 }
 
 .loading_container {
