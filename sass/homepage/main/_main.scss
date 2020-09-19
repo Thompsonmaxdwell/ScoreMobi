@@ -1,68 +1,64 @@
-.carousel_wrapper {
-	background-color: unset !important;
-	width: 100% !important;
-	height: 300px !important;
-	padding-bottom: 45px;
-
+//   <!-- - ------------------------------------==Carousel Wrapper- ------------------------------------ -->
+section .carousel_wrapper {
+	background-color: unset;
+	width:100%;
+	height: 300px;
+	padding-bottom:45px;
+	
 	.carousel_track_container_wrapper {
-		margin: 0 !important;
-		height: 100% !important;
-		overflow-x: hidden !important;
+		margin:0;
+		height:100%;
+		overflow-x: hidden;
 
-		img {
+		img{
 			display: block;
-			min-width: 100%;
+			min-width:100%;
 		}
 	}
-
-	// // ScoreMobi Slide Buton
+//   <!-- - ------------------------------------ ScoreMobi Slide Buton- ------------------------------------ -->
 	.flex_slide_button_and_ind{
-		display:flex;
-		justify-content: space-between;
+		@include flex(space-between);
+		align-items: unset;
 		margin: 7px 0;
+		
 	}
 	.slide_buttons {
-
 		width: unset;
-		bottom:unset!important;
+		bottom:unset;
 		position: unset;;
-		justify-content: unset!important; 
+		justify-content: unset; 
 		margin: 0px 0;
-		width: 100% !important;
-		bottom: unset !important;
-		justify-content: space-between !important;
-		margin: 7px 0;
 
 		button {
-			border: 2px solid #000000 !important;
-			color: #000000 !important;
+			border: 2px solid #000000 ;
+			color: #000000;
 			height: 30px;
 			width: 30px;
-			padding: 17px;
+			padding:17px;
 		}
 	}
 
-	// ScoreMobi Slide indication OR Dot
+	// - ------------------------------------ScoreMobi Slide indication OR Dot - ------------------------------------
 	.carousel_nav_wrapper {
-		position: unset !important;
+		position: unset!important;
 		padding: 5px 0;
 		display:unset;
 
 
 		.carousel_ind {
 			border-radius: 50%;
-			border: 2px solid #000000 !important;
+			border: 2px solid #000000!important;
 			box-sizing: border-box;
 		}
 
 		.current_slide {
-			background: $text_color_2 !important;
-			border: none !important;
+			background: $text_color_2!important;
+			border:none!important;
 		}
 	}
 }
 
-// ScoreMobi today  pridiction table and live Wrapepr 
+// - ------------------------------------ ScoreMobi today  pridiction table and live Wrapepr - ------------------------------------
 .todays_pricdiction_wrapper {
 	margin-top: 25px;
 	display: flex;
@@ -71,7 +67,7 @@
 	align-items: center;
 	border-bottom: 0.6px solid #D2D2D2;
 
-	// ScoreMbi Homepage Today's prediction Button here close to Slider
+	// - ------------------------------------ ScoreMbi Homepage Today's prediction Button here close to Slider- ------------------------------------
 	.todays_pricdiction_btn {
 		background-color: $text_color_2;
 		color: white;
@@ -90,7 +86,7 @@
 		}
 	}
 
-	//ScoreMbi Homepage  Live Mode wrapper here 
+	//- ------------------------------------ ScoreMbi Homepage  Live Mode wrapper here - ------------------------------------
 	.lives_mode_wrapper {
 		display: flex;
 		align-items: center;
@@ -111,7 +107,7 @@
 			}
 		}
 
-		//ScoreMbi Homepage  Live Mode  
+		//- ------------------------------------ScoreMbi Homepage  Live Mode - ------------------------------------ 
 		.lives_mode {
 			width: 90px;
 			border-radius: 14px;
@@ -126,7 +122,6 @@
 
 		}
 
-		//ScoreMbi Homepage  Live Mode green background   here 
 		.Lives_match_toggle {
 			background-color: $live;
 			padding: 2px 0;
@@ -144,29 +139,21 @@
 	}
 }
 
-// ScoreMbi Homepage today's prediction 
+// - ------------------------------------ ScoreMbi Homepage today's prediction - ------------------------------------
 .today_pridiction_seletction {
 	display: flex;
-
 	justify-content: space-between;
 	border-bottom: 0.6px solid #D2D2D2;
 	align-items: center;
 	padding: 3px;
-
-	padding: 10px 0;
 	margin-bottom: 5px;
-	justify-content: space-between;
-	border-bottom: 0.6px solid $border_color;
 
 	#match_select {
-		font-size: 20px;
 		font-weight: 600;
+		font-size: 20px;
 		line-height: 24px;
-		font-family: inherit;
 		background-color: unset;
-
-		/* navbar color-1 */
-
+		font-family: inherit;
 		color: #6F8B0A;
 		border: none;
 		outline: none;
@@ -204,18 +191,17 @@
 	}
 }
 
-// ScoreMbi Homepage  Left and  Right Icon construct here close to Mathes table it Ended here
 
-// ScoreMobi Homepage Matchs table Styling here started
+
+//- ------------------------------------ ScoreMobi Homepage Matchs table Styling here started- ------------------------------------
 table#SocreMobi_match_table {
 	width: 100%;
 	text-align: center;
 	border-collapse: collapse;
+	
 
-
-	// ScoreMobi Homepage Matchs  Table content Styling here
 	tbody::before {
-		height: 10px;
+		height: 14px;
 		display: table-row;
 		content: "";
 	}
@@ -229,7 +215,6 @@ table#SocreMobi_match_table {
 	}
 
 	thead tr th .table_header {
-		// font-weight: 500;
 		font-size: 18px;
 		color: #000000;
 	}
@@ -254,17 +239,13 @@ table#SocreMobi_match_table {
 	.ScoreMobi_matches {
 		background: #ffffff;
 		border: 0.6px solid #898686;
-		background: $white;
-		border: 0.6px solid $border_color;
 		box-sizing: border-box;
 
-		// ScoreMobi Homepage Matchs Clubs Wrapper
-		// 
+		// - ------------------------------------ScoreMobi Homepage table Clubs Wrapper- ------------------------------------
 		.football_clubs_wrapper {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
 
 			.vs {
 				margin: 10px;
@@ -286,7 +267,7 @@ table#SocreMobi_match_table {
 					align-items: center;
 				}
 
-				// ScoreMobi Homepage Match Clubs NAme
+//------------------------------------ ScoreMobi Homepage table Match Clubs Name ------------------------------------
 				.clubs_name {
 					text-align: end;
 					width: 70px;
@@ -304,7 +285,7 @@ table#SocreMobi_match_table {
 				}
 			}
 
-			// ScoreMobi Homepage Match Clubs images
+	//------------------------------------ ScoreMobi Homepage table Clubs images ------------------------------------
 			.clubs_img {
 				display: flex;
 				justify-content: flex-end;
@@ -329,15 +310,11 @@ table#SocreMobi_match_table {
 	}
 }
 
-// ScoreMobi Homepage Matchs table Styling here Ended
 
+// ----------------------------- ScoremMobi main section news wrapper-------------------------------------------
 
-// ========================================================================================================================
-// ScoreMobi Homepage Main section Card news here,Pleae take note the full styling for news card is not in this file check Aside Left file 
-// ========================================================================================================================
 
 #ScoremMobi_main_section_news_wrapper {
-
 
 	.main_news_wrapper {
 		display: grid;
@@ -351,7 +328,7 @@ table#SocreMobi_match_table {
 			.ScoreMobi_card_padding {
 				padding: 10px 0px 5px;
 			}
-
+*
 			img {
 				width: 100%;
 				height: 270px;
