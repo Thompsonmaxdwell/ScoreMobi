@@ -4,54 +4,61 @@
 aside#aside_left {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	grid-template-areas: 
-	"order_2"
-	"order_1";
+	grid-template-areas:
+		"order_2"
+		"order_1";
+
 	@include tabletSize(900px) {
-		all:unset;
+		all: unset;
 	}
-	
-	#aside_left_order_1{
+
+	#aside_left_order_1 {
 		grid-area: order_1;
-		
+
 		@include tabletSize(900px) {
-			grid-area:unset;
+			grid-area: unset;
 		}
 	}
-	#aside_left_order_2{
+
+	#aside_left_order_2 {
 		grid-area: order_2;
 
 		@include tabletSize(900px) {
-			grid-area:unset;
-		}
-	}
-	
-
-
-	//  Get The Template Mobile Experince  in Aside Left in Homepage   
-	
-
-	.ScoreMobi_mobile_Template {
-		width: 100%;
-		border: 1px solid #898686;
-		box-sizing: border-box;
-		padding: 10px 15px;
-
-		h2 {
-			font-weight: 600;
-			font-size: 16px;
-			color: $text_color_2;
-		}
-
-		img {
-			max-width: 100%;
-			height: 50px;
-			border-radius: 10px;
-			margin-top: 10px;
-			object-fit: cover;
+			grid-area: unset;
 		}
 	}
 }
+
+
+//  Get The Template Mobile Experince  in Aside Left in Homepage   
+
+
+.ScoreMobi_mobile_Template {
+	width: 100%;
+	border: 1px solid $dark-border;
+	box-sizing: border-box;
+	padding: 10px 15px;
+
+	h2 {
+		font-weight: 600;
+		font-size: 16px;
+		color: $text_color_2;
+	}
+
+	.ScoreMobi_template_image {
+		width: 100%;
+
+		img {
+			height: 50px;
+			max-width: 100%;
+			display: block;
+			margin-top: 15px;
+
+		}
+	}
+
+}
+
 
 //  Competitions in Aside Left in Homepage   ==============   Competitions in Aside Left in Homepage   
 
@@ -59,44 +66,37 @@ aside#aside_left {
 
 	h1 {
 		font-family: 'Roboto';
-		font-weight: normal;
-		font-size: 18px;
+		@include fontWight(normal, 18px);
 		padding: 7px 0;
-		color: #6f8b0a;
-		color: $text_color_1;
+		color: $text_color_2;
 	}
 
 	// ************** TOP PLAYERS Aside Left in Homepage   -************** --> <!--************** TOP PLAYERS  Aside Left in Homepage  -**************
 	.top_players {
 
 		h3 {
-			font-weight: 500;
-			font-size: 16px;
-			color: #000000;
+			@include fontWight(50, 16px);
+			color: $black_color;
 		}
 
 		p {
 			font-size: inherit;
 			margin: 3px 0;
-			color: #000000;
+			color: $black_color;
 		}
 	}
 
 	//Competitions  styling  reused here  in Aside Left in Homepage 
 	.popular_competitions_li {
-		display: flex;
-		align-items: center;
-		background: #ffffff;
+		background: $white_color;
+		@include flex(unset);
 		border: 0.6px solid $border_color_1;
 		padding: 7px 8px;
 		box-sizing: border-box;
 		margin-top: 7px;
 
 		.top_players_flex {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			align-self: center;
+			@include flex(center);
 
 			p {
 				color: #000;
@@ -104,7 +104,7 @@ aside#aside_left {
 		}
 
 		.top_player_score {
-			background-color: #c1e3fa;
+			background-color: $top_player_color;
 			border: 0.5px solid $border_color_1;
 			border-radius: 50%;
 			padding: 3px;
@@ -121,19 +121,18 @@ aside#aside_left {
 		}
 
 		figure {
-			display: flex;
-			align-items: center;
+			@include flex(unset);
+
 		}
 
 		figcaption {
-			font-size: inherit;
-			font-weight: normal;
-			color: #000000;
+			@include fontWight(normal, inherit);
+			color: $black_color;
 		}
 
 		h6 {
-			color: #9ea09d;
-			text-shadow: 0px 0px 2px #9ea09d;
+			color: $player_club_name;
+			text-shadow: 0px 0px 2px $player_club_name;
 		}
 	}
 
@@ -144,21 +143,20 @@ aside#aside_left {
 
 // Aside Left in Homepage Show More
 .show_more {
-	font-weight: 500;
-	font-size: inherit;
-	background: #ffffff;
+	background: $white_color;
+	@include fontWight(500, inherit);
 	@include border_line;
 	box-sizing: border-box;
 	color: $header_light;
-	padding: 5px;	
+	@include transition;
+	padding: 5px;
 	text-align: center;
 	margin: 10px 0;
 	cursor: pointer;
-	transition: 350ms ease-in-out;
 
 	&:hover {
 		background-color: $text_color_1;
-		color:$white;
+		color:$white_color;
 	}
 }
 
@@ -173,23 +171,13 @@ aside#aside_left {
 .ScoreMobi_card {
 	margin-top: 15px;
 	position: relative;
-	transition: .350ms ease-in-out;
+	@include transition;
 
 	img {
 		width: 100%;
 		height: 100px;
 		object-fit: cover;
-		
-
-		&::after {
-			position: absolute;
-			content: "";
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			background: red;
-		}
+		position: relative;
 	}
 
 	.ScoreMobi_card_padding {
@@ -197,14 +185,9 @@ aside#aside_left {
 
 		a {
 			color: $text_color_2;
-			font-weight: 500;
-			font-size: inherit;
+			@include fontWight(500, 0.9rem);
 			width: 100%;
-			font-family: inherit;
-			font-style: normal;
-			font-weight: 400;
-			font-size: 0.9rem;
-			transition: all 350ms ease-in-out;
+			@include transition;
 			cursor: pointer;
 
 			&:hover {
@@ -215,25 +198,22 @@ aside#aside_left {
 		.ScoreMobi_card_post_time {
 			font-size: 12px;
 			padding-top: 3px;
-			color: #666666;
+			color: $news_card_time_color;
 			opacity: 0.8;
 		}
 
 		.card_news {
 			background-color: $text_color_2;
 			color: white;
-			text-align: center;
-			padding: 5px 10px;
+			@include fontWight(500,  0.7rem);
 			text-align: center;
 			margin: 9px;
-			font-weight: 500;
 			border-radius: 20px;
 			height: auto;
 			width: auto;
 			position: absolute;
 			top: 0;
 			left: 0;
-			font-size: 0.7rem;
 		}
 	}
 }
