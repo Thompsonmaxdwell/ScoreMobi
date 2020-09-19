@@ -2073,10 +2073,13 @@ table.table_formation tbody {
   margin: 0 auto;
   text-align: center;
 }
-table.table_formation tbody tr td {
+table.table_formation tbody td {
   padding: 10px;
   font-size: 15px;
   font-weight: 600;
+}
+table.table_formation tbody td .active_info {
+  border-bottom: 4px solid #7fa302;
 }
 table.table_formation thead {
   display: flex;

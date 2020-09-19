@@ -182,11 +182,17 @@ table.table_formation{
         text-align: center;
         // background: greenyellow;
 
-        tr td{
+        td{
             padding: 10px;
             font-size: 15px;
             font-weight: 600;
+            // background-color: red;
+
+            .active_info{
+                border-bottom: 4px solid $text_color_2;
+            }
         }
+
         
     }
     
