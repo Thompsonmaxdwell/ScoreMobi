@@ -1,15 +1,12 @@
 // =================================ScoreMobi Form wrapper================================================================
 .ScoreMobi_form {
-    border: 1px solid #b1b2b6;
-    font-family: inherit;
-    font-style: normal;
+    @include fontWight(normal,  inherit);
     @include border_line;
     width: 100%;
     padding: 10px 10px;
 
     h1 {
-        font-weight: 600;
-        font-size: 1.3rem;
+        @include fontWight(600,  1.3rem);
         line-height: 34px;
         color: $text_color_1;
     }
@@ -22,7 +19,7 @@
 // =================================ScoreMobi Form ================================================================
 form {
     .ScoreMobi_input_wrapper {
-        background: #ddd;
+        background:$form_bg_color;
         border: none;
 
         &.input_space {
@@ -35,7 +32,7 @@ form {
 
         span,
         i.fa {
-            color: #959595;
+            color: $mute;
             padding-left: 5px;
             padding-right: 0px;
             font-size: 1rem;
@@ -44,14 +41,12 @@ form {
 
         input {
             background: transparent;
-            color: #000;
+            color:$black_color;
             width: 100%;
             padding: 10px 5px;
 
             ::placeholder {
-                font-family: inherit;
-                font-weight: normal;
-                font-size: inherit;
+                @include fontWight(normal,  inherit);
                 padding: 0;
             }
 
@@ -65,20 +60,16 @@ form {
 
     // ScoreMobi_form_button 
     .ScoreMobi_form_button {
-        display: flex;
-        justify-content: space-between;
+        @include flex(space-between);
         margin: 20px 0 5px 0;
 
         button {
             background-color: $form_btn_color;
-            color: #fff;
+            color: $whte_color;
             border-radius: 4px;
             padding: 6px 20px;
-            font-size: inherit;
-            padding: 8px 20px;
-            font-weight: 500;
-            transition: 350ms ease-in-out;
-            font-size: .8rem;
+            @include fontWight(normal, .8rem);
+            @include transition;
 
             &:hover {
                 background-color: $form_btn_hover;
@@ -99,7 +90,7 @@ form {
         content: '';
         position: absolute;
         display: block;
-        border-bottom: 1px solid #b4b4b4;
+        border-bottom: 1px solid $border_color_1;
         width: 43%;
         right: 0;
         top: 50%;
@@ -126,21 +117,17 @@ form {
     .facebook,
     .google {
         background-color: $facebook;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex(center);
+        @include transition;
+        @include fontWight(normal, inherit);
+        @include transition;
         padding: 7px 0;
         outline: none;
-        font-size: unset;
         font-family: unset;
         border: none;
         border-radius: 3px;
-        color: #fff;
-        transition: box-shadow 0.2s ease-in-out;
-        font-family: inherit;
-        font-size: 15px;
+        color: $white_color;
         cursor: pointer;
-        transition: 0.2s ease-in-out;
 
         i {
             font-size: 20px;
@@ -161,7 +148,7 @@ form {
     .google {
         background-color: $goolge;
         padding: 0;
-        color: rgb(122, 122, 122);
+        color: $google_text_color;
 
         &:hover {
             background-color: $google_hover;
@@ -185,7 +172,7 @@ form {
 // ==================================== premier legue wrapper=============================================================
 section .premier_legue_wrapper {
     height: 290px;
-    border: 1px solid #b1b2b6;
+    border: 1px solid $premier_league_border;
     margin-top: 10px;
     width: 100%;
 
@@ -196,12 +183,11 @@ section .premier_legue_wrapper {
     }
 
     .premier_league_title {
-        border-bottom: 1px solid #C8C8C8;
+        border-bottom: 1px solid $premier_league_title;
         text-align: center;
-        font-weight: normal;
-        font-size: 17px;
+        @include fontWight(normal, 17px);
         padding: 5px 0;
-        color: #000000;
+        color: $black_color;
 
     }
 
@@ -220,10 +206,8 @@ section .premier_legue_wrapper {
 
     // =================================premier league table header================================================================
     .premier_league_table_header {
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
+        @include flex(flex-end);
         padding: 2px;
         margin: 0;
         width: 100%;
@@ -232,11 +216,9 @@ section .premier_legue_wrapper {
         margin: 15px 0;
 
         p {
-            font-style: normal;
-            font-weight: normal;
+            @include fontWight(normal, inherit);
             line-height: 17px;
-            color: #000000;
-            font-size: inherit;
+            color: $black_color;
         }
     }
 // =================================================================================================
@@ -257,9 +239,8 @@ section .premier_legue_wrapper {
     .who p,
     .win p,
     .will p {
-        font-weight: normal;
-        font-size: 16px;
-        color: #000000;
+        @include fontWight(normal, 16px);
+        color: $black_color;
         margin-bottom: 15px;
     }
 
@@ -269,7 +250,7 @@ section .premier_legue_wrapper {
 
     .win {
         text-align: start;
-        border: none;;
+        border: none;
     }
 
     // ==========================================premier league table body=======================================================
@@ -282,39 +263,34 @@ section .premier_legue_wrapper {
         }
 
         .premier_league_club {
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
+            @include flex(space-between);
             flex-direction: column;
-            align-items: center;
             height: 70px;
 
 
             .drawn {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 18px;
-                color: #000000;
+                @include fontWight(500, 18px);
+                color: $black_color;
                 padding-top: 15px;
             }
 
         }
 
         .premier_league_odd {
-            background: #C4C4C4;
+            background: $premier_league_odd;
             padding: 2px 10px;
             display: flex;
             position: relative;
             font-size: inherit;
 
             i {
-                color: red;
+                color: $red;
                 padding-right: 5px;
 
                 &.fa-sort-up {
                     position: relative;
                     top: 20%;
-                    color: green;
+                    color: $green;
                 }
             }
 
@@ -325,9 +301,7 @@ section .premier_legue_wrapper {
 
     .premier_league_buttons_wrapper {
         background-color: $header_light;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        @include flex(space-evenly);
         width: 100%;
         padding: 10px 0;
         position: absolute;
@@ -338,20 +312,21 @@ section .premier_legue_wrapper {
       // ====================================Premier leauge slide  indicatos =============================================================
 
       .carousel_premier_league_nav {
-        background-color: $header_light !important;
+        background-color: $header_light;
         justify-content: unset;
         gap: 10px;
         position: unset;
         left: 0;
-
+        
         button {
             border-radius: 50%;
-            border: 2px solid #fff;
+            border: 2px solid $white_color;
             background-color: $header_light;
             margin: 0;
+            cursor: pointer;
 
             &.current_slide {
-                background-color: #000000;
+                background-color: $black_color;
             }
         }
     }
@@ -365,6 +340,7 @@ section .premier_legue_wrapper {
             height: unset;
             width: unset;
             padding: 0px;
+            cursor: pointer;
 
             p {
                 line-height: 100%;
@@ -372,7 +348,6 @@ section .premier_legue_wrapper {
 
             i {
                 font-size: 17px;
-                font-weight: bolder;
             }
         }
     
@@ -385,8 +360,7 @@ section .premier_legue_wrapper {
     margin-top: 20px;
 
     h1 {
-        font-weight: normal;
-        font-size: 16px;
+        @include fontWight(normal, 16px);
         line-height: 20px;
         padding: 13px 0;
         color: $header_light;
@@ -395,28 +369,23 @@ section .premier_legue_wrapper {
 
     // ScoreMobi Featured Box
     .featured_matches {
-        display: flex;
-        align-items: center;
+        @include flex(center);
         border: 1px solid $border_color;
         margin-bottom: 4px;
         padding: 4px;
 
         h2 {
-            font-weight: normal;
-            font-size: 16px;
-            font-size: 1rem;
-            color: #000000;
+            @include fontWight(normal, 16px);
+            color: $black_color;
             padding: 0;
             margin: 0;
         }
 
         p {
-            font-weight: normal;
-            font-size: 13px;
-            font-size: 0.8rem;
+            @include fontWight(normal, 13px);
             padding: 0;
             margin: 0;
-            color: #888888;
+            color: $link_color;
         }
 
         img {
@@ -438,10 +407,8 @@ section .premier_legue_wrapper {
         }
 
         p {
-            font-size: inherit;
-            color: #000000;
-            font-family: inherit;
-            font-weight: normal;
+            color: $black_color;
+            @include fontWight(normal, inherit);
         }
 
         .ScoreMobi_featured_matches {
@@ -450,9 +417,7 @@ section .premier_legue_wrapper {
 
 
             .ScoreMobi_feature_matches_wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
+                @include flex(flex-end);
                 padding: 8px 3px;
 
                 img {
