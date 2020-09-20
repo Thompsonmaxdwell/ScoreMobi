@@ -28,7 +28,7 @@
     text-align: left;
     font-weight: bold;
     color: $text_color_2;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .win {
@@ -38,12 +38,12 @@
     margin-top: 0px;
 }
 
-tr.table_head {
+tr.table_roll {
 
-    th.head {
+    th.table_head {
         border: 1px solid $border_color;
         border-bottom: none;
-        font-size: 18px;
+        font-size: 17px;
     }
 }
 
@@ -88,13 +88,55 @@ table.info_section{
 
     td {
         border: 1px solid $border_color;
-        padding: 10px;
+        padding: 15px;
 
         @include tabletSize(320px) {
             max-width: 200px;
         }
 
     }
+
+    .active_info{
+        border-bottom: 4px solid $text_color_2;
+    }
+}
+
+table.table_container{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+
+    th{
+        border: 1px solid $border_color;
+        background: $table_head;
+        padding: 10px;
+    }
+
+    td{
+        background-color: $table_head;
+        border: 1px solid $border_color;
+
+        .coach_line_up{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 9px;
+            background:linear-gradient(0deg, #FFFAFA, #FFFAFA), linear-gradient(0deg, #FFFAFA, #FFFAFA), #FFFFFF;
+
+            .coach_img{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 20%;
+
+                img{
+                    width:70%;
+                    // padding: 10px;
+                }
+            }
+        }
+    }
+
 }
 
 .pl_team {
@@ -129,4 +171,38 @@ table.info_section{
     align-items: center;
     width: 100%;
     padding: 30px;
+}
+
+table.table_formation{
+    margin-top: 20px;
+    width: 100%;
+
+    tbody{
+        margin: 0 auto;
+        text-align: center;
+        // background: greenyellow;
+
+        tr td{
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+    }
+    
+    thead{
+        display: flex;
+
+        tr{
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            background: $table_head;
+
+            td{
+                text-align: center;
+            }  
+        }  
+    }
 }
