@@ -4,16 +4,14 @@
 
 .pl_table {
     width: 100%;
-    border: 1px solid $border_color;
+   @include border_line;
 }
 
 .score_wrapper {
 
     .scores {
-        display: flex;
         width: 50px;
-        justify-content: space-evenly;
-        align-items: center;
+       @include flex(space-between);
         flex-direction: column;
 
         .points {
@@ -32,7 +30,7 @@
 }
 
 .win {
-    border: 1px solid $border_color;
+   @include border_line;
     border-top: 0px;
     border-bottom: 0px;
     margin-top: 0px;
@@ -41,21 +39,31 @@
 tr.table_roll {
 
     th.table_head {
-        border: 1px solid $border_color;
+       @include border_line;
         border-bottom: none;
-        font-size: 17px;
+
+        @include fontWight(normal, 17px);
     }
 }
 
 table.prediction {
     width: 100%;
     border-collapse: collapse;
+    
+    .prediction_head{
+        td{
+            border: 0;
+            color: $black_color;
+        }
+    }
 
     td {
-        border: 1px solid $border_color;
+       @include border_line;
         text-align: center;
         padding: 15px;
     }
+
+
 }
 
 table.shedule {
@@ -64,7 +72,7 @@ table.shedule {
     margin-top: 10px;
 
     td {
-        border: 1px solid $border_color;
+       @include border_line;
 
         @include tabletSize(320px) {
             max-width: 200px;
@@ -76,7 +84,8 @@ table.shedule {
 
         p {
             padding: 3px 0 3px 10px;
-            font-size: 13px;
+
+            @include fontWight(normal, 13);
         }
     }
 }
@@ -85,16 +94,16 @@ table.info_section{
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    text-align: center;
 
-    td {
-        border: 1px solid $border_color;
-        padding: 15px;
-
-        @include tabletSize(320px) {
-            max-width: 200px;
+        td {
+           @include border_line;
+           padding: 15px;
+           
+           @include tabletSize(320px) {
+               max-width: 200px;
+            }
         }
-
-    }
 
     .active_info{
         border-bottom: 4px solid $text_color_2;
@@ -107,31 +116,26 @@ table.table_container{
     margin-top: 30px;
 
     th{
-        border: 1px solid $border_color;
+       @include border_line;
         background: $table_head;
         padding: 10px;
     }
 
     td{
         background-color: $table_head;
-        border: 1px solid $border_color;
+       @include border_line;
 
         .coach_line_up{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            @include flex(space-around);
             padding: 9px;
             background:linear-gradient(0deg, #FFFAFA, #FFFAFA), linear-gradient(0deg, #FFFAFA, #FFFAFA), #FFFFFF;
 
             .coach_img{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                @include flex(space-evenly);
                 width: 20%;
 
                 img{
                     width:70%;
-                    // padding: 10px;
                 }
             }
         }
@@ -140,10 +144,8 @@ table.table_container{
 }
 
 .pl_team {
-    display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    @include flex(center);
     flex-direction: column;
 
     .team_name {
@@ -166,9 +168,7 @@ table.table_container{
 }
 
 .td_premier {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flex(space-evenly);
     width: 100%;
     padding: 30px;
 }
@@ -176,39 +176,49 @@ table.table_container{
 table.table_formation{
     margin-top: 20px;
     width: 100%;
-
+    
     tbody{
-        margin: 0 auto;
-        text-align: center;
-        // background: greenyellow;
-
+        width: 100%;
+        
         td{
+            width: 100%;
             padding: 10px;
-            font-size: 15px;
-            font-weight: 600;
-            // background-color: red;
+            text-align: center;
 
-            .active_info{
-                border-bottom: 4px solid $text_color_2;
-            }
+            @include fontWight(600, 15px);
         }
-
         
     }
     
     thead{
-        display: flex;
+           width: 100%;
+           display: flex;
 
         tr{
             width: 100%;
             padding: 10px;
-            font-size: 15px;
-            font-weight: 600;
+
+            @include fontWight(600, 15px);
+
             background: $table_head;
 
             td{
+                width: 100%;
                 text-align: center;
             }  
         }  
+
+        .active_formation{
+            background-color: $text_color_2;
+            color: $white_color;
+        }
+
+    }
+
+    .formation_img{
+        img{
+            width: 80%;
+            max-width: 60%;
+        }
     }
 }
