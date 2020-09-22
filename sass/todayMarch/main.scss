@@ -222,3 +222,75 @@ table.table_formation{
         }
     }
 }
+
+
+//    =================
+//    Prediction section
+//    =================
+
+.march_prediction_wrapper{
+    .full_time{
+        @include flex(space-between);
+        background-color: $header_light;
+        padding:0px 15px;
+
+
+        .full_time_scores{
+            background-color: $blue;
+            text-align: center;
+            padding: 10px 15px;
+            color: $white_color;
+            width: 50%;
+        }
+
+
+        p{
+            width: 50%;
+        }
+    }
+
+     table.prediction_section{
+         border-collapse: collapse;
+         margin-top: 10px;
+         width: 100%;
+
+        td{
+            border: 1px solid $border_color;
+
+            .predict_team{
+                width: 60%;
+                margin: 5px auto;
+                @include flex(space-evenly);
+    
+                .predict_team_img{
+                    width: 20%;
+    
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .prediction_odds{
+        width: 100%;
+        @include flex(space-evenly);
+        border-collapse: collapse;
+        
+        tbody{
+            width: 100%;
+            
+            .table_head{
+                background-color: lightgray;
+            }
+
+            tr{
+                width: 100%;
+                border: 1px solid $border_color;
+                text-align: center;
+            }
+        }
+    }
+
+}

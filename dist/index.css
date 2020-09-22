@@ -2125,6 +2125,63 @@ table.table_formation .formation_img img {
   max-width: 60%;
 }
 
+.march_prediction_wrapper .full_time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7FA302;
+  padding: 0px 15px;
+}
+.march_prediction_wrapper .full_time .full_time_scores {
+  background-color: #39A0E2;
+  text-align: center;
+  padding: 10px 15px;
+  color: #Ffffff;
+  width: 50%;
+}
+.march_prediction_wrapper .full_time p {
+  width: 50%;
+}
+.march_prediction_wrapper table.prediction_section {
+  border-collapse: collapse;
+  margin-top: 10px;
+  width: 100%;
+}
+.march_prediction_wrapper table.prediction_section td {
+  border: 1px solid #b4b4b4;
+}
+.march_prediction_wrapper table.prediction_section td .predict_team {
+  width: 60%;
+  margin: 5px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.march_prediction_wrapper table.prediction_section td .predict_team .predict_team_img {
+  width: 20%;
+}
+.march_prediction_wrapper table.prediction_section td .predict_team .predict_team_img img {
+  width: 100%;
+}
+.march_prediction_wrapper .prediction_odds {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-collapse: collapse;
+}
+.march_prediction_wrapper .prediction_odds tbody {
+  width: 100%;
+}
+.march_prediction_wrapper .prediction_odds tbody .table_head {
+  background-color: lightgray;
+}
+.march_prediction_wrapper .prediction_odds tbody tr {
+  width: 100%;
+  border: 1px solid #b4b4b4;
+  text-align: center;
+}
+
 .loading_container {
   display: none;
 }
