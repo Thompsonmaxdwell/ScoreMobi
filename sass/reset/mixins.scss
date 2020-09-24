@@ -33,6 +33,10 @@
     font-style: normal;
     font-size: $size;
 }
+@mixin  grid_Auto_fit($size) {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($size, 1fr));
+}
 
 @mixin grid-col-3 {
     display: grid;

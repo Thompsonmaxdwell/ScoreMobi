@@ -1,7 +1,7 @@
 
 
 // minimum sizing
-@mixin  desktopSize($size) {
+@mixin desktopSize($size) {
     @media (min-width:$size) {
         @content;
     }

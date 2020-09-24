@@ -65,7 +65,7 @@ form {
 
         button {
             background-color: $form_btn_color;
-            color: $whte_color;
+            color: $white_color;
             border-radius: 4px;
             padding: 6px 20px;
             @include fontWight(normal, .8rem);
@@ -103,8 +103,7 @@ form {
 
 // ========================================ScoreMobi signup via social media=========================================================
 .ScoreMobi_signup_via_social_media {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    @include grid_Auto_fit(100px);
     grid-gap: 10px;
 
     p {
@@ -356,6 +355,12 @@ section .premier_legue_wrapper {
 }
 // ======================== ScoreMobi Features Match Container ============================================================
 
+.featured_matches_wrapper{
+    @include grid_Auto_fit(230px);
+    grid-gap: 20px; 
+ 
+}
+
 .ScoreMobi_Featured_matches {
     margin-top: 20px;
 
@@ -389,8 +394,8 @@ section .premier_legue_wrapper {
         }
 
         img {
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
             margin-right: 7px;
         }
     }
