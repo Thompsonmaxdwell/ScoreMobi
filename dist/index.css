@@ -101,25 +101,43 @@ ul {
     padding: 0;
   }
 }
+.scoreMobi_header_color #nav .nav_ul {
+  display: flex;
+  gap: 60px;
+}
 .scoreMobi_header_color #nav .nav_ul a .fa-home {
   font-size: 2em;
   color: white;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_ul_li a,
+.scoreMobi_header_color #nav .nav_ul_li {
+  position: relative;
+}
+.scoreMobi_header_color #nav .nav_ul_li::after {
+  content: "";
+  border-bottom: 2px solid white;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -10px;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.1s ease-in-out;
+}
+.scoreMobi_header_color #nav .nav_ul_li:hover::after {
+  transform: scale(1);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+.scoreMobi_header_color #nav hover .nav_ul .nav_ul_li a,
 .scoreMobi_header_color #nav .dropdown_indicator {
   color: white;
   font-size: 1.1em;
   cursor: pointer;
+  display: inline-block;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_ul_li a:hover,
+.scoreMobi_header_color #nav hover .nav_ul .nav_ul_li a:hover,
 .scoreMobi_header_color #nav .dropdown_indicator:hover {
-  color: rgba(255, 255, 255, 0.493);
-}
-@media (min-width: 900px) {
-  .scoreMobi_header_color #nav .nav_ul .nav_ul_li {
-    padding-right: 60px;
-    padding-left: 0px;
-  }
+  color: white !important;
 }
 .scoreMobi_header_color #nav .nav_dropdown_content a {
   font-family: inherit;
@@ -234,30 +252,29 @@ ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
-  padding: 20px 10px;
-  width: 93%;
+  padding: 10px;
+  width: 100%;
   margin: 0 auto;
   grid-template-areas: "main main main main" "asideLeft asideLeft asideLeft asideLeft" "asideRight asideRight asideRight asideRight";
 }
-@media (min-width: 850px) {
+@media (min-width: 600px) {
   .ScoreMobi_main_wrapper {
+    width: 95%;
     padding: 20px 0px;
   }
 }
 @media (min-width: 850px) {
   .ScoreMobi_main_wrapper {
-    grid-template-areas: "main main main main main main main " "asideLeft asideLeft asideRight asideRight";
+    display: grid;
+    grid-template-areas: "main main main main main main main" "asideLeft asideLeft asideRight asideRight";
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
   .ScoreMobi_main_wrapper {
-    grid-template-columns: repeat(11, auto);
-    grid-template-areas: "asideLeft asideLeft asideLeft main main main main main asideRight asideRight asideRight";
-    width: 95%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "asideLeft main main asideRight";
     max-width: 1350px;
     margin: 0 auto;
-    grid-template-columns: repeat(11, 1fr);
-    grid-template-areas: "asideLeft asideLeft asideLeft main main main main  main asideRight asideRight asideRight";
     grid-gap: 20px;
   }
   .ScoreMobi_main_wrapper #main img {
@@ -278,6 +295,7 @@ ul {
 .ScoreMobi_main_wrapper #aside_right {
   height: auto;
   grid-area: asideRight;
+  overflow: hidden;
 }
 
 aside#aside_left {
@@ -287,22 +305,22 @@ aside#aside_left {
 }
 @media (min-width: 900px) {
   aside#aside_left {
-    all: unset;
+    display: unset;
   }
 }
-aside#aside_left #aside_left_order_1 {
+aside#aside_left #flex_order_1 {
   grid-area: order_1;
 }
 @media (min-width: 900px) {
-  aside#aside_left #aside_left_order_1 {
+  aside#aside_left #flex_order_1 {
     grid-area: unset;
   }
 }
-aside#aside_left #aside_left_order_2 {
+aside#aside_left #flex_order_2 {
   grid-area: order_2;
 }
 @media (min-width: 900px) {
-  aside#aside_left #aside_left_order_2 {
+  aside#aside_left #flex_order_2 {
     grid-area: unset;
   }
 }
@@ -312,6 +330,16 @@ aside#aside_left #aside_left_order_2 {
   border: 1px solid #898686;
   box-sizing: border-box;
   padding: 10px 15px;
+}
+@media (min-width: 600px) {
+  .ScoreMobi_mobile_Template {
+    width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .ScoreMobi_mobile_Template {
+    width: 100%;
+  }
 }
 .ScoreMobi_mobile_Template h2 {
   font-weight: 600;
@@ -323,9 +351,13 @@ aside#aside_left #aside_left_order_2 {
 }
 .ScoreMobi_mobile_Template .ScoreMobi_template_image img {
   height: 50px;
-  max-width: 100%;
   display: block;
   margin-top: 15px;
+}
+@media (min-width: 800px) {
+  .ScoreMobi_mobile_Template .ScoreMobi_template_image img {
+    width: 60%;
+  }
 }
 
 .ScoreMobi_popular_competitions h1 {
@@ -424,9 +456,21 @@ aside#aside_left #aside_left_order_2 {
 
 .ScoreMobi_card_flex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 20px;
   margin-top: 10px;
+}
+@media (min-width: 800px) {
+  .ScoreMobi_card_flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+@media (min-width: 1000px) {
+  .ScoreMobi_card_flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 .ScoreMobi_card {
@@ -436,9 +480,14 @@ aside#aside_left #aside_left_order_2 {
 }
 .ScoreMobi_card img {
   width: 100%;
-  height: 100px;
+  height: 170px;
   object-fit: cover;
   position: relative;
+}
+@media (min-width: 800px) {
+  .ScoreMobi_card img {
+    height: 120px;
+  }
 }
 .ScoreMobi_card .ScoreMobi_card_padding {
   padding: 10px 10px 10px;
@@ -482,8 +531,13 @@ aside#aside_left #aside_left_order_2 {
 section .carousel_wrapper {
   background-color: unset;
   width: 100%;
-  height: 300px;
+  height: 250px;
   padding-bottom: 45px;
+}
+@media (min-width: 700px) {
+  section .carousel_wrapper {
+    height: 300px;
+  }
 }
 section .carousel_wrapper .carousel_track_container_wrapper {
   margin: 0;
@@ -492,7 +546,7 @@ section .carousel_wrapper .carousel_track_container_wrapper {
 }
 section .carousel_wrapper .carousel_track_container_wrapper img {
   display: block;
-  min-width: 100%;
+  width: 100%;
 }
 section .carousel_wrapper .flex_slide_button_and_ind {
   display: flex;
@@ -755,7 +809,7 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
 
 #ScoremMobi_main_section_news_wrapper .main_news_wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
   margin-top: 10px;
   background-color: #Ffffff;
@@ -773,6 +827,11 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   font-size: 20px;
   padding-bottom: 20px;
   color: #000000;
+}
+@media (min-width: 700px) {
+  #ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card .news_title {
+    font-size: 17px;
+  }
 }
 #ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card figcaption {
   color: #000000;
@@ -841,7 +900,7 @@ form .ScoreMobi_form_button {
 }
 form .ScoreMobi_form_button button {
   background-color: #474747;
-  color: #fff;
+  color: #Ffffff;
   border-radius: 4px;
   padding: 6px 20px;
   font-weight: normal;
@@ -897,7 +956,7 @@ form .ScoreMobi_form_button button:hover {
   font-family: unset;
   border: none;
   border-radius: 3px;
-  color: #fff;
+  color: #Ffffff;
   cursor: pointer;
 }
 .ScoreMobi_signup_via_social_media .facebook i,
@@ -1063,7 +1122,7 @@ section .premier_legue_wrapper .carousel_premier_league_nav {
 }
 section .premier_legue_wrapper .carousel_premier_league_nav button {
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #Ffffff;
   background-color: #7FA302;
   margin: 0;
   cursor: pointer;
@@ -1086,6 +1145,12 @@ section .premier_legue_wrapper .carousel_btn p {
 }
 section .premier_legue_wrapper .carousel_btn i {
   font-size: 17px;
+}
+
+.featured_matches_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-gap: 20px;
 }
 
 .ScoreMobi_Featured_matches {
@@ -1127,8 +1192,8 @@ section .premier_legue_wrapper .carousel_btn i {
   color: #888888;
 }
 .ScoreMobi_Featured_matches .featured_matches img {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   margin-right: 7px;
 }
 .ScoreMobi_Featured_matches .ScoreMobi_featured_matches_table {
@@ -1207,7 +1272,7 @@ section .premier_legue_wrapper .carousel_btn i {
   padding: 10px 0;
 }
 .scoreMobi_footer .scoreMobi_footer_text P {
-  font-size: 26px;
+  font-size: inherit;
   line-height: 1.6;
   color: #cbc8c8;
 }
@@ -1259,6 +1324,8 @@ section .premier_legue_wrapper .carousel_btn i {
 }
 .scoreMobi_footer .scoreMobi_googlePlayStore h2 {
   font-weight: 600;
+  font-family: inherit;
+  font-style: normal;
   font-size: 18px;
   line-height: 22px;
   color: #dfdfdf;
@@ -1275,23 +1342,10 @@ section .premier_legue_wrapper .carousel_btn i {
 }
 .scoreMobi_footer .scoreMobi_googlePlayStore .footer_img img {
   display: block;
-  height: 40px;
+  height: 50px;
   width: 100%;
   border-radius: 5px;
   margin-top: 30px;
-  object-fit: cover;
-}
-@media (min-width: 450px) {
-  .scoreMobi_footer .scoreMobi_googlePlayStore .footer_img img {
-    height: 50px;
-    width: 80%;
-  }
-}
-@media (min-width: 600px) {
-  .scoreMobi_footer .scoreMobi_googlePlayStore .footer_img img {
-    width: 100%;
-    object-fit: unet;
-  }
 }
 .scoreMobi_footer .scoreMobi_googlePlayStore .scoreMobi_follow_us_wrapper {
   margin-top: 10px;
@@ -1763,7 +1817,7 @@ section .premier_legue_wrapper .carousel_btn i {
 }
 
 #i_green {
-  color: #27AE60;
+  color: green;
 }
 
 .l_transfer_date {

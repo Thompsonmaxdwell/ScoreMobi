@@ -34,7 +34,7 @@
 			}
 
 			P {
-				font-size: 26px;
+				font-size: inherit;
 				line-height: 1.6;
 				color: #cbc8c8;
 			}
@@ -46,7 +46,7 @@
 					font-weight: 600;
 					font-size: 18px;
 					line-height: 22px;
-					color: #dfdfdf;
+					color: $footer_text_color;
 				}
 				// ScoreMobi footer Links text
 				.scoreMobi_links {
@@ -72,7 +72,7 @@
 						@include desktopSize(900px) {
 							line-height: unset;
 						}
-						color: #dfdfdf;
+						color: $footer_text_color;
 					}
 				}
 			}
@@ -87,10 +87,9 @@
 			}
 
 			h2 {
-				font-weight: 600;
-				font-size: 18px;
+				@include fontWight(600, 18px);
 				line-height: 22px;
-				color: #dfdfdf;
+				color: $footer_text_color;
 			}
 			.footer_img {
 				width: 50%;
@@ -102,21 +101,12 @@
 
 				img {
 					display: block;
-					height: 40px;
+					height: 50px;
 					width: 100%;
 					border-radius: 5px;
 					margin-top: 30px;
-					object-fit: cover;
 
-					@include tabletSize(450px){
-						height: 50px;
-						width: 80%;
-					}
-
-					@include desktopSize(600px){
-						width: 100%;
-						object-fit: unet;
-					}
+					
 				}
 			}
 			.scoreMobi_follow_us_wrapper {
@@ -125,7 +115,7 @@
 				h2 {
 					font-size: 18px;
 					padding: 15px 0;
-					color: #dfdfdf;
+					color: $footer_text_color;
 				}
 			}
 			.scoreMobi_follow_us {

@@ -2,8 +2,12 @@
 section .carousel_wrapper {
 	background-color: unset;
 	width:100%;
-	height: 300px;
+	height: 250px;
 	padding-bottom:45px;
+
+	@include tabletSize(700px){
+		height: 300px;
+	}
 	
 	.carousel_track_container_wrapper {
 		margin:0;
@@ -12,7 +16,8 @@ section .carousel_wrapper {
 
 		img{
 			display: block;
-			min-width:100%;
+			width:100%;
+		
 		}
 	}
 //   <!-- - ------------------------------------ ScoreMobi Slide Buton- ------------------------------------ -->
@@ -243,6 +248,7 @@ table#SocreMobi_match_table {
 				@include tabletSize(500px) {
 					margin: 0px;
 				}
+				
 			}
 
 			.clubs {
@@ -304,8 +310,7 @@ table#SocreMobi_match_table {
 #ScoremMobi_main_section_news_wrapper {
 
 	.main_news_wrapper {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+		@include grid_Auto_fit(300px);
 		grid-gap: 20px;
 		margin-top: 10px;
 		background-color: $white_color;
@@ -327,6 +332,10 @@ table#SocreMobi_match_table {
 				font-size: 20px;
 				padding-bottom: 20px;
 				color: $black_color;
+
+				@include tabletSize(700px){
+                  font-size: 17px;
+				}
 			}
 
 			figcaption {
