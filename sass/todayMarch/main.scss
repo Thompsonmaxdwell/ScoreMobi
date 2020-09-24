@@ -1,0 +1,296 @@
+.table {
+    max-width: 100%;
+}
+
+.pl_table {
+    width: 100%;
+   @include border_line;
+}
+
+.score_wrapper {
+
+    .scores {
+        width: 50px;
+       @include flex(space-between);
+        flex-direction: column;
+
+        .points {
+            padding: 12px 0 12px 0;
+        }
+    }
+}
+
+.section_caption{
+    width: 100%;
+    padding-bottom: 8px;
+    text-align: left;
+    font-weight: bold;
+    color: $text_color_2;
+    margin-top: 30px;
+}
+
+.win {
+   @include border_line;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-top: 0px;
+}
+
+tr.table_roll {
+
+    th.table_head {
+       @include border_line;
+        border-bottom: none;
+
+        @include fontWight(normal, 17px);
+    }
+}
+
+table.prediction {
+    width: 100%;
+    border-collapse: collapse;
+    
+    .prediction_head{
+        td{
+            border: 0;
+            color: $black_color;
+        }
+    }
+
+    td {
+       @include border_line;
+        text-align: center;
+        padding: 15px;
+    }
+
+
+}
+
+table.shedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+
+    td {
+       @include border_line;
+
+        @include tabletSize(320px) {
+            max-width: 200px;
+        }
+
+        h4 {
+            padding: 3px 0 3px 10px;
+        }
+
+        p {
+            padding: 3px 0 3px 10px;
+
+            @include fontWight(normal, 13);
+        }
+    }
+}
+
+table.info_section{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: center;
+
+        td {
+           @include border_line;
+           padding: 15px;
+           
+           @include tabletSize(320px) {
+               max-width: 200px;
+            }
+        }
+
+    .active_info{
+        border-bottom: 4px solid $text_color_2;
+    }
+}
+
+table.table_container{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+
+    th{
+       @include border_line;
+        background: $table_head;
+        padding: 10px;
+    }
+
+    td{
+        background-color: $table_head;
+       @include border_line;
+
+        .coach_line_up{
+            @include flex(space-around);
+            padding: 9px;
+            background:linear-gradient(0deg, #FFFAFA, #FFFAFA), linear-gradient(0deg, #FFFAFA, #FFFAFA), #FFFFFF;
+
+            .coach_img{
+                @include flex(space-evenly);
+                width: 20%;
+
+                img{
+                    width:70%;
+                }
+            }
+        }
+    }
+
+}
+
+.pl_team {
+    width: 100%;
+    @include flex(center);
+    flex-direction: column;
+
+    .team_name {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        padding-bottom: 8px;
+        object-fit: contain;
+
+        @include tabletSize(800px) {
+            width: 80%;
+        }
+
+        @include tabletSize(1000px) {
+            width: 70%;
+        }
+    }
+}
+
+.td_premier {
+    @include flex(space-evenly);
+    width: 100%;
+    padding: 30px;
+}
+
+table.table_formation{
+    margin-top: 20px;
+    width: 100%;
+    
+    tbody{
+        width: 100%;
+        
+        td{
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+
+            @include fontWight(600, 15px);
+        }
+        
+    }
+    
+    thead{
+           width: 100%;
+           display: flex;
+
+        tr{
+            width: 100%;
+            padding: 10px;
+
+            @include fontWight(600, 15px);
+
+            background: $table_head;
+
+            td{
+                width: 100%;
+                text-align: center;
+            }  
+        }  
+
+        .active_formation{
+            background-color: $text_color_2;
+            color: $white_color;
+        }
+
+    }
+
+    .formation_img{
+        img{
+            width: 80%;
+            max-width: 60%;
+        }
+    }
+}
+
+
+//    =================
+//    Prediction section
+//    =================
+
+.march_prediction_wrapper{
+    .full_time{
+        @include flex(space-between);
+        background-color: $header_light;
+        padding:0px 15px;
+
+
+        .full_time_scores{
+            background-color: $blue;
+            text-align: center;
+            padding: 10px 15px;
+            color: $white_color;
+            width: 50%;
+        }
+
+
+        p{
+            width: 50%;
+        }
+    }
+
+     table.prediction_section{
+         border-collapse: collapse;
+         margin-top: 10px;
+         width: 100%;
+
+        td{
+            border: 1px solid $border_color;
+
+            .predict_team{
+                width: 60%;
+                margin: 5px auto;
+                @include flex(space-evenly);
+    
+                .predict_team_img{
+                    width: 20%;
+    
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .prediction_odds{
+        width: 100%;
+        @include flex(space-evenly);
+        border-collapse: collapse;
+        
+        tbody{
+            width: 100%;
+            
+            .table_head{
+                background-color: lightgray;
+            }
+
+            tr{
+                width: 100%;
+                border: 1px solid $border_color;
+                text-align: center;
+            }
+        }
+    }
+
+}

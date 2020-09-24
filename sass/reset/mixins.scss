@@ -21,8 +21,14 @@
     justify-content: ($btw);
 }
 
-@mixin fontWight($value, $size) {
-    font-weight: $value;
+// @mixin flex($justify, $align) {
+//     display: flex;
+//     align-items: ($align);
+//     justify-content: ($btw);
+// }
+
+@mixin fontWight($weight, $size) {
+    font-weight: $weight;
     font-family: inherit;
     font-style: normal;
     font-size: $size;
