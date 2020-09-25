@@ -7,7 +7,7 @@
 	align-items: center;
 	align-content: center;
 	padding: 10px;
-	font-family: 'Montserrat';
+	font-family: inherit;
 	width: 100%;
 
 	@include desktopSize(900px) {
@@ -20,7 +20,7 @@
 		font-weight: 600;
 		font-size: 20px;
 
-		color: #ffffff;
+		color: $white_color;
 
 		@include desktopSize(900px) {
 			font-size: 30px;
@@ -28,7 +28,7 @@
 	}
 
 	.scoreMobi_logo {
-		color: white;
+		color: $white_color;
 	}
 
 	.header_social_icon {
@@ -48,7 +48,7 @@
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		color: white;
+		color: $white_color;
 		font-size: 18px;
 
 		span {
@@ -63,9 +63,7 @@
 //*********************** Nav header  styling Starte here ***********************
 .scoreMobi_header_color {
 	background-color: $header_dark;
-	font-family: 'Montserrat';
 	width: 100%;
-
 
 	.scoreMobi_header_content {
 		width: 100%;
@@ -87,60 +85,87 @@
 	}
 
 	#nav {
+		padding: 0 10px;
+
 		@include desktopSize(900px) {
 			padding: 0;
 		}
 
 		.nav_ul {
-			display: flex;
-			gap: 60px;
-		}
 
-		.nav_ul a .fa-home {
-			font-size: 2em;
-			color: white;
-		}
+			@include desktopSize(900px) {
+				display: flex;
+				gap: 60px;
+
+			}
 
 
-		.nav_ul_li {
-			position: relative;
+			.nav_ul_li {
+				position: relative;
+				&.active {
+					position: relative;
+	
+					&::after {
+						transform: scale(1);
+					}
+				}
+				&::after {
+					content: '';
+					border-bottom: 2px solid $white_color;
+					position: absolute;
+					width: 100%;
+					left: 0;
+					top: 50%;
+					display: inline-block;
+					transform: scale(0);
+					transform-origin: right;
+					transition: transform 0.7s ease-in-out;
+
+					@include desktopSize(900px) {
+						top: 100%;
+					}
+				}
+
+				&:hover::after {
+					transform: scale(1);
+					transform-origin: left;
+					transition: transform 0.5s ease-in-out;
+				}
+
+				.fa-home {
+					font-size: 1.1em;
+					color: $white_color;
+				}
+				a {
+					line-height: unset;
+					padding-bottom: 30px;
+
+					@include desktopSize(900px) {
+						padding-bottom: 0;
+					}
+				}
+
+			}
+
 			
 
-			&::after {
-				content: '';
-				border-bottom: 2px solid white;
-				position: absolute;
-				width: 100%;
-				left: 0;
-				bottom: -10px;
-				transform: scale(0);
-				transform-origin: left;
-				transition: transform 0.1s ease-in-out;
-			}
-			&:hover::after {
-				transform: scale(1);
-				transform-origin: left;
-				transition: transform 0.5s ease-in-out;
-			}
 
+
+
+
+			a,
+			.dropdown_indicator {
+				color: $white_color;
+				font-size: 1.1em;
+				cursor: pointer;
+				// display: inline-block;
+
+				&:hover {
+					color: $white_color !important;
+				}
+			}
 
 		}
-
-		
-
-		hover .nav_ul .nav_ul_li a,
-		.dropdown_indicator {
-			color: white;
-			font-size: 1.1em;
-			cursor: pointer;
-			display: inline-block;
-
-			&:hover {
-				color: white!important;
-			}
-		}
-
-
 
 		.nav_dropdown_content a {
 			font-family: inherit;
@@ -154,6 +179,7 @@
 		gap: 10px;
 		position: relative;
 		z-index: 1;
+		padding: 0px 10px;
 	}
 
 	.input_wrap {
@@ -169,19 +195,20 @@
 		}
 
 		i.fa-search {
-			color: white;
+			color: $white_color;
 		}
 
 		span i:hover {
-			color: white;
+			color: $white_color;
 		}
 
 		.header_input {
 			background-color: $header_light;
-			color: white;
+			color: $white_color;
+			width: 100% !important;
 
 			&::placeholder {
-				color: white;
+				color: $white_color;
 			}
 
 			&:focus {
