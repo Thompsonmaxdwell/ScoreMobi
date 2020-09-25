@@ -92,6 +92,7 @@
 		}
 
 		.nav_ul {
+			position: relative;
 
 			@include desktopSize(900px) {
 				display: flex;
@@ -100,76 +101,105 @@
 			}
 
 
+			.fa-home {
+				font-size: 1.1em;
+				color: $white_color;
+			}
+
 			.nav_ul_li {
 				position: relative;
-				&.active {
-					position: relative;
-	
+			
+					&.active {
+						// position: relative;
+
+						&::after {
+							transform: scale(1);
+						}
+					}
+
 					&::after {
-						transform: scale(1);
+						content: '';
+						border-bottom: 2px solid $white_color;
+						position: absolute;
+						width: 100%;
+						left: 0;
+						bottom: -5px;
+						display: inline-block;
+						transform: scale(0);
+						transform-origin: right;
+						transition: transform 1s ease-in-out;
 					}
-				}
-				&::after {
-					content: '';
-					border-bottom: 2px solid $white_color;
-					position: absolute;
-					width: 100%;
-					left: 0;
-					top: 50%;
-					display: inline-block;
-					transform: scale(0);
-					transform-origin: right;
-					transition: transform 0.7s ease-in-out;
 
-					@include desktopSize(900px) {
-						top: 100%;
+					&:hover::after {
+						transform: scale(1) ;
+						transform-origin: left;
+						transition: transform 0.6s ease-in-out;
 					}
-				}
-
-				&:hover::after {
-					transform: scale(1);
-					transform-origin: left;
-					transition: transform 0.5s ease-in-out;
-				}
-
-				.fa-home {
-					font-size: 1.1em;
-					color: $white_color;
-				}
-				a {
-					line-height: unset;
-					padding-bottom: 30px;
-
+					a {
+						line-height: unset;
+						padding-bottom: 30px;
+	
 					@include desktopSize(900px) {
 						padding-bottom: 0;
 					}
 				}
-
+				
 			}
-
 			
-
-
-
-
-
 			a,
 			.dropdown_indicator {
 				color: $white_color;
 				font-size: 1.1em;
 				cursor: pointer;
-				// display: inline-block;
 
 				&:hover {
-					color: $white_color !important;
+					color: $white_color!important;
+				}
+			}
+			.nav_dropdown_content{
+				position: unset!important;
+				border-radius:0!important;
+				box-shadow:unset!important;
+				border-top: 1px solid $white_color;
+
+				.ScoreMobi_nav_dropdown{
+					display:flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 95%;
+					margin: 0 auto;
+					padding: 10px 0;
+					
+					
+					.nav_dropdown_item{
+						display:flex;
+						align-items: center;
+						gap:10px;
+
+						 
+						a {
+							font-family: inherit;
+							font-size: inherit;
+							padding:0;
+							
+							&:hover{
+								all:unset;
+							} 
+						}
+						img{
+							width:30px;
+							height:30px;
+							border-radius: 50%;
+						}
+						
+					}
+					
 				}
 			}
 
 		}
 
-		.nav_dropdown_content a {
-			font-family: inherit;
-		}
+		
 	}
 
 	// header input  styling here with header search icon

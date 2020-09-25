@@ -103,16 +103,20 @@ ul {
     padding: 0;
   }
 }
+.scoreMobi_header_color #nav .nav_ul {
+  position: relative;
+}
 @media (min-width: 900px) {
   .scoreMobi_header_color #nav .nav_ul {
     display: flex;
     gap: 60px;
   }
 }
-.scoreMobi_header_color #nav .nav_ul .nav_ul_li {
-  position: relative;
+.scoreMobi_header_color #nav .nav_ul .fa-home {
+  font-size: 1.1em;
+  color: #Ffffff;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_ul_li.active {
+.scoreMobi_header_color #nav .nav_ul .nav_ul_li {
   position: relative;
 }
 .scoreMobi_header_color #nav .nav_ul .nav_ul_li.active::after {
@@ -124,25 +128,16 @@ ul {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 50%;
+  bottom: -5px;
   display: inline-block;
   transform: scale(0);
   transform-origin: right;
-  transition: transform 0.7s ease-in-out;
-}
-@media (min-width: 900px) {
-  .scoreMobi_header_color #nav .nav_ul .nav_ul_li::after {
-    top: 100%;
-  }
+  transition: transform 1s ease-in-out;
 }
 .scoreMobi_header_color #nav .nav_ul .nav_ul_li:hover::after {
   transform: scale(1);
   transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-}
-.scoreMobi_header_color #nav .nav_ul .nav_ul_li .fa-home {
-  font-size: 1.1em;
-  color: #Ffffff;
+  transition: transform 0.6s ease-in-out;
 }
 .scoreMobi_header_color #nav .nav_ul .nav_ul_li a {
   line-height: unset;
@@ -163,8 +158,37 @@ ul {
 .scoreMobi_header_color #nav .nav_ul .dropdown_indicator:hover {
   color: #Ffffff !important;
 }
-.scoreMobi_header_color #nav .nav_dropdown_content a {
+.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content {
+  position: unset !important;
+  border-radius: 0 !important;
+  box-shadow: unset !important;
+  border-top: 1px solid #Ffffff;
+}
+.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown .nav_dropdown_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown .nav_dropdown_item a {
   font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown .nav_dropdown_item a:hover {
+  all: unset;
+}
+.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown .nav_dropdown_item img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 .scoreMobi_header_color #header_right_wrapper {
   display: flex;
