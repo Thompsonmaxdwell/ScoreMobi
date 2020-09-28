@@ -56,8 +56,6 @@ form {
         }
     }
 
-    // ============================== ScoreMobi form button wrapper====================================================================
-
     // ScoreMobi_form_button 
     .ScoreMobi_form_button {
         @include flex(space-between);
@@ -77,8 +75,6 @@ form {
         }
     }
 }
-
-// ==================================Form Or===============================================================
 
 .or {
     text-align: center;

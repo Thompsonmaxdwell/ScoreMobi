@@ -1,7 +1,13 @@
+$max_width: 1500px;
+$desktop: 1400px;
+$tablet: 969px;
+$max_tablet: 969px;
+$mobile: 533px;
+
 
 
 // minimum sizing
-@mixin  desktopSize($size) {
+@mixin desktopSize($size) {
     @media (min-width:$size) {
         @content;
     }
@@ -14,14 +20,6 @@
     }
     
 }
-
-
-
-$max_width: 1500px;
-$desktop: 1400px;
-$tablet: 969px;
-$max_tablet: 969px;
-$mobile: 533px;
 
 
 
