@@ -23,9 +23,8 @@ ul {
 .scoreMobi_header {
   background-color: #7FA302;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  align-content: center;
+  justify-content: space-between;
   padding: 10px;
   font-family: inherit;
   width: 100%;
@@ -36,8 +35,9 @@ ul {
   }
 }
 .scoreMobi_header h2 {
+  font-weight: 600px;
+  font-family: inherit;
   font-style: normal;
-  font-weight: 600;
   font-size: 20px;
   color: #Ffffff;
 }
@@ -63,8 +63,8 @@ ul {
 }
 .scoreMobi_header .login {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
   color: #Ffffff;
   font-size: 18px;
 }
@@ -75,6 +75,7 @@ ul {
 .scoreMobi_header_color {
   background-color: #6F8B0A;
   width: 100%;
+  height: 100%;
 }
 .scoreMobi_header_color .scoreMobi_header_content {
   width: 100%;
@@ -103,26 +104,32 @@ ul {
     padding: 0;
   }
 }
-.scoreMobi_header_color #nav .nav_ul {
-  position: relative;
-}
 @media (min-width: 900px) {
   .scoreMobi_header_color #nav .nav_ul {
     display: flex;
     gap: 60px;
   }
 }
-.scoreMobi_header_color #nav .nav_ul .fa-home {
-  font-size: 1.1em;
-  color: #Ffffff;
-}
 .scoreMobi_header_color #nav .nav_ul .nav_ul_li {
+  padding-bottom: 30px;
+}
+@media (min-width: 900px) {
+  .scoreMobi_header_color #nav .nav_ul .nav_ul_li {
+    padding-bottom: 0px;
+  }
+}
+.scoreMobi_header_color #nav .nav_ul .nav_ul_li a, .scoreMobi_header_color #nav .nav_ul .dropdown_indicator {
   position: relative;
+  line-height: unset;
+  color: #Ffffff;
+  font-weight: normal;
+  font-family: inherit;
+  font-style: normal;
+  font-size: 1.1em;
+  cursor: pointer;
+  display: inline-block;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_ul_li.active::after {
-  transform: scale(1);
-}
-.scoreMobi_header_color #nav .nav_ul .nav_ul_li::after {
+.scoreMobi_header_color #nav .nav_ul .nav_ul_li a::after, .scoreMobi_header_color #nav .nav_ul .dropdown_indicator::after {
   content: "";
   border-bottom: 2px solid #Ffffff;
   position: absolute;
@@ -134,58 +141,95 @@ ul {
   transform-origin: right;
   transition: transform 1s ease-in-out;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_ul_li:hover::after {
+.scoreMobi_header_color #nav .nav_ul .nav_ul_li a:hover::after, .scoreMobi_header_color #nav .nav_ul .dropdown_indicator:hover::after {
   transform: scale(1);
   transform-origin: left;
   transition: transform 0.6s ease-in-out;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_ul_li a {
-  line-height: unset;
-  padding-bottom: 30px;
+.scoreMobi_header_color #nav .nav_ul .nav_ul_li a.active_link::after, .scoreMobi_header_color #nav .nav_ul .dropdown_indicator.active_link::after {
+  transform: scale(1);
+}
+.scoreMobi_header_color #nav .nav_ul .nav_ul_li a:hover, .scoreMobi_header_color #nav .nav_ul .dropdown_indicator:hover {
+  color: #Ffffff;
 }
 @media (min-width: 900px) {
-  .scoreMobi_header_color #nav .nav_ul .nav_ul_li a {
+  .scoreMobi_header_color #nav .nav_ul .nav_ul_li a, .scoreMobi_header_color #nav .nav_ul .dropdown_indicator {
     padding-bottom: 0;
   }
 }
-.scoreMobi_header_color #nav .nav_ul a,
-.scoreMobi_header_color #nav .nav_ul .dropdown_indicator {
+.scoreMobi_header_color #nav .nav_ul .nav_ul_li a .fa-home, .scoreMobi_header_color #nav .nav_ul .dropdown_indicator .fa-home {
+  font-size: 1.1em;
+  color: #Ffffff;
+}
+.scoreMobi_header_color #nav .nav_ul .dropdown_link {
+  padding-bottom: 0px;
+}
+.scoreMobi_header_color #nav .nav_ul .dropdown_link .dropdown_wdith {
+  width: 95%;
+  margin: 0 auto;
+}
+.scoreMobi_header_color #nav .nav_ul .dropdown_link .dropdown_indicator {
   color: #Ffffff;
   font-size: 1.1em;
   cursor: pointer;
+  margin-bottom: 10px;
 }
-.scoreMobi_header_color #nav .nav_ul a:hover,
-.scoreMobi_header_color #nav .nav_ul .dropdown_indicator:hover {
-  color: #Ffffff !important;
+@media (min-width: 900px) {
+  .scoreMobi_header_color #nav .nav_ul .dropdown_link .dropdown_indicator {
+    margin-bottom: 0px;
+  }
+  .scoreMobi_header_color #nav .nav_ul .dropdown_link .dropdown_indicator::after {
+    bottom: 15px;
+  }
 }
-.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content {
-  position: unset !important;
-  border-radius: 0 !important;
-  box-shadow: unset !important;
-  border-top: 1px solid #Ffffff;
+@media (min-width: 900px) {
+  .scoreMobi_header_color #nav .nav_ul .dropdown_link .dropdown_indicator i {
+    line-height: 4;
+  }
 }
-.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown {
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper {
+  background-color: #Ffffff;
+}
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper .dropdown_nav_wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 95%;
-  margin: 0 auto;
+  gap: 50px;
   padding: 10px 0;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown .nav_dropdown_item {
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper .dropdown_nav_wrapper a {
+  color: #000000;
+}
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper .dropdown_content_Wrapper {
+  position: unset;
+  border-radius: 0;
+  box-shadow: unset;
+  padding-top: 5px;
+}
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper .dropdown_content_Wrapper .dropdown_item_Wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  padding: 10px 0;
+}
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper .dropdown_content_Wrapper .dropdown_item_Wrapper:first-child {
+  border-top: 1px solid #b4b4b4;
+}
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper .dropdown_content_Wrapper .dropdown_item_Wrapper .nav_dropdown_item_wrapper {
   display: flex;
   align-items: center;
+  justify-content: none;
   gap: 10px;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown .nav_dropdown_item a {
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper .dropdown_content_Wrapper .dropdown_item_Wrapper .nav_dropdown_item_wrapper a {
+  font-weight: normal;
   font-family: inherit;
+  font-style: normal;
   font-size: inherit;
   padding: 0;
+  display: block;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown .nav_dropdown_item a:hover {
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper .dropdown_content_Wrapper .dropdown_item_Wrapper .nav_dropdown_item_wrapper a:hover {
   all: unset;
 }
-.scoreMobi_header_color #nav .nav_ul .nav_dropdown_content .ScoreMobi_nav_dropdown .nav_dropdown_item img {
+.scoreMobi_header_color #nav .nav_ul .dropdown_wrapper .dropdown_content_Wrapper .dropdown_item_Wrapper .nav_dropdown_item_wrapper img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -196,14 +240,13 @@ ul {
   gap: 10px;
   position: relative;
   z-index: 1;
-  padding: 0px 10px;
 }
 .scoreMobi_header_color .input_wrap {
   border: none;
   background-color: #7FA302;
 }
 .scoreMobi_header_color .input_wrap .form_input:focus {
-  box-shadow: 0px 0px 1px 1.5px #fff;
+  box-shadow: 0px 0px 1px 1.5px #Ffffff;
 }
 @media (min-width: 900px) {
   .scoreMobi_header_color .input_wrap {
@@ -229,15 +272,15 @@ ul {
 }
 .scoreMobi_header_color .header_select {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 5px;
   background-color: #7FA302;
 }
 
 .showcase_wrapper {
   position: relative;
-  height: 270px;
+  height: 300px;
   font-family: "Montserrat";
 }
 .showcase_wrapper img {
@@ -907,48 +950,47 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
 .ScoreMobi_form p {
   font-size: 0.8rem;
 }
-
-form .ScoreMobi_input_wrapper {
+.ScoreMobi_form form .ScoreMobi_input_wrapper {
   background: #ddd;
   border: none;
 }
-form .ScoreMobi_input_wrapper.input_space {
+.ScoreMobi_form form .ScoreMobi_input_wrapper.input_space {
   margin-top: 10px;
 }
-form .ScoreMobi_input_wrapper :focus {
+.ScoreMobi_form form .ScoreMobi_input_wrapper :focus {
   box-shadow: 0px 0px 1px 1.5px #474747;
 }
-form .ScoreMobi_input_wrapper span,
-form .ScoreMobi_input_wrapper i.fa {
+.ScoreMobi_form form .ScoreMobi_input_wrapper span,
+.ScoreMobi_form form .ScoreMobi_input_wrapper i.fa {
   color: #959595;
   padding-left: 5px;
   padding-right: 0px;
   font-size: 1rem;
   margin-right: 4px;
 }
-form .ScoreMobi_input_wrapper input {
+.ScoreMobi_form form .ScoreMobi_input_wrapper input {
   background: transparent;
   color: #000000;
   width: 100%;
   padding: 10px 5px;
 }
-form .ScoreMobi_input_wrapper input ::placeholder {
+.ScoreMobi_form form .ScoreMobi_input_wrapper input ::placeholder {
   font-weight: normal;
   font-family: inherit;
   font-style: normal;
   font-size: inherit;
   padding: 0;
 }
-form .ScoreMobi_input_wrapper input:focus {
+.ScoreMobi_form form .ScoreMobi_input_wrapper input:focus {
   border: none;
 }
-form .ScoreMobi_form_button {
+.ScoreMobi_form form .ScoreMobi_form_button {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 20px 0 5px 0;
 }
-form .ScoreMobi_form_button button {
+.ScoreMobi_form form .ScoreMobi_form_button button {
   background-color: #474747;
   color: #Ffffff;
   border-radius: 4px;
@@ -959,7 +1001,7 @@ form .ScoreMobi_form_button button {
   font-size: 0.8rem;
   transition: all 0.5s ease-in-out;
 }
-form .ScoreMobi_form_button button:hover {
+.ScoreMobi_form form .ScoreMobi_form_button button:hover {
   background-color: #626262;
 }
 

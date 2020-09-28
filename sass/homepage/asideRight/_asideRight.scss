@@ -14,65 +14,65 @@
     p {
         font-size: 0.8rem;
     }
-}
-
-// =================================ScoreMobi Form ================================================================
-form {
-    .ScoreMobi_input_wrapper {
-        background:$form_bg_color;
-        border: none;
-
-        &.input_space {
-            margin-top: 10px;
-        }
-
-        :focus {
-            box-shadow: 0px 0px 1px 1.5px $form_btn_color;
-        }
-
-        span,
-        i.fa {
-            color: $mute;
-            padding-left: 5px;
-            padding-right: 0px;
-            font-size: 1rem;
-            margin-right: 4px;
-        }
-
-        input {
-            background: transparent;
-            color:$black_color;
-            width: 100%;
-            padding: 10px 5px;
-
-            ::placeholder {
-                @include fontWight(normal,  inherit);
-                padding: 0;
+    
+    // =================================ScoreMobi Form ================================================================
+    form {
+        .ScoreMobi_input_wrapper {
+            background:$form_bg_color;
+            border: none;
+    
+            &.input_space {
+                margin-top: 10px;
             }
-
-            &:focus {
-                border: none;
+    
+            :focus {
+                box-shadow: 0px 0px 1px 1.5px $form_btn_color;
+            }
+    
+            span,
+            i.fa {
+                color: $mute;
+                padding-left: 5px;
+                padding-right: 0px;
+                font-size: 1rem;
+                margin-right: 4px;
+            }
+    
+            input {
+                background: transparent;
+                color:$black_color;
+                width: 100%;
+                padding: 10px 5px;
+    
+                ::placeholder {
+                    @include fontWight(normal,  inherit);
+                    padding: 0;
+                }
+    
+                &:focus {
+                    border: none;
+                }
             }
         }
-    }
-
-    // ============================== ScoreMobi form button wrapper====================================================================
-
-    // ScoreMobi_form_button 
-    .ScoreMobi_form_button {
-        @include flex(space-between);
-        margin: 20px 0 5px 0;
-
-        button {
-            background-color: $form_btn_color;
-            color: $white_color;
-            border-radius: 4px;
-            padding: 6px 20px;
-            @include fontWight(normal, .8rem);
-            @include transition;
-
-            &:hover {
-                background-color: $form_btn_hover;
+    
+        // ============================== ScoreMobi form button wrapper====================================================================
+    
+        // ScoreMobi_form_button 
+        .ScoreMobi_form_button {
+            @include flex(space-between);
+            margin: 20px 0 5px 0;
+    
+            button {
+                background-color: $form_btn_color;
+                color: $white_color;
+                border-radius: 4px;
+                padding: 6px 20px;
+                @include fontWight(normal, .8rem);
+                @include transition;
+    
+                &:hover {
+                    background-color: $form_btn_hover;
+                }
             }
         }
     }
