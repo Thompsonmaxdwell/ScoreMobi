@@ -91,6 +91,7 @@ table.shedule {
 }
 
 table.info_section{
+    background-color: red;
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
@@ -229,11 +230,13 @@ table.table_formation{
 //    =================
 
 .march_prediction_wrapper{
+
+    // display: none;
+
     .full_time{
         @include flex(space-between);
         background-color: $header_light;
         padding:0px 15px;
-
 
         .full_time_scores{
             background-color: $blue;
@@ -242,7 +245,6 @@ table.table_formation{
             color: $white_color;
             width: 50%;
         }
-
 
         p{
             width: 50%;

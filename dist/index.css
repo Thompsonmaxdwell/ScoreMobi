@@ -841,7 +841,7 @@ form .ScoreMobi_form_button {
 }
 form .ScoreMobi_form_button button {
   background-color: #474747;
-  color: #fff;
+  color: #Ffffff;
   border-radius: 4px;
   padding: 6px 20px;
   font-weight: normal;
@@ -897,7 +897,7 @@ form .ScoreMobi_form_button button:hover {
   font-family: unset;
   border: none;
   border-radius: 3px;
-  color: #fff;
+  color: #Ffffff;
   cursor: pointer;
 }
 .ScoreMobi_signup_via_social_media .facebook i,
@@ -1063,7 +1063,7 @@ section .premier_legue_wrapper .carousel_premier_league_nav {
 }
 section .premier_legue_wrapper .carousel_premier_league_nav button {
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #Ffffff;
   background-color: #7FA302;
   margin: 0;
   cursor: pointer;
@@ -1763,7 +1763,7 @@ section .premier_legue_wrapper .carousel_btn i {
 }
 
 #i_green {
-  color: #27AE60;
+  color: green;
 }
 
 .l_transfer_date {
@@ -2000,6 +2000,7 @@ table.shedule td p {
 }
 
 table.info_section {
+  background-color: red;
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
