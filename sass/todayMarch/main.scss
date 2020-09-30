@@ -90,7 +90,7 @@ table.shedule {
     }
 }
 
-table.info_section{
+.info_section{
     background-color: red;
     width: 100%;
     border-collapse: collapse;
@@ -129,7 +129,7 @@ table.table_container{
         .coach_line_up{
             @include flex(space-around);
             padding: 9px;
-            background:linear-gradient(0deg, #FFFAFA, #FFFAFA), linear-gradient(0deg, #FFFAFA, #FFFAFA), #FFFFFF;
+            background:$table_color;
 
             .coach_img{
                 @include flex(space-evenly);
@@ -275,24 +275,66 @@ table.table_formation{
         }
     }
 
-    .prediction_odds{
-        width: 100%;
-        @include flex(space-evenly);
-        border-collapse: collapse;
-        
-        tbody{
+    .prediction_odd_container{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    
+        .odd_container_1,.odd_container_2{
             width: 100%;
-            
-            .table_head{
-                background-color: lightgray;
-            }
+        }
 
-            tr{
+        .prediction_odds{
+            width: 100%;  
+            margin-bottom: 20px;
+            border-collapse: collapse;
+            
+            tbody{
                 width: 100%;
-                border: 1px solid $border_color;
-                text-align: center;
+                
+                .table_head{
+                    background-color: lightgray;
+                }
+                
+                tr{
+                    width: 100%;
+                    border: 1px solid $border_color;
+                    text-align: center;
+
+                    td,th{
+                        padding: 8px;
+                    }
+                }
             }
         }
     }
 
+
+}
+
+.wrap_table{
+    @include grid_Auto_fit(100px);
+    grid-gap: 10px;
+    
+    
+    .t1,.t2{
+        table.prediction_odds{
+            width: 100%;
+            border-collapse: collapse;
+        }
+    }
+
+        tr{
+            width: 100%;
+            border: 1px solid $border_color;
+            th{
+                padding: 10px;
+                background-color: $table_head;
+            }
+            td{
+                padding: 10px;
+                text-align: center;
+                background-color: $table_color;
+            }
+        }
 }
