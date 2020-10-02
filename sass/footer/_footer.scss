@@ -1,13 +1,18 @@
 .scoreMobi_footer {
 	background-color: $header_dark;
 	margin: 0;
+	
+
 // ScoreMbi Footer Content
 	.scoreMobi_footer_content {
 		width: 100%;
 		padding: 20px;
+		
 
 		@include desktopSize(900px) {
 			padding: 30px 70px;
+			max-width: 1440px;
+	        margin:0 auto;
 		}
 	}
 	// ScoreMobi footer_flex_wrapper

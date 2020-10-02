@@ -1371,6 +1371,8 @@ section .premier_legue_wrapper .carousel_btn i {
 @media (min-width: 900px) {
   .scoreMobi_footer .scoreMobi_footer_content {
     padding: 30px 70px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 .scoreMobi_footer .scoreMobi_footer_flex_wrapper {
