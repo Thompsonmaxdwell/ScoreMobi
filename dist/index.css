@@ -1510,6 +1510,7 @@ section .premier_legue_wrapper .carousel_btn i {
 .scoreMobi_footer .copyright {
   background-color: #7FA302;
   color: #ffffff;
+  padding: 0;
 }
 .scoreMobi_footer .copyright .copyRightText {
   display: none;
@@ -1527,6 +1528,12 @@ section .premier_legue_wrapper .carousel_btn i {
 .scoreMobi_footer .copyright .scoreMobi_copyRight {
   display: flex;
   flex-direction: column;
+}
+.scoreMobi_footer .copyright .scoreMobi_copyRight.active_copyright {
+  border-bottom: 2px solid #Ffffff;
+}
+.scoreMobi_footer .copyright .scoreMobi_copyRight:hover {
+  border-bottom: 2px solid #Ffffff;
 }
 .scoreMobi_footer .copyright .scoreMobi_copyRight a {
   font-style: normal;
