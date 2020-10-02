@@ -924,6 +924,12 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   grid-gap: 20px;
   background-color: #Ffffff;
 }
+@media (min-width: 1440px) {
+  #ScoremMobi_main_section_news_wrapper .main_news_wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
 #ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card .ScoreMobi_card_padding {
   padding: 10px 0px 5px;
 }

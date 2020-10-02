@@ -640,6 +640,10 @@ table#SocreMobi_match_table {
 		grid-gap: 20px;
 		background-color: $white_color;
 
+		@include  desktopSize(1440px){
+			@include grid_Auto_fit(100%);
+		}
+
 
 		.ScoreMobi_card {
 			.ScoreMobi_card_padding {
