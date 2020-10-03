@@ -921,6 +921,48 @@ table#SocreMobi_match_table .ScoreMobi_matches .football_clubs_wrapper .first_cl
   justify-content: flex-start;
 }
 
+#ScoremMobi_main_section_news_wrapper .header_caption {
+  font-weight: 600;
+  font-family: inherit;
+  font-style: normal;
+  font-size: 20px;
+  margin: 15px 0;
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  background-color: #Ffffff;
+}
+@media (min-width: 1440px) {
+  #ScoremMobi_main_section_news_wrapper .main_news_wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card .ScoreMobi_card_padding {
+  padding: 10px 0px 5px;
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card .news_title {
+  font-weight: 500;
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: #000000;
+}
+@media (min-width: 700px) {
+  #ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card .news_title {
+    font-size: 17px;
+  }
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card figcaption {
+  color: #000000;
+}
+
 .ScoreMobi_form {
   font-weight: normal;
   font-family: inherit;
@@ -1339,6 +1381,8 @@ section .premier_legue_wrapper .carousel_btn i {
 @media (min-width: 900px) {
   .scoreMobi_footer .scoreMobi_footer_content {
     padding: 30px 70px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 .scoreMobi_footer .scoreMobi_footer_flex_wrapper {
@@ -1476,6 +1520,7 @@ section .premier_legue_wrapper .carousel_btn i {
 .scoreMobi_footer .copyright {
   background-color: #7FA302;
   color: #ffffff;
+  padding: 0;
 }
 .scoreMobi_footer .copyright .copyRightText {
   display: none;
@@ -1493,6 +1538,12 @@ section .premier_legue_wrapper .carousel_btn i {
 .scoreMobi_footer .copyright .scoreMobi_copyRight {
   display: flex;
   flex-direction: column;
+}
+.scoreMobi_footer .copyright .scoreMobi_copyRight.active_copyright {
+  border-bottom: 2px solid #Ffffff;
+}
+.scoreMobi_footer .copyright .scoreMobi_copyRight:hover {
+  border-bottom: 2px solid #Ffffff;
 }
 .scoreMobi_footer .copyright .scoreMobi_copyRight a {
   font-style: normal;
