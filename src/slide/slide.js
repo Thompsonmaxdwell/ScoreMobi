@@ -1,8 +1,8 @@
 const tracks = document.querySelectorAll('.carousel_track');
 const slides = Array.from(tracks);
 const dotsNavs = document.querySelectorAll('.carousel_nav');
-const slideWidth = slides[0].children[0].getBoundingClientRect().width;
-
+let  slideWidth = '';
+slides[0] ? slideWidth =  slides[0].children[0].getBoundingClientRect().width :null
 
 // arrange slide next  each other 
 tracks.forEach(track => {
