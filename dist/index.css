@@ -378,6 +378,16 @@ ul {
     line-height: 2;
   }
 }
+@media (min-width: 1000px) {
+  .ScoreMobi_main_wrapper.news_details {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "main main main main asideRight asideRight";
+    grid-gap: 20px;
+  }
+}
 .ScoreMobi_main_wrapper #aside_left {
   grid-area: asideLeft;
   height: auto;
@@ -2012,6 +2022,46 @@ section .premier_legue_wrapper .carousel_btn i {
   width: 100%;
 }
 
+#ScoremMobi_main_section_news_wrapper .header_caption {
+  margin: 0px;
+}
+
+#ScoremMobi_main_section_news_wrapper .header_caption {
+  font-weight: 600;
+  font-family: inherit;
+  font-style: normal;
+  font-size: 20px;
+  margin: 15px 0;
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  background-color: #Ffffff;
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card .ScoreMobi_card_padding {
+  padding: 10px 0px 5px;
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card .news_title {
+  font-weight: 500;
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: #000000;
+}
+@media (min-width: 700px) {
+  #ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card .news_title {
+    font-size: 17px;
+  }
+}
+#ScoremMobi_main_section_news_wrapper .main_news_wrapper .ScoreMobi_card figcaption {
+  color: #000000;
+}
+
 .sm_title {
   cursor: pointer;
 }
@@ -2091,15 +2141,8 @@ section .premier_legue_wrapper .carousel_btn i {
   background-color: #6c8a00;
 }
 
-@media (min-width: 1100px) {
-  .ScoreMobi_main_prediction.news_details {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: " main main asideRight";
-    grid-gap: 20px;
-  }
+.ScoreMobi_card figure img {
+  width: 100%;
 }
 
 .table {
@@ -2185,22 +2228,23 @@ table.shedule td p {
   font-size: 13;
 }
 
-table.info_section {
+.info_section {
+  background-color: red;
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
   text-align: center;
 }
-table.info_section td {
+.info_section td {
   border: 1px solid #b4b4b4;
   padding: 15px;
 }
 @media (min-width: 320px) {
-  table.info_section td {
+  .info_section td {
     max-width: 200px;
   }
 }
-table.info_section .active_info {
+.info_section .active_info {
   border-bottom: 4px solid #7fa302;
 }
 
@@ -2223,7 +2267,7 @@ table.table_container td .coach_line_up {
   align-items: center;
   justify-content: space-around;
   padding: 9px;
-  background: linear-gradient(0deg, #FFFAFA, #FFFAFA), linear-gradient(0deg, #FFFAFA, #FFFAFA), #FFFFFF;
+  background: #FFFAFA;
 }
 table.table_container td .coach_line_up .coach_img {
   display: flex;
@@ -2349,23 +2393,55 @@ table.table_formation .formation_img img {
 .march_prediction_wrapper table.prediction_section td .predict_team .predict_team_img img {
   width: 100%;
 }
-.march_prediction_wrapper .prediction_odds {
-  width: 100%;
+.march_prediction_wrapper .prediction_odd_container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  border-collapse: collapse;
+  gap: 8px;
 }
-.march_prediction_wrapper .prediction_odds tbody {
+.march_prediction_wrapper .prediction_odd_container .odd_container_1, .march_prediction_wrapper .prediction_odd_container .odd_container_2 {
   width: 100%;
 }
-.march_prediction_wrapper .prediction_odds tbody .table_head {
+.march_prediction_wrapper .prediction_odd_container .prediction_odds {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+.march_prediction_wrapper .prediction_odd_container .prediction_odds tbody {
+  width: 100%;
+}
+.march_prediction_wrapper .prediction_odd_container .prediction_odds tbody .table_head {
   background-color: lightgray;
 }
-.march_prediction_wrapper .prediction_odds tbody tr {
+.march_prediction_wrapper .prediction_odd_container .prediction_odds tbody tr {
   width: 100%;
   border: 1px solid #b4b4b4;
   text-align: center;
+}
+.march_prediction_wrapper .prediction_odd_container .prediction_odds tbody tr td, .march_prediction_wrapper .prediction_odd_container .prediction_odds tbody tr th {
+  padding: 8px;
+}
+
+.wrap_table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+}
+.wrap_table .t1 table.prediction_odds, .wrap_table .t2 table.prediction_odds {
+  width: 100%;
+  border-collapse: collapse;
+}
+.wrap_table tr {
+  width: 100%;
+  border: 1px solid #b4b4b4;
+}
+.wrap_table tr th {
+  padding: 10px;
+  background-color: #E7E7E7;
+}
+.wrap_table tr td {
+  padding: 10px;
+  text-align: center;
+  background-color: #FFFAFA;
 }
 
 .loading_container {
