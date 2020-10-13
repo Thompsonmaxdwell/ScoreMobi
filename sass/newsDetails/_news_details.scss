@@ -1,3 +1,4 @@
+
 #ScoremMobi_main_section_news_wrapper {
 	.header_caption {
 		@include fontWight(600, 20px);
@@ -5,10 +6,6 @@
 	}
 
 	.main_news_wrapper {
-		@include grid_Auto_fit(300px);
-		grid-gap: 20px;
-		background-color: $white_color;
-
 
 		.ScoreMobi_card {
 			.ScoreMobi_card_padding {
@@ -38,7 +35,6 @@
 			}
 		}
 	}
-
 }
 
 .sm_title{

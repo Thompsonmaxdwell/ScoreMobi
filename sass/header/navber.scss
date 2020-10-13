@@ -1,11 +1,22 @@
 	//----------------------------------------top header logo styling  ---------------------------------------	
+	.header_fixed{
+		position:fixed;
+		width: 100%;
+		z-index: 223;
+		top:0;
+	}
 	.scoreMobi_header {
 		background-color: $header_light;
-		@include flex(space-between);
 		padding: 10px;
 		font-family: inherit;
 		width: 100%;
+		position: relative;
 
+		.top_header_flex{
+			@include flex(space-between);
+
+		}
+	
 		@include desktopSize(900px) {
 			padding: 10px 35px;
 
@@ -49,20 +60,26 @@
 		}
 	}
 
+	.top_header {
+		max-width: 1350px;
+		width: 100%;
+		margin: 0 auto;
+		
+		
+	}
 
 	//---------------------------------------Header  Style---------------------------------------	
 	.scoreMobi_header_color {
 		background-color: $header_dark;
 		width: 100%;
 		height: 100%;
+		@include desktopSize(900px) {
+			padding: 0px 35px;
 
+		}
+		
 		.scoreMobi_header_content {
 			width: 100%;
-			padding: 0px;
-
-			@include desktopSize(900px) {
-				padding: 0px 35px;
-			}
 		}
 
 		.scoreMobi_logo_menu_section {
@@ -95,14 +112,15 @@
 
 				.nav_ul_li {
 					padding-bottom: 30px;
-					// line-height: 3;
+
 					@include tabletSize(900px) {
-						padding-bottom: 0px;
+						padding: 0px;
 					}
 				}
 
 				//----------------------------------------Header Nav li ---------------------------------------	
-				.nav_ul_li a ,.dropdown_indicator{
+				.nav_ul_li a,
+				.dropdown_indicator {
 					position: relative;
 					line-height: unset;
 					color: $white_color;
@@ -153,23 +171,25 @@
 
 				}
 
-			
+
 				//---------------------------------------- Dropdown continer ----------------------------------------
 				.dropdown_link {
 					padding-bottom: 0px;
-					
+
 					.dropdown_wdith {
 						width: 95%;
 						margin: 0 auto;
 					}
+
 					//---------------------------------------- Dropdown indicator  ----------------------------------------
 					.dropdown_indicator {
 						color: $white_color;
 						font-size: 1.1em;
 						cursor: pointer;
-						margin-bottom:10px;
+						margin-bottom: 10px;
+
 						@include tabletSize(900px) {
-							margin-bottom:0px;
+							margin-bottom: 0px;
 
 							&::after {
 								bottom: 15px;
@@ -180,7 +200,7 @@
 							@include tabletSize(900px) {
 								line-height: 4;
 							}
-							
+
 						}
 
 					}
@@ -255,6 +275,11 @@
 			position: relative;
 			z-index: 1;
 			padding: 0px 10px;
+
+			@include desktopSize(900px) {
+				padding: 0px;
+	
+			}
 		}
 
 		.input_wrap {

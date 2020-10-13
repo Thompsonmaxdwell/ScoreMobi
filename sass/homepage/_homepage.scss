@@ -1,31 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
 
 // ---------------------------  ScoreMobi main wrapper ---------------------------
+.main_section_wrapper {
+	background-color: #dfe3d1;
+	
+}
+
 .ScoreMobi_main_wrapper {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 15px;
 	padding: 10px;
 	width: 100%;
+	background-color: $white_color;
+	padding: 10px;
 	margin: 0 auto;
 	grid-template-areas: "main main main main"
 		"asideLeft asideLeft asideLeft asideLeft"
 		"asideRight asideRight asideRight asideRight";
 
-		&.prediction_wrappper{
-			margin-top:20px;
-		}
-	@include tabletSize(600px) {
-		width: 95%;
-		padding: 20px 0px;
+	&.prediction_wrappper {
+		margin-top: 100px;
 	}
 
-	@include tabletSize(850px) {
-		display: grid;
-		grid-template-areas:
-			"main main main main main main main"
-			"asideLeft asideLeft asideRight asideRight";
+	@include tabletSize(600px) {
+		width: 95%;
+		padding: 20px;
 	}
+
+
 
 	@include desktopSize(1000px) {
 		grid-template-columns: repeat(4, 1fr);
@@ -42,16 +45,16 @@
 		}
 	}
 
-	&.news_details{
+	&.news_details {
 		@include desktopSize(1000px) {
 			width: 100%;
 			max-width: 1100px;
-			margin: 0 auto;
+			margin: 100px auto;
 			grid-template-columns: repeat(6, 1fr);
 			grid-template-areas: "main main main main asideRight asideRight";
-            grid-gap:20px;
-        }
-    } 
+			grid-gap: 20px;
+		}
+	}
 
 	#aside_left {
 		grid-area: asideLeft;
@@ -106,8 +109,13 @@ aside#aside_left {
 //  Get The Template Mobile Experince  in Aside Left in Homepage   
 .ScoreMobi_mobile_Template {
 	width: 100%;
-	border: 1px solid $dark-border;
 	@include container_border;
+
+	.ScoreMobi_template_image {
+		@include flex(center);
+		gap: 10px;
+	}
+
 	box-sizing: border-box;
 	padding: 10px 15px;
 
@@ -173,7 +181,7 @@ aside#aside_left {
 		background: $white_color;
 		@include flex(unset);
 		@include container_border;
-		border: 0.6px solid $border_color_1;
+		background-color: $lighgreen;
 		padding: 7px 8px;
 		box-sizing: border-box;
 		margin-top: 7px;
@@ -251,12 +259,12 @@ aside#aside_left {
 	margin-top: 10px;
 
 	@include tabletSize(800px) {
-		@include grid_Auto_fit(300px);
+		// @include grid_Auto_fit(300px);
 	}
 
-	@include desktopSize(1000px) {
-		@include grid_Auto_fit(200px);
-	}
+	// @include desktopSize(1000px) {
+	// 	@include grid_Auto_fit(200px);
+	// }
 }
 
 .ScoreMobi_card {
@@ -355,7 +363,6 @@ section .carousel_wrapper {
 		width: unset;
 		bottom: unset;
 		position: unset;
-		;
 		justify-content: unset;
 		margin: 0px 0;
 
@@ -395,8 +402,8 @@ section .carousel_wrapper {
 	@include flex(space-between);
 	border-bottom: 0.6px solid $today_prediction_border;
 
-	&.todays_prediction{
-		margin-top:0;
+	&.todays_prediction {
+		margin-top: 0;
 	}
 
 
@@ -429,13 +436,12 @@ section .carousel_wrapper {
 		.live_match_update {
 			padding: 0 5px;
 			justify-self: center;
-			font-size: 17px;
+			@include fontWight(normal, inherit);
 			color: $text_color_2;
 			font-weight: 500;
 
 			@include tabletSize(500px) {
 				padding: 0 20px;
-				font-size: 20px;
 				padding: 0 10px;
 			}
 		}
@@ -461,12 +467,10 @@ section .carousel_wrapper {
 			color: $white_color;
 			border-radius: 25px;
 			text-align: center;
-			font-size: 17px;
+			@include fontWight(normal, inherit);
 			width: 70%;
 
-			@include tabletSize(500px) {
-				width: 70%;
-			}
+
 
 		}
 	}
@@ -543,13 +547,13 @@ table#SocreMobi_match_table {
 	}
 
 	thead tr th .table_header {
-		font-size: 18px;
+		font-size: 15px;
 		color: $black_color;
 	}
 
 	th,
 	td {
-		padding: 5px 3px;
+		padding: 5px 0px;
 
 		@include tabletSize(500px) {
 			padding: 5px;
@@ -558,63 +562,70 @@ table#SocreMobi_match_table {
 
 	p,
 	.clubs_name {
-		font-weight: normal;
-		font-size: inherit;
+		@include fontWight(normal, 13px);
 		color: $black_color;
 		cursor: pointer;
+
+		@include tabletSize(700px) {
+			@include fontWight(normal, inherit);
+		}
 	}
 
 	.ScoreMobi_matches {
-		background: $white_color;
-		border: 0.6px solid $table_td_border;
+		background-color: $lighgreen;
+		box-shadow: 0px 0px 3px $lighgreen inset;
 		@include container_border;
 		box-sizing: border-box;
 
 
 		// - ------------------------------------ScoreMobi Homepage table Clubs Wrapper- ------------------------------------
 		.football_clubs_wrapper {
-			@include flex(center);
+			@include flex(space-between);
+			margin: 0 auto;
+			width: 100%;
+			gap: 15px;
 
-			.vs {
-				margin: 10px;
-
-				@include tabletSize(500px) {
-					margin: 0px;
-				}
-
-			}
 
 			.clubs {
 				display: flex;
 				flex-direction: column;
-
+				width: 100%;
 
 				@include tabletSize(500px) {
 					flex-direction: row;
 					@include flex(center);
 				}
 
-				//------------------------------------ ScoreMobi Homepage table Match Clubs Name ------------------------------------
+				//--------------- ScoreMobi Homepage table Match Clubs Name ------------------------------------
 				.clubs_name {
 					text-align: end;
-					width: 70px;
+					width: 100%;
 					order: 1;
 
+
 					@include tabletSize(500px) {
+						padding-right: 10px;
 						order: unset;
-						width: 90px;
 					}
 				}
 
 				.clubs_name:last-child {
 					text-align: start;
+					padding-right: 10px;
+					padding-right: unset;
+
+					@include tabletSize(500px) {
+						padding-left: 10px;
+						padding-right: unset
+					}
 				}
 			}
 
-			//------------------------------------ ScoreMobi Homepage table Clubs images ------------------------------------
+			// ------ ScoreMobi Homepage table Clubs images ------------------------------------
 			.clubs_img {
 				@include flex(flex-end);
 				align-items: unset;
+
 
 				img {
 					width: 25px;
@@ -623,7 +634,6 @@ table#SocreMobi_match_table {
 					@include tabletSize(500px) {
 						width: 27px;
 						height: 27px;
-						margin: 0 25px;
 					}
 				}
 			}
@@ -651,9 +661,10 @@ table#SocreMobi_match_table {
 		grid-gap: 20px;
 		background-color: $white_color;
 
-		@include  desktopSize(1440px){
+		@include desktopSize(1297px) {
 			@include grid_Auto_fit(100%);
 		}
+
 
 
 		.ScoreMobi_card {
@@ -684,17 +695,16 @@ table#SocreMobi_match_table {
 			}
 		}
 	}
+}
 
 
 
 
 
-
-// ---------------------------------------------- Homepage Aside right style -------------------------------------------
-// =================================ScoreMobi Form wrapper================================================================
+// ---------------------------------------------- Homepage Aside right style --------------------
+// =================================ScoreMobi Form wrapper==========================================
 .ScoreMobi_form {
 	@include fontWight(normal, inherit);
-	@include border_line;
 	border-radius: 3px;
 	width: 100%;
 	padding: 10px 10px;
@@ -863,7 +873,6 @@ table#SocreMobi_match_table {
 // ==================================== premier legue wrapper=============================================================
 section .premier_legue_wrapper {
 	height: 280px;
-	border: 1px solid $premier_league_border;
 	@include container_border;
 	margin-top: 10px;
 	width: 100%;
@@ -897,7 +906,7 @@ section .premier_legue_wrapper {
 	}
 
 
-	// =================================premier league table header================================================================
+	// =================================premier league table header ================================
 	.premier_league_table_header {
 		flex-direction: row;
 		@include flex(flex-end);
@@ -1074,7 +1083,7 @@ section .premier_legue_wrapper {
 	// ScoreMobi Featured Box
 	.featured_matches {
 		@include flex(unset);
-		border: 1px solid $border_color;
+		border-bottom: 1px solid $border_color;
 		@include container_border;
 		margin-bottom: 4px;
 		padding: 4px;
@@ -1114,18 +1123,15 @@ section .premier_legue_wrapper {
 
 		}
 
-
 		p {
 			color: $black_color;
 			@include fontWight(normal, inherit);
 		}
 
 		.ScoreMobi_featured_matches {
-			border: 1px solid $border_color;
 			@include container_border;
 			box-sizing: border-box;
-			border-collapse: collapse;
-
+			background-color: #e8f0e8;
 
 			.ScoreMobi_feature_matches_wrapper {
 				@include flex(flex-end);

@@ -6,6 +6,7 @@
     width:100%;
     margin: 30px 0;
     display: grid;
+    background-color:$white_color;
 	grid-template-columns: 3fr 1fr;
     grid-gap: 20px;
     
@@ -47,7 +48,7 @@
 
     .league_wrap {
         display: flex;
-        
+    
 
         & img {
             width: 40px;

@@ -1,7 +1,10 @@
 
 const tabs = document.querySelectorAll('#tabs ul li');
 const tabs_contents = document.querySelectorAll('.tabs_content')
+
 const loader = document.querySelector('.loading_container');
+console.log(tabs)
+console.log(tabs_contents)
 
  function tab() {
 return tabs.forEach(function(tab, tab_index) {
@@ -31,7 +34,7 @@ return tabs.forEach(function(tab, tab_index) {
         })
     })
 }
-console.log('hello');
+
 
 export default tab;
 

@@ -30,7 +30,15 @@ module.exports = {
                         loader: 'sass-loader' // 将 Sass 编译成 CSS
                     }
                 ]
-            }
+            },
+             {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
         ],
     },
     plugins: [
